@@ -23,7 +23,7 @@ include('./conexionBD/connection.php');
 
 $hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$consultar = "SELECT nombreUsuario FROM ininbiowebapp.usuario WHERE nombreUsuario = ?";
+$consultar = "SELECT nombreUsuario FROM usuario WHERE nombreUsuario = ?";
 
 $sentencia = $conn->prepare($consultar);
 $sentencia->bind_param('s',$_POST['nombreUsuario']);
@@ -45,7 +45,7 @@ if($result->num_rows > 0){
         </script>';
 } else {
    $sentencia->close();
-   $insertar="INSERT INTO ininbiowebapp.usuario (nombre,apellidos,correo,password,nombreUsuario,telefono) VALUES (?,?,?,?,?,?)";
+   $insertar="INSERT INTO usuario (nombre,apellidos,correo,password,nombreUsuario,telefono) VALUES (?,?,?,?,?,?)";
    $pq = $conn->prepare($insertar);
    $pq->bind_param('ssssss',$_POST['nombre'],$_POST['apellidos'],$_POST['correo'],$hashed,$_POST['nombreUsuario'],$_POST['telefono']);
    

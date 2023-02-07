@@ -210,105 +210,106 @@ if(isset($_SESSION['rol'])){
 </div>
 
 <footer class="section novi-background footer-advanced bg-gray-700">
-  <div class="footer-advanced-main">
-    <div class="container">
-      <div class="row row-50">
-        <div class="col-lg-4">
-          <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-          <p class="footer-advanced-text">
-            ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-          </p>
-        </div>
-        <div class="col-sm-7 col-md-5 col-lg-4">
-          <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
-          <!-- Post Inline-->
-          <article class="post-inline">
-            <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
-            <ul class="post-inline-meta">
-              <li>by Mike Barnes</li>
-              <li><a href="#">2 days ago</a></li>
-            </ul>
-          </article>
-          <!-- Post Inline-->
-          <article class="post-inline">
-            <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
-            <ul class="post-inline-meta"> 
-              <li>by Mike Barnes</li>
-              <li><a href="#">2 days ago</a></li>
-            </ul>
-          </article>
-        </div>
-        <div class="col-sm-5 col-md-7 col-lg-4">
-          <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
-          <div class="row row-x-10" data-lightgallery="group">
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div>
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div>
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div>
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div>
-            <!-- <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-5.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-5-85x85.jpg" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div>
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-6.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-6-85x85.jpg" alt=""/>
-                <div class="thumbnail-minimal-caption"> </div></a></div>
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-7.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-7-85x85.jpg" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div>
-            <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-8.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-8-85x85.jpg" alt=""/>
-                <div class="thumbnail-minimal-caption"></div></a></div> -->
+        <div class="footer-advanced-main">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
+                <p class="footer-advanced-text">
+                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                </p>
+              </div>
+              <div class="col-sm-7 col-md-5 col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
+                <!-- Post Inline-->
+                <article class="post-inline">
+                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
+                  <ul class="post-inline-meta">
+                    <li>by Mike Barnes</li>
+                    <li><a href="#">2 days ago</a></li>
+                  </ul>
+                </article>
+                <!-- Post Inline-->
+                <article class="post-inline">
+                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
+                  <ul class="post-inline-meta"> 
+                    <li>by Mike Barnes</li>
+                    <li><a href="#">2 days ago</a></li>
+                  </ul>
+                </article>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
+                <div class="row row-x-10" data-lightgallery="group">
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/urea.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"> </div></a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-advanced-aside">
-    <div class="container">
-      <div class="footer-advanced-layout">
-        <div>
-          <ul class="list-nav"> 
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="about-us.html">Acerca de Nosotros</a></li>
-            <li><a href="typography.html">Productos</a></li>
-            <li><a href="certificaciones.html">Certificaciones</a></li>
-            <!-- <li><a href="contacts.html">Contacts</a></li> -->
-          </ul>
+        <div class="footer-advanced-aside">
+          <div class="container">
+            <div class="footer-advanced-layout">
+              <div class="list-nav">
+              <p class="icon novi-icon icon-sm link-default fa-brands fa-clock"> Horario</p>
+              <p>Lunes a Viernes de 8:00 am. a 6:00 pm.</p>
+            </div>
+              <!-- <div>
+                <ul class="list-nav"> 
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="about-us.html">Nosotros</a></li>
+                  <li><a href="typography.php">Productos y Servicios</a></li>
+                </ul>
+              </div> -->
+              <div>
+                <ul class="foter-social-links list-inline list-inline-md">
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
+                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <ul class="foter-social-links list-inline list-inline-md">
-            <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-            <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-            <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-            <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
-            <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
-            <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
-          </ul>
+        <div class="container">
+          <hr/>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <hr/>
-  </div>
-  <div class="footer-advanced-aside">
-    <div class="container">
-      <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-        <!-- Rights-->
-        <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-        <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-      </div>
-    </div>
-  </div>
+        <div class="footer-advanced-aside">
+          <div class="container">
+            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
+              <!-- Rights-->
+              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
+            </div>
+          </div>
+        </div>
 
-  <!-- <div class="card" style="--i:url(img1.jpg)">
-    <div class="content">
-      <i class="fa-sharp fa-solid fa-house"></i>
-        <a href="#">Ver Detalles</a>
-    </div>
-</div> -->
-
-
-</footer>
+        <!-- <div class="card" style="--i:url(img1.jpg)">
+          <div class="content">
+            <i class="fa-sharp fa-solid fa-house"></i>
+              <a href="#">Ver Detalles</a>
+          </div>
+      </div> -->
+      </footer>
 </div>
 
 

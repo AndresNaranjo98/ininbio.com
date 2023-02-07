@@ -2,7 +2,7 @@
               <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <?php
                   $id = $idPro;
-                    $consultaLogin = "SELECT * FROM ininbiowebapp.productos WHERE idProductos = '$id'";
+                    $consultaLogin = "SELECT * FROM productos WHERE idProductos = '$id'";
                     $sentencia = $conn->prepare($consultaLogin);
                     $sentencia->execute();
                     $result = $sentencia->get_result();

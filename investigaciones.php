@@ -179,7 +179,7 @@ if (isset($_SESSION['rol'])) {
         </div>
       </section>
 
-        <footer class="section novi-background footer-advanced bg-gray-700">
+      <footer class="section novi-background footer-advanced bg-gray-700">
         <div class="footer-advanced-main">
           <div class="container">
             <div class="row row-50">
@@ -317,5 +317,43 @@ if (isset($_SESSION['rol'])) {
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js\contador.js"></script>
+
+
+<link rel="stylesheet" href="css\whats.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="css\whats2.css">
+<div class="nav-bottom">
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+          <div class="popup-whatsapp fadeIn">
+              <div class="content-whatsapp -top"><button type="button" class="closePopup">
+                    <i class="material-icons icon-font-color">close</i>
+                  </button> 
+                
+                 <p>  <img src="images\secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
+                 
+              </div>
+              <div class="content-whatsapp -bottom">
+                <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+                 
+                 
+                
+        
+                  <button class="send-msPopup" id="send-btn" type="button">
+                      <i class="material-icons icon-font-color--black">send</i>
+                  </button>
+
+              </div>
+          </div>
+          <button type="button" id="whats-openPopup" class="whatsapp-button">
+              <div class="float" >
+<i class="fa fa-whatsapp my-float"></i></div>
+          </button>
+          <div class="circle-anime"></div>
+      </div>
+      <script  src="js\script2.js"></script>
   </body>
 </html>
