@@ -134,26 +134,37 @@ if(isset($_SESSION['rol'])){
               </div>
             </div>
             <div class="rd-navbar-main-outer" style="text-align: center;">
-              <div class="rd-navbar-main">
-                <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
-                
-                  <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">Acerca de Nosotros</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Productos</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="certificaciones.html">Certificaciones</a>
-                    </li>
-                    <li class="rd-nav-item active"><a class="rd-nav-link" href="login.html"><span class="icon novi-icon icon-md mdi mdi-account"></span></a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="carrito.html"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
-                    </li>
-                  </ul>
-                </div>
+            <div class="rd-navbar-main">
+              <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
+
+                <ul class="rd-navbar-nav menu-horizontal">
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Inicio</a>
+                  </li>
+                  <li class="rd-nav-item">
+                    <p class="rd-nav-link" style="cursor: pointer;">Acerca de Nosotros</p>
+                    <ul class="menu-vertical">
+                      <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
+                      <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
+                      <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Productos</a>
+                    <ul class="menu-vertical">
+                      <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
+                      <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
+                      <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
+                      <li><a class="rd-nav-link" href="antiadherentes.php">Antiadherentes</a></li>
+                    </ul>
+                  </li>
+                  <li id="loginRegister" class="rd-nav-item active"><a class="rd-nav-link" href="login.php"><span class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
           </nav>
         </div>
       </header>

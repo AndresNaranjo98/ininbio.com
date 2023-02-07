@@ -1,6 +1,7 @@
 {
     "require": {
         "firebase/php-jwt": "^6.3",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "mercadopago/dx-php": "2.5.3"
     }
 }

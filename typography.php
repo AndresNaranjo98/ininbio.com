@@ -72,6 +72,7 @@ if (isset($_SESSION['rol'])) {
 </head>
 
 <body>
+
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="200" height="150" srcset="images/main-logo.png 2x" />
@@ -127,14 +128,25 @@ if (isset($_SESSION['rol'])) {
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-                <ul class="rd-navbar-nav">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item "><a class="rd-nav-link" href="index.php">Inicio</a>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.php">Acerca de Nosotros</a>
+                  <li class="rd-nav-item">
+                    <p class="rd-nav-link" style="cursor: pointer;">Acerca de Nosotros</p>
+                    <ul class="menu-vertical">
+                      <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
+                      <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
+                      <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
+                    </ul>
                   </li>
-                  <li class="rd-nav-item  active"><a class="rd-nav-link" href="typography.php">Productos</a>
-                  </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Productos</a>
+                    <ul class="menu-vertical">
+                      <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
+                      <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
+                      <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
+                      <li><a class="rd-nav-link" href="antiadherentes.php">Antiadherentes</a></li>
+                    </ul>
                   </li>
                   <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
@@ -148,26 +160,17 @@ if (isset($_SESSION['rol'])) {
       </div>
     </header>
 
-    <!-- Working at CaseCraft-->
-    <section class="section novi-background section-lg">
-      <div class="container">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <h3 class="text-uppercase">SERVICIOS QUE OFRECEN</h3>
-            <p>
-              ♦ Higiene y Sanitización Industrial.</p>
-            <p>♦ Servicios de limpieza y desinfección de planta (instalaciones) y equipos</p>
-            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/main-logo.png" alt="" width="570" height="388" />
-          </div>
-        </div>
-      </div>
-    </section>
 
     <?php
 
     include('./conexionBD/connection.php');
+    require('vendor/autoload.php');
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    $key_encrypt = $_ENV['KEY_ENCRYPT'];
+    $method_encrypt = $_ENV['METHOD_ENCRYPT'];
 
     $consultaLogin = "SELECT * FROM ininbiowebapp.productos";
     $sentencia = $conn->prepare($consultaLogin);
@@ -176,6 +179,12 @@ if (isset($_SESSION['rol'])) {
     ?>
 
     <!--Cards Products-->
+    <section class="section novi-background section-xl">
+      <div class="fondoProductos">
+        <p class="tituloProductos">
+          Catálogo de Productos
+        </p>
+    </div>
     <div class="c">
       <div class="pro">
         <?php
@@ -192,13 +201,14 @@ if (isset($_SESSION['rol'])) {
             </div>
             <div style="text-align: center;">
               <div class="name"> <?php echo $row[$i][1]; ?> </div>
-              <div class="job">$<?php echo $row[$i][3]; ?></div>
+              <div class="job"><?php echo $row[$i][3]; ?> USD</div>
             </div>
             <div class="media-icons">
               <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
               <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i class="fa-solid fa-info"></i></a>
             </div>
           </div>
+
           <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -208,12 +218,31 @@ if (isset($_SESSION['rol'])) {
                     <div class="cerrar" aria-hidden="true">&times;</div>
                   </button>
                 </div>
-                <div class="modal-body" style="text-align: center; color: black;">
-                <?php echo $row[$i][2]; ?>
+                <div class="modal-body">
+                  <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
+                  <aside style="font-weight: normal; color: black;"><?php echo $row[$i][2]; ?></aside><br>
+                  <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                    <form action="carrito.php" method="post">
+                      <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
+                        <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
+                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
+                        </button>
+                        <input id="cantidad" name="cantidad" style="width: 50px;" value="1">
+                        <button type="button" style="width: 30px; height: 30px;" data-action="increment">
+                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
+                        </button>
+                      </p>
+                  </div>
+
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">No</button>
-                  <button id="cerrar" type="button" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">Sí, cerrar sesión</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
+                  <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -223,7 +252,51 @@ if (isset($_SESSION['rol'])) {
         ?>
       </div>
     </div>
+    </section>
     <br>
+
+    <script>
+      function decrement(e) {
+        const btn = e.target.parentNode.parentElement.querySelector(
+          'button[data-action="decrement"]'
+        );
+        const target = btn.nextElementSibling;
+        let value = Number(target.value);
+        if (value > 0) {
+          value--;
+          target.value = value;
+        }
+        if (value <= 0) {
+          target.value = 1;
+        }
+      }
+
+      function increment(e) {
+        const btn = e.target.parentNode.parentElement.querySelector(
+          'button[data-action="decrement"]'
+        );
+        const target = btn.nextElementSibling;
+        let value = Number(target.value);
+        value++;
+        target.value = value;
+      }
+
+      const decrementButtons = document.querySelectorAll(
+        `button[data-action="decrement"]`
+      );
+
+      const incrementButtons = document.querySelectorAll(
+        `button[data-action="increment"]`
+      );
+
+      decrementButtons.forEach(btn => {
+        btn.addEventListener("click", decrement);
+      });
+
+      incrementButtons.forEach(btn => {
+        btn.addEventListener("click", increment);
+      });
+    </script>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
       <div class="footer-advanced-main">
