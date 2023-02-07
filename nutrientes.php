@@ -163,7 +163,7 @@ if (isset($_SESSION['rol'])) {
       <hr class="my-4" />
       <div class="botonesProductos" class="section novi-background section-lg" style="text-align : center;">
         <h4>Seleccione la categoria de nutrientes que desee ver:</h4>
-        <form method="POST">
+        <form action="" method="post">
           <button type="submit" id="tequila" name="tequila" value="tequila" class="button button-md button-primary" style="vertical-align: bottom;">Tequila</button>
           <button type="submit" id="ron" name="ron" value="ron" class="button button-md button-primary">Ron</button>
           <button type="submit" id="mezcal" name="mezcal" value="mezcal" class="button button-md button-primary">Mezcal</button>
@@ -171,7 +171,6 @@ if (isset($_SESSION['rol'])) {
           <button type="submit" id="charanda" name="charanda" value="charanda" class="button button-md button-primary">Charanda</button>
           <button type="submit" id="whisky" name="whisky" value="whisky" class="button button-md button-primary">Whisky</button>
           <button type="submit" id="cerveza" name="cerveza" value="cerveza" class="button button-md button-primary">Cerveza</button>
-          <form>
       </div>
 
       <?php
@@ -222,7 +221,7 @@ if (isset($_SESSION['rol'])) {
       $sentencia->execute();
       $result = $sentencia->get_result();
       ?>
-
+      </form>
       <div class="c">
         <div class="pro">
           <?php

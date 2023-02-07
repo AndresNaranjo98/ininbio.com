@@ -180,82 +180,82 @@ if (isset($_SESSION['rol'])) {
               $id_Producto = openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt);
             } else {
       ?> <p>ERROR</p> <?php
-            }
-            if (is_string(openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt))) {
-              $imagen_Producto = openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt);
-            } else {
-              ?> <p>ERROR</p> <?php
-          }
-          if (is_string(openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt))) {
-            $nom_Producto = openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt);
-          } else {
-            ?> <p>ERROR</p> <?php
-                          }
-              if (is_numeric(openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt))) {
-                $price_Producto = openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt);
-              } else {
-                ?> <p>ERROR</p> <?php
+                    }
+                    if (is_string(openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt))) {
+                      $imagen_Producto = openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt);
+                    } else {
+                      ?> <p>ERROR</p> <?php
+                            }
+                            if (is_string(openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt))) {
+                              $nom_Producto = openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt);
+                            } else {
+                              ?> <p>ERROR</p> <?php
+                            }
+                            if (is_numeric(openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt))) {
+                              $price_Producto = openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt);
+                            } else {
+                            ?> <p>ERROR</p> <?php
                               }
-              if (is_numeric($_POST['cantidad'])) {
-                $cantidad_producto = $_POST['cantidad'];
-              } else {
-                ?> <p>ERROR</p> <?php
+                              if (is_numeric($_POST['cantidad'])) {
+                                $cantidad_producto = $_POST['cantidad'];
+                              } else {
+                                ?> <p>ERROR</p> <?php
                               }
 
-              if (!isset($_SESSION['cart'])) {
-                $productosCarrito = array(
-                  'id_Producto' => $id_Producto,
-                  'imagen_Producto' => $imagen_Producto,
-                  'nom_Producto' => $nom_Producto,
-                  'price_Producto' => $price_Producto,
-                  'cantidad_Producto' => $cantidad_producto
-                );
-                $_SESSION['cart'][0] = $productosCarrito;
-              } else {
-                $numeroProductos = count($_SESSION['cart']);
-                $productosCarrito = array(
-                  'id_Producto' => $id_Producto,
-                  'imagen_Producto' => $imagen_Producto,
-                  'nom_Producto' => $nom_Producto,
-                  'price_Producto' => $price_Producto,
-                  'cantidad_Producto' => $cantidad_producto
-                );
-                $_SESSION['cart'][$numeroProductos] = $productosCarrito;
-              }
-              break;
-            case 'delete':
-                if (is_numeric(openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt))) {
-                  $id_Producto = openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt);
-                  foreach ($_SESSION['cart'] as $indice => $productosCarrito) {
-                    if ($productosCarrito['id_Producto'] == $id_Producto) {
-                      unset($_SESSION['cart'][$indice]);
-                      $_SESSION['cart'] = array_values($_SESSION['cart']);
-                      echo '
+                              if (!isset($_SESSION['cart'])) {
+                                $productosCarrito = array(
+                                  'id_Producto' => $id_Producto,
+                                  'imagen_Producto' => $imagen_Producto,
+                                  'nom_Producto' => $nom_Producto,
+                                  'price_Producto' => $price_Producto,
+                                  'cantidad_Producto' => $cantidad_producto
+                                );
+                                $_SESSION['cart'][0] = $productosCarrito;
+                              } else {
+                                $numeroProductos = count($_SESSION['cart']);
+                                $productosCarrito = array(
+                                  'id_Producto' => $id_Producto,
+                                  'imagen_Producto' => $imagen_Producto,
+                                  'nom_Producto' => $nom_Producto,
+                                  'price_Producto' => $price_Producto,
+                                  'cantidad_Producto' => $cantidad_producto
+                                );
+                                $_SESSION['cart'][$numeroProductos] = $productosCarrito;
+                              }
+                              break;
+                            case 'delete':
+                              if (is_numeric(openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt))) {
+                                $id_Producto = openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt);
+                                foreach ($_SESSION['cart'] as $indice => $productosCarrito) {
+                                  if ($productosCarrito['id_Producto'] == $id_Producto) {
+                                    unset($_SESSION['cart'][$indice]);
+                                    $_SESSION['cart'] = array_values($_SESSION['cart']);
+                                    echo '
 <script>
 Swal.fire({
 icon: "success",
 title: "¡Producto eliminado del carrito!",
 });
 </script>';
+                                ?>
+                  <script>
+                    console.log(<?php var_dump($_SESSION["cart"]) ?>);
+                  </script><?php
+                                  }
+                                }
+                              } else {
+                            ?> <p>ERROR</p> <?php
+                              }
+                              break;
+                          }
+                        }
                 ?>
-<script>
-console.log(<?php var_dump($_SESSION["cart"]) ?>);
-</script><?php
-                    }
-                  }
-                } else {
-?> <p>ERROR</p> <?php
-                }
-              break;
-          }
-        }
-?>
 
       <!-- foreach($_SESSION['cart'] as $indice=>$productosCarrito){ -->
 
       <?php
 
-      if (isset($_SESSION['cart'])) {
+      if ((!empty($_SESSION['cart']))) {
         $total = 0;
         $subtotalTotal = 0;
       ?>
@@ -264,78 +264,76 @@ console.log(<?php var_dump($_SESSION["cart"]) ?>);
             <div class="col">
               <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
               <br>
-              <form id="procesar-pago" action="#">
-                <div id="carrito" class="table-responsive">
-                  <table class="table" id="lista-compra">
-                    <thead>
-                      <tr style="text-align: center;">
-                        <th scope="col" style="font-weight: bold; color: black;">Imagen</th>
-                        <th scope="col" style="font-weight: bold; color: black;">Producto</th>
-                        <th scope="col" style="font-weight: bold; color: black;">Precio</th>
-                        <th scope="col" style="font-weight: bold; color: black;">Cantidad</th>
-                        <th scope="col" style="font-weight: bold; color: black;">Subtotal</th>
-                        <th scope="col" style="font-weight: bold; color: black;">Eliminar</th>
+              <div id="carrito" class="table-responsive">
+                <table class="table" id="lista-compra">
+                  <thead>
+                    <tr style="text-align: center;">
+                      <th scope="col" style="font-weight: bold; color: black;">Imagen</th>
+                      <th scope="col" style="font-weight: bold; color: black;">Producto</th>
+                      <th scope="col" style="font-weight: bold; color: black;">Precio</th>
+                      <th scope="col" style="font-weight: bold; color: black;">Cantidad</th>
+                      <th scope="col" style="font-weight: bold; color: black;">Subtotal</th>
+                      <th scope="col" style="font-weight: bold; color: black;">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody style="text-align: center;">
+                    <?php
+                    foreach ($_SESSION['cart'] as $indice => $productosCarrito) { ?>
+                      <tr>
+                        <td>
+                          <img src=" <?php echo $productosCarrito['imagen_Producto']; ?>" style="width: 150px; height: 150px;">
+                        </td>
+                        <td>
+                          <?php echo $productosCarrito['nom_Producto']; ?>
+                        </td>
+                        <td>
+                          <?php echo $productosCarrito['price_Producto']; ?> USD * Kilogramo
+                        </td>
+                        <td>
+                          <?php echo $productosCarrito['cantidad_Producto']; ?>
+                        </td>
+                        <td>
+                          <?php $subtotal =  $productosCarrito['cantidad_Producto'] * $productosCarrito['price_Producto'];
+                          $total = $total + $subtotal;
+                          $subtotalTotal = $subtotalTotal + $subtotal;
+                          echo $subtotal; ?>
+                        </td>
+                        <td>
+                          <form action="" method="POST">
+                            <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($productosCarrito['id_Producto'], $method_encrypt, $key_encrypt); ?>">
+                            <button type="submit" name="addProduct" value="delete" class="button button-primary button-winona wow button-sm me-1 mb-2" style="justify-items: center;"><i class="fas fa-trash"></i></button>
+                          </form>
+                        </td>
+                      <?php } ?>
                       </tr>
-                    </thead>
-                    <tbody style="text-align: center;">
+                  </tbody>
+                  <tr>
+                    <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">SUBTOTAL:
                       <?php
-                      foreach ($_SESSION['cart'] as $indice => $productosCarrito) { ?>
-                        <tr>
-                          <td>
-                            <img src=" <?php echo $productosCarrito['imagen_Producto']; ?>" style="width: 150px; height: 150px;">
-                          </td>
-                          <td>
-                            <?php echo $productosCarrito['nom_Producto']; ?>
-                          </td>
-                          <td>
-                            <?php echo $productosCarrito['price_Producto']; ?> USD * Kilogramo
-                          </td>
-                          <td>
-                            <?php echo $productosCarrito['cantidad_Producto']; ?>
-                          </td>
-                          <td>
-                            <?php $subtotal =  $productosCarrito['cantidad_Producto'] * $productosCarrito['price_Producto'];
-                            $total = $total + $subtotal;
-                            $subtotalTotal = $subtotalTotal + $subtotal;
-                            echo $subtotal; ?>
-                          </td>
-                          <td>
-                            <form action="" method="POST">
-                              <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($productosCarrito['id_Producto'], $method_encrypt, $key_encrypt); ?>">
-                              <button type="submit" name="addProduct" value="delete" class="button button-primary button-winona wow button-sm me-1 mb-2" style="justify-items: center;"><i class="fas fa-trash"></i></button>
-                            </form>
-                          </td>
-                        <?php } ?>
-                        </tr>
-                    </tbody>
-                    <tr>
-                      <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">SUBTOTAL:
-                        <?php
-                        $iva = $subtotalTotal * 0.16;
-                        echo $subtotalTotal ?> USD</th>
-                      <th scope="col">
-                        <p id="subtotal"></p>
-                      </th>
-                      <!-- <th scope="col"></th> -->
-                    </tr>
-                    <tr>
-                      <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">IVA: 16%</th>
-                      <th scope="col">
-                        <p id="igv"></p>
-                      </th>
-                      <!-- <th scope="col"></th> -->
-                    </tr>
-                    <tr>
-                      <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">TOTAL: <?php echo $total + $iva ?> USD</th>
-                      <th scope="col">
-                        <p id="total"></p>
-                      </th>
-                      <!-- <th scope="col"></th> -->
-                    </tr>
-                  </table>
-                </div>
+                      $iva = $subtotalTotal * 0.16;
+                      echo $subtotalTotal ?> USD</th>
+                    <th scope="col">
+                      <p id="subtotal"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                  <tr>
+                    <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">IVA: 16%</th>
+                    <th scope="col">
+                      <p id="igv"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                  <tr>
+                    <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">TOTAL: <?php echo $total + $iva ?> USD</th>
+                    <th scope="col">
+                      <p id="total"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                </table>
+              </div>
             </div>
-            </form>
           </div>
         </div>
 
@@ -356,6 +354,7 @@ console.log(<?php var_dump($_SESSION["cart"]) ?>);
         $item->unit_price = 75.56;
         $preference->items = array($item);
         $preference->save();
+        if (isset($_SESSION['cart'])) {
         ?>
 
         <div style="text-align: center;">
@@ -366,6 +365,7 @@ console.log(<?php var_dump($_SESSION["cart"]) ?>);
         <div>
 
         <?php
+        }
       } else {
         echo '
           <script>
