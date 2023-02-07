@@ -32,7 +32,7 @@ $dotenv->load();
 $key = $_ENV['KEY_JWT'];
 $now = strtotime("now");
 
-$consultaLogin = "SELECT nombreUsuario, password, idRol FROM ininbiowebapp.usuario WHERE nombreUsuario = ?";
+$consultaLogin = "SELECT nombreUsuario, password, idRol FROM usuario WHERE nombreUsuario = ?";
 $sentencia = $conn->prepare($consultaLogin);
 $sentencia->bind_param('s',$_POST['nombreUsuario']);
 $sentencia->execute();
