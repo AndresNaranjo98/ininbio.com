@@ -34,22 +34,6 @@ if (isset($_SESSION['rol'])) {
       break;
     default:
   }
-} else {
-  echo '
-  <script>
-    window.onload = function() {
-        what();
-        function what() {
-            Swal.fire({
-              icon: "error",
-              title: "¡No has iniciado sesión!",
-              text: "Debes iniciar sesión para agregar productos al carrito",
-            }).then(function() {
-              window.location = "login.php";
-            });
-  };
-  }
-  </script>';
 }
 
 ?>
@@ -158,8 +142,10 @@ if (isset($_SESSION['rol'])) {
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Productos</a>
+                  <li class="rd-nav-item">
+                    <p class="rd-nav-link" style="cursor: pointer;">Productos</p>
                     <ul class="menu-vertical">
+                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -344,7 +330,7 @@ if (isset($_SESSION['rol'])) {
                           <?php echo $productosCarrito['nom_Producto']; ?>
                         </td>
                         <td>
-                          <?php echo $productosCarrito['price_Producto']; ?> USD * Kilogramo
+                          $<?php echo $productosCarrito['price_Producto']; ?> USD * Kilogramo
                         </td>
                         <td>
                           <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
@@ -356,7 +342,7 @@ if (isset($_SESSION['rol'])) {
                           </button>
                         </td>
                         <td>
-                          <?php $subtotal =  $productosCarrito['cantidad_Producto'] * $productosCarrito['price_Producto'];
+                          $<?php $subtotal =  $productosCarrito['cantidad_Producto'] * $productosCarrito['price_Producto'];
                           $total = $total + $subtotal;
                           $subtotalTotal = $subtotalTotal + $subtotal;
                           echo $subtotal; ?>
@@ -372,7 +358,7 @@ if (isset($_SESSION['rol'])) {
                   </tbody>
                   <tr>
                     <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">SUBTOTAL:
-                      <?php
+                      $<?php
                       $iva = $subtotalTotal * 0.16;
                       echo $subtotalTotal ?> USD</th>
                     <th scope="col">
@@ -388,7 +374,7 @@ if (isset($_SESSION['rol'])) {
                     <!-- <th scope="col"></th> -->
                   </tr>
                   <tr>
-                    <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">TOTAL: <?php echo $total + $iva ?> USD</th>
+                    <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">TOTAL: $<?php echo $total + $iva ?> USD</th>
                     <th scope="col">
                       <p id="total"></p>
                     </th>
@@ -505,70 +491,62 @@ if (isset($_SESSION['rol'])) {
     </section>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
-      <div class="footer-advanced-main">
-        <div class="container">
-          <div class="row row-50">
-            <div class="col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-              <p class="footer-advanced-text">
-                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-              </p>
-            </div>
-            <div class="col-sm-7 col-md-5 col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
-              <!-- Post Inline-->
-              <article class="post-inline">
-                <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
-                <ul class="post-inline-meta">
-                  <li>by Mike Barnes</li>
-                  <li><a href="#">2 days ago</a></li>
-                </ul>
-              </article>
-              <!-- Post Inline-->
-              <article class="post-inline">
-                <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
-                <ul class="post-inline-meta">
-                  <li>by Mike Barnes</li>
-                  <li><a href="#">2 days ago</a></li>
-                </ul>
-              </article>
-            </div>
-            <div class="col-sm-5 col-md-7 col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
-              <div class="row row-x-10" data-lightgallery="group">
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/urea.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
-                    <div class="thumbnail-minimal-caption"></div>
-                  </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
-                    <div class="thumbnail-minimal-caption"> </div>
-                  </a></div>
+        <div class="footer-advanced-main">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
+                <p class="footer-advanced-text">
+                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                </p>
+              </div>
+              <div class="col-sm-7 col-md-5 col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
+                <!-- Post Inline-->
+                <article class="post-inline">
+                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
+                  <ul class="post-inline-meta">
+                    <li>by Mike Barnes</li>
+                    <li><a href="#">2 days ago</a></li>
+                  </ul>
+                </article>
+                <!-- Post Inline-->
+                <article class="post-inline">
+                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
+                  <ul class="post-inline-meta"> 
+                    <li>by Mike Barnes</li>
+                    <li><a href="#">2 days ago</a></li>
+                  </ul>
+                </article>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
+                <div class="row row-x-10" data-lightgallery="group">
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/urea.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
+                      <div class="thumbnail-minimal-caption"> </div></a></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-advanced-aside">
-        <div class="container">
-          <div class="footer-advanced-layout">
-            <div class="list-nav">
+        <div class="footer-advanced-aside">
+          <div class="container">
+            <div class="footer-advanced-layout">
+              <div class="list-nav">
               <p class="icon novi-icon icon-sm link-default fa-brands fa-clock"> Horario</p>
               <p>Lunes a Viernes de 8:00 am. a 6:00 pm.</p>
             </div>

@@ -175,8 +175,10 @@ if (isset($_SESSION['rol'])) {
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Productos</a>
+                  <li class="rd-nav-item">
+                    <p class="rd-nav-link" style="cursor: pointer;">Productos</p>
                     <ul class="menu-vertical">
+                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
