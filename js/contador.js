@@ -1,5 +1,8 @@
 document.body.onload = productosCarritos();
-
+document.getElementById("cerrar").onclick = function() {
+  location.href = 'cerrarSesion.php?logout=true';
+  localStorage.clear();
+}
 
 function productosCarritos(){
     var carrito = document.getElementById('contar');
