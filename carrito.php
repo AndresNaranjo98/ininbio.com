@@ -21,18 +21,35 @@ if (isset($_SESSION['rol'])) {
       // header('location: index.php');
     ?>
       <script>
-        window.onload = function() {
+        window.addEventListener("DOMContentLoaded", function(){
           what();
 
           function what() {
             document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="color : white" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
+            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item active"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart']))?0:count($_SESSION['cart']); ?></span></a></li>';
           };
-        }
+        });
       </script>
-<?php
+  <?php
       break;
     default:
   }
+} else {
+  echo '
+  <script>
+    window.onload = function() {
+        what();
+        function what() {
+            Swal.fire({
+              icon: "error",
+              title: "¡No has iniciado sesión!",
+              text: "Debes iniciar sesión para agregar productos al carrito",
+            }).then(function() {
+              window.location = "login.php";
+            });
+  };
+  }
+  </script>';
 }
 
 ?>
@@ -151,7 +168,7 @@ if (isset($_SESSION['rol'])) {
                   </li>
                   <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <li id="productosInCart" class="rd-nav-item active"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
                   </li>
                 </ul>
               </div>
@@ -173,83 +190,123 @@ if (isset($_SESSION['rol'])) {
       $key_encrypt = $_ENV['KEY_ENCRYPT'];
       $method_encrypt = $_ENV['METHOD_ENCRYPT'];
 
-      if (isset($_POST['addProduct'])) {
+      if (isset($_POST['addProduct']) && !empty($_SESSION['rol'])) {
         switch ($_POST['addProduct']) {
           case 'add':
             if (is_numeric(openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt))) {
               $id_Producto = openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt);
             } else {
       ?> <p>ERROR</p> <?php
-                    }
-                    if (is_string(openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt))) {
-                      $imagen_Producto = openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt);
+    }
+    if (is_string(openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt))) {
+      $imagen_Producto = openssl_decrypt($_POST['imagen'], $method_encrypt, $key_encrypt);
+    } else {
+      ?> <p>ERROR</p> <?php
+            }
+          if (is_string(openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt))) {
+            $nom_Producto = openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt);
+          } else {
+            ?> <p>ERROR</p> <?php
+              }
+              if (is_numeric(openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt))) {
+                $price_Producto = openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt);
+              } else {
+                ?> <p>ERROR</p> <?php
+                              }
+                    if (is_numeric($_POST['cantidad'])) {
+                      $cantidad_producto = $_POST['cantidad'];
                     } else {
                       ?> <p>ERROR</p> <?php
                             }
-                            if (is_string(openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt))) {
-                              $nom_Producto = openssl_decrypt($_POST['nombreProducto'], $method_encrypt, $key_encrypt);
-                            } else {
-                              ?> <p>ERROR</p> <?php
-                            }
-                            if (is_numeric(openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt))) {
-                              $price_Producto = openssl_decrypt($_POST['precio'], $method_encrypt, $key_encrypt);
-                            } else {
-                            ?> <p>ERROR</p> <?php
-                              }
-                              if (is_numeric($_POST['cantidad'])) {
-                                $cantidad_producto = $_POST['cantidad'];
-                              } else {
-                                ?> <p>ERROR</p> <?php
-                              }
 
-                              if (!isset($_SESSION['cart'])) {
-                                $productosCarrito = array(
-                                  'id_Producto' => $id_Producto,
-                                  'imagen_Producto' => $imagen_Producto,
-                                  'nom_Producto' => $nom_Producto,
-                                  'price_Producto' => $price_Producto,
-                                  'cantidad_Producto' => $cantidad_producto
-                                );
-                                $_SESSION['cart'][0] = $productosCarrito;
-                              } else {
-                                $numeroProductos = count($_SESSION['cart']);
-                                $productosCarrito = array(
-                                  'id_Producto' => $id_Producto,
-                                  'imagen_Producto' => $imagen_Producto,
-                                  'nom_Producto' => $nom_Producto,
-                                  'price_Producto' => $price_Producto,
-                                  'cantidad_Producto' => $cantidad_producto
-                                );
-                                $_SESSION['cart'][$numeroProductos] = $productosCarrito;
-                              }
-                              break;
-                            case 'delete':
-                              if (is_numeric(openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt))) {
-                                $id_Producto = openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt);
-                                foreach ($_SESSION['cart'] as $indice => $productosCarrito) {
-                                  if ($productosCarrito['id_Producto'] == $id_Producto) {
-                                    unset($_SESSION['cart'][$indice]);
-                                    $_SESSION['cart'] = array_values($_SESSION['cart']);
-                                    echo '
-<script>
-Swal.fire({
-icon: "success",
-title: "¡Producto eliminado del carrito!",
-});
-</script>';
-                                ?>
-                  <script>
-                    console.log(<?php var_dump($_SESSION["cart"]) ?>);
-                  </script><?php
-                                  }
-                                }
-                              } else {
-                            ?> <p>ERROR</p> <?php
-                              }
-                              break;
+                    if (!isset($_SESSION['cart'])) {
+                      $productosCarrito = array(
+                        'id_Producto' => $id_Producto,
+                        'imagen_Producto' => $imagen_Producto,
+                          'nom_Producto' => $nom_Producto,
+                          'price_Producto' => $price_Producto,
+                          'cantidad_Producto' => $cantidad_producto
+                        );
+                        $_SESSION['cart'][0] = $productosCarrito;
+                      } else {
+                        $id_ProdCart = array_column($_SESSION['cart'], "id_Producto");
+                        if (in_array($id_Producto, $id_ProdCart)) {
+                          echo '<script>alert("¡Este producto ya se encuentra en tu carrito!");</script>';
+                        } else {
+                      // $idPro = 0;
+                      // $carrito = $_SESSION['cart'];
+                      // for($i = 0 ; $i < count($carrito); $i++)
+                      // {
+                      //   $idPro = $carrito[$i]['id_Producto'];
+                      // }
+                      // if(in_array($id_Producto, $idPro)){
+                      //   echo 'ya existe este producto en el carrito';
+                      // } else {
+                // else {
+                // $ids = array();
+                          // $id_ProdCart = array_column($_SESSION['cart'],"id_Producto");
+                          // if(in_array($id_Producto, $id_ProdCart)){
+                          // for($i = 0 ; $i < count($_SESSION['cart']); $i++)
+                          // {
+                          // $ids = $_SESSION['cart'][$i]['id_Producto'];
+                          // echo $ids;
+                          // if(in_array($id_Producto, $ids)){
+                          //   // $_SESSION['cart'][$i]['cantidad_Producto'] += $_POST['cantidad'];
+                          //   echo 'HOLAAAAAAA';
+                          // }
+                          // echo $ids;
+                          // $_SESSION['cart'][$i]['cantidad_Producto'] += $_POST['cantidad'];
+                          // }
+                              $numeroProductos = count($_SESSION['cart']);
+                              $productosCarrito = array(
+                                'id_Producto' => $id_Producto,
+                                'imagen_Producto' => $imagen_Producto,
+                                'nom_Producto' => $nom_Producto,
+                                'price_Producto' => $price_Producto,
+                                'cantidad_Producto' => $cantidad_producto
+                              );
+                              $_SESSION['cart'][$numeroProductos] = $productosCarrito;
+                              // }
+                              //   } else{
+                              //   $numeroProductos = count($_SESSION['cart']);
+                              //   $productosCarrito = array(
+                              //     'id_Producto' => $id_Producto,
+                              //     'imagen_Producto' => $imagen_Producto,
+                              //     'nom_Producto' => $nom_Producto,
+                              //     'price_Producto' => $price_Producto,
+                              //     'cantidad_Producto' => $cantidad_producto
+                              //   );
+                              //   $_SESSION['cart'][$numeroProductos] = $productosCarrito;
+                            }
                           }
-                        }
-                ?>
+                          break;
+                        case 'delete':
+                          if (is_numeric(openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt))) {
+                            $id_Producto = openssl_decrypt($_POST['id'], $method_encrypt, $key_encrypt);
+                            foreach ($_SESSION['cart'] as $indice => $productosCarrito) {
+                              if ($productosCarrito['id_Producto'] == $id_Producto) {
+                        unset($_SESSION['cart'][$indice]);
+                        $_SESSION['cart'] = array_values($_SESSION['cart']);
+                        echo '
+                          <script>
+                          Swal.fire({
+                          icon: "success",
+                          title: "¡Producto eliminado del carrito!",
+                          });
+                          </script>';
+                        ?>
+      <script>
+        console.log(<?php var_dump($_SESSION["cart"]) ?>);
+      </script><?php
+                }
+          }
+        } else {
+            ?> <p>ERROR</p> <?php
+              }
+              break;
+          }
+        }
+        ?>
 
       <!-- foreach($_SESSION['cart'] as $indice=>$productosCarrito){ -->
 
@@ -290,7 +347,13 @@ title: "¡Producto eliminado del carrito!",
                           <?php echo $productosCarrito['price_Producto']; ?> USD * Kilogramo
                         </td>
                         <td>
-                          <?php echo $productosCarrito['cantidad_Producto']; ?>
+                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
+                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
+                          </button>
+                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="<?php echo $productosCarrito['cantidad_Producto']; ?>">
+                          <button type="button" style="width: 30px; height: 30px;" data-action="increment">
+                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
+                          </button>
                         </td>
                         <td>
                           <?php $subtotal =  $productosCarrito['cantidad_Producto'] * $productosCarrito['price_Producto'];
@@ -337,12 +400,55 @@ title: "¡Producto eliminado del carrito!",
           </div>
         </div>
 
+        <script>
+          function decrement(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+              'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if (value > 0) {
+              value--;
+              target.value = value;
+            }
+            if (value <= 0) {
+              target.value = 1;
+            }
+          }
+
+          function increment(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+              'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value++;
+            target.value = value;
+          }
+
+          const decrementButtons = document.querySelectorAll(
+            `button[data-action="decrement"]`
+          );
+
+          const incrementButtons = document.querySelectorAll(
+            `button[data-action="increment"]`
+          );
+
+          decrementButtons.forEach(btn => {
+            btn.addEventListener("click", decrement);
+          });
+
+          incrementButtons.forEach(btn => {
+            btn.addEventListener("click", increment);
+          });
+        </script>
+
         <?php
         // SDK de Mercado Pago
         require __DIR__ .  '/vendor/autoload.php';
 
         // Agrega credenciales
-        MercadoPago\SDK::setAccessToken('TEST-8750919789569254-020211-3a8313adf7d3e8c5232251243ce114e8-359662634');
+        MercadoPago\SDK::setAccessToken('');
 
         // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
@@ -351,18 +457,18 @@ title: "¡Producto eliminado del carrito!",
         $item = new MercadoPago\Item();
         $item->title = 'Chaqueta';
         $item->quantity = 1;
-        $item->unit_price = 75.56;
+        $item->unit_price = 10.00;
         $preference->items = array($item);
         $preference->save();
         if (isset($_SESSION['cart'])) {
         ?>
 
-        <div style="text-align: center;">
-          <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
-          </script>
-        </div>
+          <div style="text-align: center;">
+            <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
+            </script>
+          </div>
 
-        <div>
+          <div>
 
         <?php
         }
@@ -382,123 +488,131 @@ title: "¡Producto eliminado del carrito!",
 
         <!-- <input type="number" onchange="calcularSubtotal(this.value);" min='1'> -->
 
-        </div>
+          </div>
 
-        <p id="resultado" style="font-weight: bold; color: black;">
+          <p id="resultado" style="font-weight: bold; color: black;">
 
-        </p>
+          </p>
 
 
-        <script>
-          function calcularSubtotal(valor) {
-            var valor2 = valor * 100
-            document.getElementById("resultado").innerHTML = valor2;
-          }
-        </script>
+          <script>
+            function calcularSubtotal(valor) {
+              var valor2 = valor * 100
+              document.getElementById("resultado").innerHTML = valor2;
+            }
+          </script>
 
     </section>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
-        <div class="footer-advanced-main">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-                </p>
-              </div>
-              <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
-                <!-- Post Inline-->
-                <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
-                  <ul class="post-inline-meta">
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
-                  </ul>
-                </article>
-                <!-- Post Inline-->
-                <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
-                  <ul class="post-inline-meta"> 
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
-                  </ul>
-                </article>
-              </div>
-              <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
-                <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/urea.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"> </div></a></div>
-                </div>
+      <div class="footer-advanced-main">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
+              <p class="footer-advanced-text">
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+              </p>
+            </div>
+            <div class="col-sm-7 col-md-5 col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
+              <!-- Post Inline-->
+              <article class="post-inline">
+                <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
+                <ul class="post-inline-meta">
+                  <li>by Mike Barnes</li>
+                  <li><a href="#">2 days ago</a></li>
+                </ul>
+              </article>
+              <!-- Post Inline-->
+              <article class="post-inline">
+                <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
+                <ul class="post-inline-meta">
+                  <li>by Mike Barnes</li>
+                  <li><a href="#">2 days ago</a></li>
+                </ul>
+              </article>
+            </div>
+            <div class="col-sm-5 col-md-7 col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
+              <div class="row row-x-10" data-lightgallery="group">
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/urea.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                    <div class="thumbnail-minimal-caption"> </div>
+                  </a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout">
-              <div class="list-nav">
+      </div>
+      <div class="footer-advanced-aside">
+        <div class="container">
+          <div class="footer-advanced-layout">
+            <div class="list-nav">
               <p class="icon novi-icon icon-sm link-default fa-brands fa-clock"> Horario</p>
               <p>Lunes a Viernes de 8:00 am. a 6:00 pm.</p>
             </div>
-              <!-- <div>
+            <!-- <div>
                 <ul class="list-nav"> 
                   <li><a href="index.html">Inicio</a></li>
                   <li><a href="about-us.html">Nosotros</a></li>
                   <li><a href="typography.php">Productos y Servicios</a></li>
                 </ul>
               </div> -->
-              <div>
-                <ul class="foter-social-links list-inline list-inline-md">
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
-                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
-                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
-                </ul>
-              </div>
+            <div>
+              <ul class="foter-social-links list-inline list-inline-md">
+                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
+                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
+                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
+                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
+                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
+                <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
+              </ul>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <hr />
+      </div>
+      <div class="footer-advanced-aside">
         <div class="container">
-          <hr/>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-              <!-- Rights-->
-              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-            </div>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+            <!-- Rights-->
+            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="card" style="--i:url(img1.jpg)">
+      <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
           </div>
       </div> -->
-      </footer>
+    </footer>
   </div>
 
   <!-- MODAL LOGOUTT -->
@@ -538,41 +652,41 @@ title: "¡Producto eliminado del carrito!",
   <script src="js\contador.js"></script>
 
 
-<link rel="stylesheet" href="css\whats.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css\whats.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
-<link rel="stylesheet" href="css\whats2.css">
-<div class="nav-bottom">
-         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-          <div class="popup-whatsapp fadeIn">
-              <div class="content-whatsapp -top"><button type="button" class="closePopup">
-                    <i class="material-icons icon-font-color">close</i>
-                  </button> 
-                
-                 <p>  <img src="images\secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
-                 
-              </div>
-              <div class="content-whatsapp -bottom">
-                <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-                 
-                 
-                
-        
-                  <button class="send-msPopup" id="send-btn" type="button">
-                      <i class="material-icons icon-font-color--black">send</i>
-                  </button>
+  <link rel="stylesheet" href="css\whats2.css">
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="popup-whatsapp fadeIn">
+      <div class="content-whatsapp -top"><button type="button" class="closePopup">
+          <i class="material-icons icon-font-color">close</i>
+        </button>
 
-              </div>
-          </div>
-          <button type="button" id="whats-openPopup" class="whatsapp-button">
-              <div class="float" >
-<i class="fa fa-whatsapp my-float"></i></div>
-          </button>
-          <div class="circle-anime"></div>
+        <p> <img src="images\secretary.png" width="50"> Hola, ¿en que podemos ayudarle? </p>
+
       </div>
-      <script  src="js\script2.js"></script>
+      <div class="content-whatsapp -bottom">
+        <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+
+
+
+
+        <button class="send-msPopup" id="send-btn" type="button">
+          <i class="material-icons icon-font-color--black">send</i>
+        </button>
+
+      </div>
+    </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+      <div class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+      </div>
+    </button>
+    <div class="circle-anime"></div>
+  </div>
+  <script src="js\script2.js"></script>
 
 </body>
 

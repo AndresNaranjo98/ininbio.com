@@ -33,7 +33,6 @@ if (isset($_SESSION['rol'])) {
     default:
   }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -290,12 +289,12 @@ if (isset($_SESSION['rol'])) {
                       <br>
                       <br>
                       <p class="fa-sharp fa-solid fa-cart-plus fa-2x iconoProducto" id="Click" style=" color: #71c500; cursor: pointer;"></p>
-                      <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
+                      <p class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></p>
                     </div>
                   </div>
-                  <h4 class="post-modern-title"><a class="post-modern-title"><?php echo $row[$i][1];?></a></h4>
+                  <h4 class="post-modern-title"><p class="post-modern-title"><?php echo $row[$i][1];?></p></h4>
                   <ul class="post-modern-meta">
-                    <li><a class="button-winona"><?php echo $row[$i][3]; ?> USD * kg</a></li>
+                    <li><p style="color: #2d9082;"><?php echo $row[$i][3]; ?> USD * kg</p></li>
                     <li style="text-transform: capitalize; color: #71c500;"><?php echo $row[$i][6]; ?> </li>
                   </ul>
                   <p style="font-weight: normal;">Categoria: <?php echo $row[$i][5]; ?> </p>
@@ -322,7 +321,7 @@ if (isset($_SESSION['rol'])) {
                         <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
                           <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
                         </button>
-                        <input id="cantidad" name="cantidad" style="width: 50px;" value="1">
+                        <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
                         <button type="button" style="width: 30px; height: 30px;" data-action="increment">
                           <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
                         </button>
@@ -613,7 +612,7 @@ if (isset($_SESSION['rol'])) {
         </div>
         <div class="footer-advanced-aside">
           <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
+            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
               <!-- Rights-->
               <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
               <p class="rights" style="color: #2c9182;">www.ininbio.com</p>

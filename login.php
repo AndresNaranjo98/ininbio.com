@@ -205,11 +205,11 @@ if (isset($_SESSION['rol'])) {
       <form method="post" action="procesoLogin.php" style="text-align: center;">
         <h3 class="font-weight-bold wow-outer"><span class="wow slideInDown" style="text-align:  center;color: black;">Inicia Sesión</span></h3>
         <div class="row wow slideInUp">
-          <div class="col-md-6" style="margin-left: 23%; margin-right: 15%;">
-            <div class="form-group">
+          <div class="col-md-12">
+            <div class="form-group col-lg-12">
               <input type="text" name="nombreUsuario" class="form-control" placeholder="Nombre de Usuario" required />
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-12">
               <!-- <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea> -->
               <input type="password" name="password" class="form-control" placeholder="Contraseña" required />
             </div>
@@ -313,7 +313,7 @@ if (isset($_SESSION['rol'])) {
         </div>
         <div class="footer-advanced-aside">
           <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
+            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
               <!-- Rights-->
               <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
               <p class="rights" style="color: #2c9182;">www.ininbio.com</p>

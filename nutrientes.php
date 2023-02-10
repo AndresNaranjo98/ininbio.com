@@ -264,7 +264,7 @@ if (isset($_SESSION['rol'])) {
                           <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
                           </button>
-                          <input id="cantidad" name="cantidad" style="width: 50px;" value="1">
+                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
                           <button type="button" style="width: 30px; height: 30px;" data-action="increment">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
                           </button>
@@ -419,7 +419,7 @@ if (isset($_SESSION['rol'])) {
         </div>
         <div class="footer-advanced-aside">
           <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
+            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
               <!-- Rights-->
               <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
               <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
