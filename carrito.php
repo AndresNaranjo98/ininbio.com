@@ -21,19 +21,32 @@ if (isset($_SESSION['rol'])) {
       // header('location: index.php');
     ?>
       <script>
-        window.addEventListener("DOMContentLoaded", function(){
-          what();
-
+        window.onload = what;
           function what() {
             document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="color : white" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
             document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item active"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart']))?0:count($_SESSION['cart']); ?></span></a></li>';
           };
-        });
       </script>
   <?php
       break;
     default:
   }
+}else {
+  echo '
+  <script>
+    window.onload = function() {
+        what();
+        function what() {
+            Swal.fire({
+              icon: "error",
+              title: "¡No has iniciado sesión!",
+              text: "Debes iniciar sesión para agregar productos al carrito",
+            }).then(function() {
+              window.location = "login.php";
+            });
+  };
+  }
+  </script>';
 }
 
 ?>

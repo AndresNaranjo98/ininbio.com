@@ -25,6 +25,7 @@ if (isset($_SESSION['rol'])) {
 
           function what() {
             document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="color : white" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
+            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item active"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart'])) ? 0 : count($_SESSION['cart']); ?></span></a></li>';
           };
         }
       </script>
@@ -150,7 +151,7 @@ if (isset($_SESSION['rol'])) {
                   </li>
                   <li id="loginRegister" style="cursor: pointer;" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
                   </li>
                 </ul>
               </div>
@@ -196,7 +197,7 @@ if (isset($_SESSION['rol'])) {
           ?>
             <div class="pr">
               <div class="imghere">
-                <img src="<?php echo $row[$i][6]; ?>" alt="">
+                <img src="<?php echo $row[$i][4]; ?>" alt="">
               </div>
               <div style="text-align: center;">
                 <div class="name"> <?php echo $row[$i][1]; ?> </div>
