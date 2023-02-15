@@ -222,26 +222,26 @@ if(isset($_SESSION['rol'])){
                 </p>
               </div>
               <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
-                <!-- Post Inline-->
-                <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
-                  <ul class="post-inline-meta">
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
-                  </ul>
-                </article>
-                <!-- Post Inline-->
-                <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
-                  <ul class="post-inline-meta"> 
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
-                  </ul>
-                </article>
+                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+              </span>
+              <p class="footer-advanced-text">
+                Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
+              </p>
+              <div style="margin-top: 20px;">
+              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
+                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
+                </ul>
               </div>
+            </div>
               <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
+                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
                 <div class="row row-x-10" data-lightgallery="group">
                   <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
@@ -260,34 +260,6 @@ if(isset($_SESSION['rol'])){
                   <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
                       <div class="thumbnail-minimal-caption"> </div></a></div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout">
-              <div class="list-nav">
-              <p class="icon novi-icon icon-sm link-default fa-brands fa-clock"> Horario</p>
-              <p>Lunes a Viernes de 8:00 am. a 6:00 pm.</p>
-            </div>
-              <!-- <div>
-                <ul class="list-nav"> 
-                  <li><a href="index.html">Inicio</a></li>
-                  <li><a href="about-us.html">Nosotros</a></li>
-                  <li><a href="typography.php">Productos y Servicios</a></li>
-                </ul>
-              </div> -->
-              <div>
-                <ul class="foter-social-links list-inline list-inline-md">
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
-                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
-                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
-                </ul>
               </div>
             </div>
           </div>
@@ -311,7 +283,7 @@ if(isset($_SESSION['rol'])){
               <a href="#">Ver Detalles</a>
           </div>
       </div> -->
-      </footer>
+    </footer>
 </div>
 
 

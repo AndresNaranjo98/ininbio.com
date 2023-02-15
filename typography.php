@@ -26,7 +26,7 @@ if (isset($_SESSION['rol'])) {
 
           function what() {
             document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="color : white" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
-            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item active"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart'])) ? 0 : count($_SESSION['cart']); ?></span></a></li>';
+            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart'])) ? 0 : count($_SESSION['cart']); ?></span></a></li>';
           };
         }
       </script>
@@ -56,8 +56,8 @@ if (isset($_SESSION['rol'])) {
   <link rel="stylesheet" href="css/whats2.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
- <style>
+
+  <style>
     .ie-panel {
       display: none;
       background: #212121;
@@ -148,7 +148,7 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer;">Productos</p>
                     <ul class="menu-vertical">
-                    <li class="rd-nav-item active"><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -201,64 +201,64 @@ if (isset($_SESSION['rol'])) {
             $idPro = $row[$i][0];
             // print_r($row[$i]);
 
-        ?>
-          <div class="pr">
-            <div class="imghere">
-              <img src="<?php echo $row[$i][4]; ?>" alt="">
+          ?>
+            <div class="pr">
+              <div class="imghere">
+                <img src="<?php echo $row[$i][4]; ?>" alt="">
+              </div>
+              <div style="text-align: center;">
+                <div class="name"> <?php echo $row[$i][1]; ?> </div>
+                <div class="job"><?php echo $row[$i][3]; ?> USD</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fa-solid fa-cart-shopping" style=" padding-top: 25%;"></i></a>
+                <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i class="fa-solid fa-info" style=" padding-top: 25%;"></i></a>
+              </div>
             </div>
-            <div style="text-align: center;">
-              <div class="name"> <?php echo $row[$i][1]; ?> </div>
-              <div class="job"><?php echo $row[$i][3]; ?> USD</div>
-            </div>
-            <div class="media-icons">
-              <a href="#"><i class="fa-solid fa-cart-shopping" style=" padding-top: 25%;"></i></a>
-              <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i class="fa-solid fa-info" style=" padding-top: 25%;"></i></a>
-            </div>
-          </div>
 
-          <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <div class="cerrar" aria-hidden="true">&times;</div>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
-                  <aside style="font-weight: normal; color: black;"><?php echo $row[$i][2]; ?></aside><br>
-                  <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                    <form action="carrito.php" method="post">
-                      <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
-                        <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
-                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
-                        </button>
-                        <input id="cantidad" name="cantidad" style="width: 50px;" value="1">
-                        <button type="button" style="width: 30px; height: 30px;" data-action="increment">
-                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
-                        </button>
-                      </p>
+            <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
                   </div>
+                  <div class="modal-body">
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
+                    <aside style="font-weight: normal; color: black;"><?php echo $row[$i][2]; ?></aside><br>
+                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                      <form action="carrito.php" method="post">
+                        <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
+                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
+                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
+                          </button>
+                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
+                          <button type="button" style="width: 30px; height: 30px;" data-action="increment">
+                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
+                          </button>
+                        </p>
+                    </div>
 
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
-                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                  <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
-                  </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
+                    <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        <?php
-        }
-        ?>
+          <?php
+          }
+          ?>
+        </div>
       </div>
-    </div>
     </section>
     <br>
 
@@ -316,36 +316,36 @@ if (isset($_SESSION['rol'])) {
                 </p>
               </div>
               <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
-                <!-- Post Inline-->
-                <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
-                  <ul class="post-inline-meta">
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
-                  </ul>
-                </article>
-                <!-- Post Inline-->
-                <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
-                  <ul class="post-inline-meta"> 
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
-                  </ul>
-                </article>
+                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+              </span>
+              <p class="footer-advanced-text">
+                Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
+              </p>
+              <div style="margin-top: 20px;">
+              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
+                  <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
+                </ul>
               </div>
+            </div>
               <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
+                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
                 <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/di-phosta.png" alt=""/>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-fast.png" alt=""/>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/nutri-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/nutri-ferm.png" alt=""/>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/vinimax.png" alt=""/>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/urea.png" alt=""/>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
                   <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
@@ -358,48 +358,20 @@ if (isset($_SESSION['rol'])) {
             </div>
           </div>
         </div>
+        <div class="container">
+          <hr/>
+        </div>
         <div class="footer-advanced-aside">
           <div class="container">
-            <div class="footer-advanced-layout">
-              <div class="list-nav">
-              <p class="icon novi-icon icon-sm link-default fa-brands fa-clock"> Horario</p>
-              <p>Lunes a Viernes de 8:00 am. a 6:00 pm.</p>
-            </div>
-            <!-- <div>
-                <ul class="list-nav"> 
-                  <li><a href="index.html">Inicio</a></li>
-                  <li><a href="about-us.html">Nosotros</a></li>
-                  <li><a href="typography.php">Productos y Servicios</a></li>
-                </ul>
-              </div> -->
-            <div>
-              <ul class="foter-social-links list-inline list-inline-md">
-                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
-                <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
-                <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
-                <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
-              </ul>
+            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
+              <!-- Rights-->
+              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <hr />
-      </div>
-      <div class="footer-advanced-aside">
-        <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
-            <!-- Rights-->
-            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- <div class="card" style="--i:url(img1.jpg)">
+        <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
