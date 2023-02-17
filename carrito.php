@@ -267,9 +267,9 @@ if (isset($_SESSION['rol'])) {
                                                                                       }
                                                                                     } else {
                             ?> <p>ERROR</p> <?php
-                                            }
-                                            break;
-                                        }
+                                                                                    }
+                                                                                    break;
+                                                                                }
                                             ?>
         <script>
           window.onload = contadorProductos;
@@ -317,30 +317,29 @@ if (isset($_SESSION['rol'])) {
                           <?php echo $productosCarrito['nom_Producto']; ?>
                         </td>
                         <td>
-                          <p id="precioProducto<?php echo $productosCarrito['id_Producto']; ?>"><?php echo $productosCarrito['price_Producto']; ?></p>
+                          <p id="<?php echo $productosCarrito['id_Producto']; ?>"><?php echo $productosCarrito['price_Producto']; ?></p>
                         </td>
                         <td>
-                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement" onclick="calcular(<?php echo $productosCarrito['price_Producto']; ?>,document.getElementById('cantidad').value)">
+                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement" onclick="calcularSubtotal(<?php echo $productosCarrito['price_Producto']; ?>, document.getElementById('cantidad<?php echo $productosCarrito['id_Producto']; ?>').value, 'subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>')">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
                           </button>
-                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="<?php echo $productosCarrito['cantidad_Producto']; ?>">
-                          <button type="button" style="width: 30px; height: 30px;" data-action="increment" onclick="calcular(<?php echo $productosCarrito['price_Producto']; ?>,document.getElementById('cantidad').value)">
+                          <input id="cantidad<?php echo $productosCarrito['id_Producto']; ?>" style="width: 50px; text-align: center;" value="<?php echo $productosCarrito['cantidad_Producto']; ?>">
+                          <button type="button" style="width: 30px; height: 30px;" data-action="increment" onclick="calcularSubtotal(<?php echo $productosCarrito['price_Producto']; ?>, document.getElementById('cantidad<?php echo $productosCarrito['id_Producto']; ?>').value, 'subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>')">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
                           </button>
                         </td>
-                        <script>
-                          function calcular(precioPorProducto, cantidadPorProducto) {
-                            console.log(precioPorProducto);
-                            console.log(cantidadPorProducto);
-                            var subtotalIndividual = precioPorProducto * cantidadPorProducto;
-                            document.getElementById("subtotalProducto").innerHTML = subtotalIndividual;
-                          }
-                          // var precio = document.getElementById("precioProducto<?php echo $productosCarrito['id_Producto']; ?>").innerHTML;
-                          // console.log(precio);
-                        </script>
+
                         <td>
-                          <p id="subtotalProducto" style="font-weight: normal;"><?php echo '$' . $productosCarrito['cantidad_Producto'] * $productosCarrito['price_Producto']; ?></p>
+                          <p id="subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>" style="font-weight: normal;"></p>
                         </td>
+
+                        <script>
+                          function calcularSubtotal(precio, cantidad, idSubtotal) {
+                            var subtotalPorProducto = precio * cantidad;
+                            document.getElementById(idSubtotal).innerText = subtotalPorProducto;
+                          }
+                        </script>
+
                         <td>
                           <form action="" method="POST">
                             <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($productosCarrito['id_Producto'], $method_encrypt, $key_encrypt); ?>">
@@ -349,6 +348,7 @@ if (isset($_SESSION['rol'])) {
                         </td>
                       <?php } ?>
                       </tr>
+
                   </tbody>
                   <tr>
                     <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">
@@ -466,38 +466,26 @@ if (isset($_SESSION['rol'])) {
 
           </div>
 
-          <p id="resultado" style="font-weight: bold; color: black;">
-
-          </p>
-
-
-          <script>
-            function calcularSubtotal(valor) {
-              var valor2 = valor * 100
-              document.getElementById("resultado").innerHTML = valor2;
-            }
-          </script>
-
     </section>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
-        <div class="footer-advanced-main">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-                </p>
-              </div>
-              <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+      <div class="footer-advanced-main">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
+              <p class="footer-advanced-text">
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+              </p>
+            </div>
+            <div class="col-sm-7 col-md-5 col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
               </span>
               <p class="footer-advanced-text">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -509,44 +497,52 @@ if (isset($_SESSION['rol'])) {
                 </ul>
               </div>
             </div>
-              <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
-                <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"> </div></a></div>
-                </div>
+            <div class="col-sm-5 col-md-7 col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
+              <div class="row row-x-10" data-lightgallery="group">
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                    <div class="thumbnail-minimal-caption"> </div>
+                  </a></div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <hr />
+      </div>
+      <div class="footer-advanced-aside">
         <div class="container">
-          <hr/>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-              <!-- Rights-->
-              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-            </div>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+            <!-- Rights-->
+            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="card" style="--i:url(img1.jpg)">
+      <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
