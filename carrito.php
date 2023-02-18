@@ -320,25 +320,20 @@ if (isset($_SESSION['rol'])) {
                           <p id="<?php echo $productosCarrito['id_Producto']; ?>"><?php echo $productosCarrito['price_Producto']; ?></p>
                         </td>
                         <td>
-                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement" onclick="calcularSubtotal(<?php echo $productosCarrito['price_Producto']; ?>, document.getElementById('cantidad<?php echo $productosCarrito['id_Producto']; ?>').value, 'subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>')">
+                          <button type="button" id="restaProducto" style="width: 30px; height: 30px;" data-action="decrement" onclick="restarSubtotal(<?php echo $productosCarrito['price_Producto']; ?>, document.getElementById('cantidad<?php echo $productosCarrito['id_Producto']; ?>').value, 'subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>', 'subtotalTotal<?php echo $productosCarrito['id_Producto']; ?>')">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
                           </button>
                           <input id="cantidad<?php echo $productosCarrito['id_Producto']; ?>" style="width: 50px; text-align: center;" value="<?php echo $productosCarrito['cantidad_Producto']; ?>">
-                          <button type="button" style="width: 30px; height: 30px;" data-action="increment" onclick="calcularSubtotal(<?php echo $productosCarrito['price_Producto']; ?>, document.getElementById('cantidad<?php echo $productosCarrito['id_Producto']; ?>').value, 'subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>')">
+                          <button type="button" id="sumaProducto" style="width: 30px; height: 30px;" data-action="increment" onclick="sumarSubtotal(<?php echo $productosCarrito['price_Producto']; ?>, document.getElementById('cantidad<?php echo $productosCarrito['id_Producto']; ?>').value, 'subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>', 'subtotalTotal<?php echo $productosCarrito['id_Producto']; ?>')">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
                           </button>
                         </td>
 
                         <td>
-                          <p id="subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>" style="font-weight: normal;"></p>
+                          <p id="subtotalProducto<?php echo $productosCarrito['id_Producto']; ?>" style="font-weight: normal;">
+                            <?php echo $productosCarrito['price_Producto'] * $productosCarrito['cantidad_Producto']; ?>
+                          </p>
                         </td>
-
-                        <script>
-                          function calcularSubtotal(precio, cantidad, idSubtotal) {
-                            var subtotalPorProducto = precio * cantidad;
-                            document.getElementById(idSubtotal).innerText = subtotalPorProducto;
-                          }
-                        </script>
 
                         <td>
                           <form action="" method="POST">
@@ -352,7 +347,8 @@ if (isset($_SESSION['rol'])) {
                   </tbody>
                   <tr>
                     <th colspan="6" scope="col" class="text-right" style="color: black; font-weight: bold">
-                      <p id="subtotalTotal">SUBTOTAL: $<?php echo $subtotalTotal = $subtotalTotal + $subtotal; ?></p>
+                      <p id="subtotalTotal<?php echo $productosCarrito['id_Producto']; ?>">SUBTOTAL: </script>
+                      </p>
                     </th>
                     <!-- <th scope="col"></th> -->
                   </tr>
@@ -371,6 +367,30 @@ if (isset($_SESSION['rol'])) {
                     <!-- <th scope="col"></th> -->
                   </tr>
                 </table>
+                <script>
+                  var subtotalTotal = 0;
+
+                  function sumarSubtotal(precio, cantidad, idSubtotal, idSubtotalTotal) {
+                    cantidad++;
+                    var subtotalPorProducto = (precio * cantidad);
+                    document.getElementById(idSubtotal).innerText = subtotalPorProducto;
+                    subtotalTotal += subtotalPorProducto;
+                    // document.getElementById(idSubtotalTotal).innerText = subtotalTotal;
+                    console.log(document.getElementById(idSubtotal).innerText);
+                  }
+
+                  function restarSubtotal(precio, cantidad, idSubtotal, idSubtotalTotal) {
+                    cantidad--;
+                    var subtotalPorProducto = (precio * cantidad);
+                    document.getElementById(idSubtotal).innerText = subtotalPorProducto;
+                    subtotalTotal += subtotalPorProducto;
+                    // document.getElementById(idSubtotalTotal).innerText = subtotalTotal;
+                    console.log(document.getElementById(idSubtotal).innerText);
+                    if (subtotalPorProducto == 0) {
+                      document.getElementById(idSubtotal).innerText = precio;
+                    }
+                  }
+                </script>
               </div>
             </div>
           </div>

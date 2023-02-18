@@ -298,7 +298,7 @@ if (isset($_SESSION['rol'])) {
                   <h4 class="post-modern-title"><p class="post-modern-title"><?php echo $row[$i][1];?></p></h4>
                   <ul class="post-modern-meta">
                     <li><p style="color: #2c9182;"><?php echo $row[$i][3]; ?> USD * kg</p></li>
-                    <li style="text-transform: capitalize; color: #71c500;"><?php echo $row[$i][6]; ?> </li>
+                    <li style="text-transform: capitalize; color: #71c500;"><?php echo $row[$i][4]; ?> </li>
                   </ul>
                   <p style="font-weight: normal;">Categoria: <?php echo $row[$i][5]; ?> </p>
                 </tr>
@@ -334,7 +334,7 @@ if (isset($_SESSION['rol'])) {
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                   <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
                   <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
