@@ -24,7 +24,7 @@ if (isset($_SESSION['rol'])) {
           what();
 
           function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="color : white" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
+            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="cursor: pointer;" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
             document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart']))?0:count($_SESSION['cart']); ?></span></a></li>';
           };
         }
@@ -127,32 +127,32 @@ if (isset($_SESSION['rol'])) {
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-                <ul class="rd-navbar-nav menu-horizontal">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Inicio</a>
+              <ul class="rd-navbar-nav menu-horizontal">
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item">
-                    <p class="rd-nav-link" style="cursor: pointer;">Nosotros</p>
-                    <ul class="menu-vertical">
-                      <li> <a class="rd-nav-link" href="about-us.php">Acerca de Nosotros</a></li>
+                  <li class="rd-nav-item" >
+                    <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <ul class="menu-vertical" style="text-align: center;">
+                      <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
                       <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
+                      <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item">
-                    <p class="rd-nav-link" style="cursor: pointer;">Productos</p>
-                    <ul class="menu-vertical">
+                  <li class="rd-nav-item" >
+                    <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
+                    <ul class="menu-vertical" style="text-align: center;">
                     <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="antiadherentes.php">Antiadherentes</a></li>
+                      <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" style="cursor: pointer;" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
-                  </li>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
                 </ul>
               </div>
             </div>
@@ -197,7 +197,7 @@ if (isset($_SESSION['rol'])) {
           ?>
             <div class="pr">
               <div class="imghere">
-                <img src="<?php echo $row[$i][4]; ?>" alt="">
+                <img src="<?php echo $row[$i][6]; ?>" alt="">
               </div>
               <div style="text-align: center;">
                 <div class="name"> <?php echo $row[$i][1]; ?> </div>
@@ -206,7 +206,7 @@ if (isset($_SESSION['rol'])) {
               <div class="media-icons">
               <form action="carrito.php" method="post">
                   <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="cantidad" id="cantidad" value="1">
@@ -227,7 +227,7 @@ if (isset($_SESSION['rol'])) {
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
                     <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
                     <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
                     <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
@@ -246,7 +246,7 @@ if (isset($_SESSION['rol'])) {
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                     <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
                     <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                     <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
                     <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
@@ -327,7 +327,7 @@ if (isset($_SESSION['rol'])) {
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/watch?v=k3uHN6LZpg8"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->

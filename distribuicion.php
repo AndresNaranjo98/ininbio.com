@@ -41,7 +41,7 @@ if (isset($_SESSION['rol'])) {
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Ininbio/Acerca de Nosotros</title>
+  <title>Ininbio/Productos</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -133,11 +133,11 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
+                      <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
                       <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
-                      <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
                   <li class="rd-nav-item" >
@@ -161,183 +161,9 @@ if (isset($_SESSION['rol'])) {
       </div>
     </header>
 
-    <!-- Working at CaseCraft-->
-    <section class="section novi-background section-xl">
-    <div class="fondoAbout">
-        <p class="tituloAbout">
-          ¿Quiénes Somos?
-        </p>
-      </div>
-      <div class="container" style="margin-top: 30px;">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <p class="about-subtitle">ININBIO</p>
-            <p>Inovaciones Industriales biotecnológicas</p>
-            <br>
-            <p>Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
-              levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de
-              fórmulas novedosas de acuerdo a sus necesidades.</p>
-            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/main-logo.png" alt="" width="300" height="250" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Advantages and Achievements-->
-    <section class="section novi-background section-md text-center bg-gray-100">
-      <div class="container">
-        <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Ideología y Ética Empresarial</span></h3>
-        <!-- <p class="wow-outer"><span class="text-width-1 wow slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p> -->
-        <div class="row row-30">
-          <div class="col-sm-6 col-lg-4 wow-outer">
-            <!-- Box Minimal-->
-            <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-bullseye wow fadeIn" style="color: white;"></div>
-              <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Misión</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">
-                  Crear empresas que produzcan, comercialicen productos y servicios únicos e innovadores
-                  que ofrezcan a nuestros clientes una solución integral para garantizar los principios de
-                  sustentabilidad y sostenibilidad, logrando la fidelidad de clientes y proveedores, a través
-                  de motivar y perfeccionar a nuestra herramienta más importante, el capital humano.
 
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4 wow-outer">
-            <!-- Box Minimal-->
-            <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-eye wow fadeIn" style="color: white;"></div>
-              <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Visión</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">
-                  En 2026 somos un grupo referente en innovación biotecnológica, comercialización y de
-                  servicio, aliados fundamentales con cada uno de nuestros clientes de la industria de
-                  bebidas alcohólicas y de consumo.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4 wow-outer">
-            <!-- Box Minimal-->
-            <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-balance-scale wow fadeIn" style="color: white;"></div>
-              <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Códigos de Ética</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">* Calidad.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Justicia.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Innovación.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Coherencia.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Comunicación.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Confianza.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Compromiso.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Lealtad.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section novi-background section-lg text-center">
-      <div class="container">
-        <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Nuestro Equipo de Trabajo</span></h3>
-        <div class="row row-50 row-xxl-70 justify-content-center justify-content-lg-start">
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-1-270x273.jpg" alt="" width="170" height="172" />
-              </figure>
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Juan Andres Aguilar Naranjo</a></h5>
-                <p class="profile-creative-position">Jefe de departamento de TI</p>
-                <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
-                </div>
-                <p>Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-2-270x273.jpg" alt="" width="170" height="172" />
-              </figure>
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Hortencia Piña</a></h5>
-                <p class="profile-creative-position">Jefe de departamento de Bioquimica</p>
-                <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
-                </div>
-                <p>John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-3-270x273.jpg" alt="" width="170" height="172" />
-              </figure>
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Jose Martin Martinez</a></h5>
-                <p class="profile-creative-position">Jefe de departamento de Mecatronica</p>
-                <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
-                </div>
-                <p>Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
-              </figure>
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Rafael Sánchez Alvarado</a></h5>
-                <p class="profile-creative-position">Esclavo del Andres</p>
-                <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
-                </div>
-                <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
-              </figure>
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Benjamin Ibarra Hernandez</a></h5>
-                <p class="profile-creative-position">Dueño</p>
-                <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
-                </div>
-                <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
-              </figure>
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Manuel Pinkye</a></h5>
-                <p class="profile-creative-position">Diseñador</p>
-                <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
-                </div>
-                <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="section novi-background footer-advanced bg-gray-700">
+
+<footer class="section novi-background footer-advanced bg-gray-700">
         <div class="footer-advanced-main">
           <div class="container">
             <div class="row row-50">
@@ -409,8 +235,10 @@ if (isset($_SESSION['rol'])) {
               <a href="#">Ver Detalles</a>
           </div>
       </div> -->
-      </footer>
+    </footer>
   </div>
+
+  <!-- MODAL LOGOUTT -->
 
   <div class="modal fade bd-example-modal-sm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
@@ -426,23 +254,39 @@ if (isset($_SESSION['rol'])) {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">No</button>
-          <button type="button" id="cerrar" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">Sí, cerrar sesión</button>
+          <button id="cerrar" type="button" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">Sí, cerrar sesión</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- <script>
+  <script>
     document.getElementById("cerrar").onclick = function() {
       location.href = 'cerrarSesion.php?logout=true';
       localStorage.clear();
     }
-  </script> -->
+  </script>
+
+
+  <script type="text/javascript">
+    var btnElm = document.getElementById('Click');
+    var pElm = document.getElementById('contar');
+    var contar = 0;
+
+    btnElm.onclick = function() {
+
+      contar++;
+
+      pElm.textContent = contar;
+
+    }
+  </script>
 
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
+  <script src="js/boton.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
 
