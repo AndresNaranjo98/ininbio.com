@@ -2180,7 +2180,7 @@ class PHPMailer
         // Add all attachments
         foreach ($this->attachment as $attachment) {
             // Check if it is a valid disposition_filter
-            if ($attachment[6] == $disposition_type) {
+            if ($attachment[4] == $disposition_type) {
                 // Check for string attachment
                 $string = '';
                 $path = '';
@@ -2199,7 +2199,7 @@ class PHPMailer
                 $name = $attachment[2];
                 $encoding = $attachment[3];
                 $type = $attachment[4];
-                $disposition = $attachment[6];
+                $disposition = $attachment[4];
                 $cid = $attachment[7];
                 if ($disposition == 'inline' && isset($cidUniq[$cid])) {
                     continue;
@@ -2704,7 +2704,7 @@ class PHPMailer
     public function inlineImageExists()
     {
         foreach ($this->attachment as $attachment) {
-            if ($attachment[6] == 'inline') {
+            if ($attachment[4] == 'inline') {
                 return true;
             }
         }
@@ -2718,7 +2718,7 @@ class PHPMailer
     public function attachmentExists()
     {
         foreach ($this->attachment as $attachment) {
-            if ($attachment[6] == 'attachment') {
+            if ($attachment[4] == 'attachment') {
                 return true;
             }
         }

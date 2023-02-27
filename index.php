@@ -1,41 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['rol'])) {
-  switch ($_SESSION['rol']) {
-    case 1:
-      // header('location: index.php');
-?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="#"><span class="icon novi-icon icon-md mdi mdi-logout"></span></a></li>';
-          };
-        }
-      </script>
-    <?php
-      break;
-    case 2:
-      // header('location: index.php');
-    ?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="cursor: pointer;" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
-            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart'])) ? 0 : count($_SESSION['cart']); ?></span></a></li>';
-          };
-        }
-      </script>
-<?php
-      break;
-    default:
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
@@ -93,31 +55,36 @@ if (isset($_SESSION['rol'])) {
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
               <!-- RD Navbar Panel-->
-             
+
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png"  width="250" height="130" srcset="images/main-logo.png 2x" /></a>
-              </div>                  
-           
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+              </div>
+
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
@@ -125,36 +92,38 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 30%;">
-            <div class="rd-navbar-main" >
+          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+            <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
                 <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                      <!-- <li><a class="rd-nav-link" href="typography.php">Productos</a></li> -->
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrollot.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  </li>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -162,9 +131,6 @@ if (isset($_SESSION['rol'])) {
         </nav>
       </div>
     </header>
-
-
-
 
     <section class="section swiper-container swiper-slider" data-loop="true" data-slide-effect="fade" data-autoplay="4759" data-simulate-touch="true">
       <div class="swiper-wrapper">
@@ -217,7 +183,7 @@ if (isset($_SESSION['rol'])) {
                 </li>
                 <!-- <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span><div style="margin-left: 5px;">100% Mexicano</div></li> -->
               </ul>
-              <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="certificaciones.php" data-wow-delay=".4s">Conoce más</a></div>
+              <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="certificaciones.php" data-wow-delay=".4s" style="font-size: 20px; font-weight: normal;">Conoce más</a></div>
             </div>
           </div>
         </div>
@@ -246,7 +212,7 @@ if (isset($_SESSION['rol'])) {
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
                   <div style="margin-left: 5px;">Estudios de caracterización genética</div>
                 </li>
-                <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="typography.php" data-wow-delay=".4s">Conoce más</a></div>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="typography.php" data-wow-delay=".4s" style="font-size: 20px; font-weight: normal;">Conoce más</a></div>
             </div>
           </div>
         </div>
@@ -277,87 +243,89 @@ if (isset($_SESSION['rol'])) {
       <div class="container">
         <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Nuestros productos más vendidos</span></h3>
         <div class="row row-lg-50 row-35 offset-top-2">
-        <?php
-            $row = $result->fetch_all();
-            for ($i = 0; $i < count($row); ++$i) {
-              $idPro = $row[$i][0];
-            ?>
-          <div class="col-md-6 wow-outer">
+          <?php
+          $row = $result->fetch_all();
+          for ($i = 0; $i < count($row); ++$i) {
+            $idPro = $row[$i][0];
+          ?>
+            <div class="col-md-6 wow-outer">
               <!-- Post Modern-->
               <article class="post-modern wow slideInLeft" style="text-align: center;">
                 <tr>
-                  <div class="card" style="--i:url(../<?php echo $row[$i][6]; ?>)">
+                  <div class="card" style="--i:url(../<?php echo $row[$i][4]; ?>)">
                     <div class="content">
                       <br>
                       <br>
                       <br>
                       <br>
                       <form action="carrito.php" method="post">
-                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="cantidad" id="cantidad" value="1">
-                  <button  id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">                
-                  <p class="fa-sharp fa-solid fa-cart-plus fa-2x iconoProducto" id="Click" style=" color: #71c500; cursor: pointer;"></p>
-                </button>
-                <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
-          </form>
+                        <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                        <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                        <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                        <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
+                        <input type="hidden" name="cantidad" id="cantidad" value="1">
+                        <button id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">
+                          <p class="fa-sharp fa-solid fa-cart-plus fa-2x iconoProducto" id="Click" style=" color: #71c500; cursor: pointer;"></p>
+                        </button>
+                        <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
+                      </form>
                     </div>
                   </div>
-                  <h4 class="post-modern-title"><p class="post-modern-title"><?php echo $row[$i][1];?></p></h4>
+                  <h4 class="post-modern-title">
+                    <p class="post-modern-title" style="font-weight: normal; font-size: 30px;"><?php echo $row[$i][1]; ?></p>
+                  </h4>
                   <ul class="post-modern-meta">
                     <!-- <li><p style="color: #2c9182;">$<?php echo $row[$i][3]; ?> USD * kg</p></li> -->
-                    <li style="text-transform: capitalize; color: #71c500;"><?php echo $row[$i][5]; ?> </li>
+                    <li style="text-transform:capitalize; color: #71c500; font-size: 20px;">Categoría: <?php echo $row[$i][5]; ?> </li>
                   </ul>
                   <!-- <p style="font-weight: normal;">Categoria: <?php echo $row[$i][5]; ?> </p> -->
                 </tr>
               </article>
-          </div>
+            </div>
 
-          <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <div class="cerrar" aria-hidden="true">&times;</div>
-                  </button>
-                </div>
-                <div class="modal-body" style="text-align: left;">
-                  <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
-                  <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
-                  <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
-                  <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                    <form action="carrito.php" method="post">
-                      <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
-                        <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
-                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
-                        </button>
-                        <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
-                        <button type="button" style="width: 30px; height: 30px;" data-action="increment">
-                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
-                        </button>
-                      </p>
+            <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
-                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                  <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
-                  </form>
+                  <div class="modal-body" style="text-align: left;">
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
+                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
+                    <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
+                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                      <form action="carrito.php" method="post">
+                        <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
+                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
+                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
+                          </button>
+                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
+                          <button type="button" style="width: 30px; height: 30px;" data-action="increment">
+                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
+                          </button>
+                        </p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
+                    <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
           <?php
-            }
-            ?>
-          <div class="col-md-12 wow-outer"><a class="button button-primary button-md" href="typography.php">Ver más productos</a></div>
+          }
+          ?>
+          <div class="col-md-12 wow-outer"><a class="button button-primary button-md" href="typography.php" style="font-size: 20px; font-weight: normal;">Ver más productos</a></div>
         </div>
       </div>
     </section>
@@ -406,68 +374,64 @@ if (isset($_SESSION['rol'])) {
     </script>
 
 
-    <section class="section novi-background section-lg bg-gray-100">
+    <section class="section novi-background section-lg" style="background-color: #182f3e;">
       <div class="container">
         <div class="row row-30">
-          <div class="col-sm-6 col-lg-4 wow-outer">
+        <div class="col-sm-6 col-lg-6 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-chloe__icon novi-icon fa-solid fa-flask-vial wow fadeIn" style="color: white;" data-wow-delay=".1s"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" style="color: white; font-size: 30px;" data-wow-delay=".1s">Técnicas para la conservación de Levaduras</h4>
+                <p class="wow fadeInUpSmall" style="color: white; text-align: justify; font-size: 20px;" data-wow-delay=".1s">
+                  Trabajamos en conjunto con la Universidad Nacional Autónoma de México (UNAM), para dar un amplio servicio de técnicas de conservación de levaduras, ya que esto permite al industrial tener siempre su misma levadura sin contaminación.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-chloe__icon novi-icon fa-solid fa-virus wow fadeIn" style="color: white;" data-wow-delay=".1s"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" style="color: white; font-size: 30px;" data-wow-delay=".1s">Estudios, Evaluación Y Factibilidad De Cepas</h4>
+                <p class="wow fadeInUpSmall" style="color: white; text-align: justify; font-size: 20px;" data-wow-delay=".1s">
+                Mediante la evaluación y factibilidad de cepas determinamos si una cepa en particular es adecuada para su uso en una 
+                aplicación específica. Esto implicar la evaluación de su capacidad para producir un compuesto de interés, su resistencia 
+                a las condiciones adversas, entre otros factores.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 wow-outer">
             <!-- Box Minimal-->
             <article class="box-minimal">
               <div class="box-chloe__icon novi-icon fa-solid fa-microscope wow fadeIn" style="color: white;"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Nutrición Celular</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">
+                <h4 class="box-minimal-title wow slideInDown" style="color: white; font-size: 30px;">Nutrición Celular</h4>
+                <p class="wow fadeInUpSmall" style="color: white; text-align: justify; font-size: 20px;">
                   ININBIO al igual que la Universidad de Guanajuato (UG), trabajamos con amplia dedicación en el tema de nutrición celular dando soporte técnico a nuestros clientes en llevar a cabo procesos de alto nivel ayudando a reducir costos y aumentar la productividad.
                 </p>
               </div>
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-4 wow-outer">
-            <!-- Box Minimal-->
-            <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-flask-vial wow fadeIn" style="color: white;" data-wow-delay=".1s"></div>
-              <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;" data-wow-delay=".1s">Técnicas de conservación de Levaduras</h4>
-                <p class="wow fadeInUpSmall" style="color: white;" data-wow-delay=".1s">
-                  Trabajamos en conjunto con la Universidad Nacional Autónoma de México (UNAM), para dar un amplio servicio de técnicas de conservación de levaduras, ya que esto permite al industrial tener siempre su misma levadura sin contaminación.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-4 wow-outer">
+          <div class="col-sm-6 col-lg-6 wow-outer">
             <!-- Box Minimal -->
             <article class="box-minimal">
               <div class="box-chloe__icon novi-icon fa-solid fa-hand-holding-heart wow fadeIn" style="color: white;" data-wow-delay=".2s"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;" data-wow-delay=".2s">Análisis Gratuitos</h4>
-                <p class="wow fadeInUpSmall" style="color: white;" data-wow-delay=".2s">
+                <h4 class="box-minimal-title wow slideInDown" style="color: white; font-size: 30px;" data-wow-delay=".2s">Análisis Gratuitos</h4>
+                <p class="wow fadeInUpSmall" style="color: white; text-align: justify; font-size: 20px;" data-wow-delay=".2s">
                   Nuestro equipo técnico y científico hace análisis ¡GRATUITOS! a sus procesos de fermentación para lograr un eficaz diagnóstico sobre la eficiencia del proceso y las sugerencias para obtener así mejores resultados.
                 </p>
               </div>
             </article>
           </div>
-
-          <div class="col-sm-6 col-lg-4 wow-outer"></div>
-          
-          <div class="col-sm-6 col-lg-4 wow-outer">
-            <!-- Box Minimal-->
-            <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-virus wow fadeIn" style="color: white;" data-wow-delay=".1s"></div>
-              <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;" data-wow-delay=".1s">Estudios, Evaluación Y Factibilidad De Cepas</h4>
-                <p class="wow fadeInUpSmall" style="color: white;" data-wow-delay=".1s">
-                  Trabajamos en conjunto con la Universidad Nacional Autónoma de México (UNAM), para dar un amplio servicio de técnicas de conservación de levaduras, ya que esto permite al industrial tener siempre su misma levadura sin contaminación.
-                </p>
-              </div>
-            </article>
-          </div>
-
         </div>
       </div>
-      <div class="container">
-          <hr/>
-        </div>
     </section>
 
     <section class="section novi-background section-lg text-center" style="background-color: #2c9182;">
@@ -558,23 +522,23 @@ if (isset($_SESSION['rol'])) {
     </section>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
-        <div class="footer-advanced-main">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-                </p>
-              </div>
-              <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+      <div class="footer-advanced-main">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+              <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+              </p>
+            </div>
+            <div class="col-sm-7 col-md-5 col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
               </span>
-              <p class="footer-advanced-text">
+              <p class="footer-advanced-text" style="color: white; font-size: 20px;">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -586,44 +550,52 @@ if (isset($_SESSION['rol'])) {
                 </ul>
               </div>
             </div>
-              <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
-                <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"> </div></a></div>
-                </div>
+            <div class="col-sm-5 col-md-7 col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
+              <div class="row row-x-10" data-lightgallery="group">
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                    <div class="thumbnail-minimal-caption"> </div>
+                  </a></div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <hr />
+      </div>
+      <div class="footer-advanced-aside">
         <div class="container">
-          <hr/>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-              <!-- Rights-->
-              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-            </div>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+            <!-- Rights-->
+            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="card" style="--i:url(img1.jpg)">
+      <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
@@ -661,13 +633,13 @@ if (isset($_SESSION['rol'])) {
 
 
 
-<script>
-document.body.onload = productosCarritos();
-document.getElementById("cerrar").onclick = function() {
-  location.href = 'cerrarSesion.php?logout=true';
-  localStorage.clear();
-}
-</script>
+  <script>
+    document.body.onload = productosCarritos();
+    document.getElementById("cerrar").onclick = function() {
+      location.href = 'cerrarSesion.php?logout=true';
+      localStorage.clear();
+    }
+  </script>
 
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
@@ -678,40 +650,40 @@ document.getElementById("cerrar").onclick = function() {
 
 
   <link rel="stylesheet" href="css\whats.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
- <link rel="stylesheet" href="css\whats2.css">
-<div class="nav-bottom">
-           <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-            <div class="popup-whatsapp fadeIn">
-                <div class="content-whatsapp -top"><button type="button" class="closePopup">
-                      <i class="material-icons icon-font-color">close</i>
-                    </button> 
-                  
-                   <p>  <img src="images\secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
-                   
-                </div>
-                <div class="content-whatsapp -bottom">
-                  <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-                   
-                   
-                  
-          
-                    <button class="send-msPopup" id="send-btn" type="button">
-                        <i class="material-icons icon-font-color--black">send</i>
-                    </button>
+  <link rel="stylesheet" href="css\whats2.css">
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="popup-whatsapp fadeIn">
+      <div class="content-whatsapp -top"><button type="button" class="closePopup">
+          <i class="material-icons icon-font-color">close</i>
+        </button>
 
-                </div>
-            </div>
-            <button type="button" id="whats-openPopup" class="whatsapp-button">
-                <div class="float" >
-  <i class="fa fa-whatsapp my-float"></i></div>
-            </button>
-            <div class="circle-anime"></div>
-        </div>
-        <script  src="js\script2.js"></script>
+        <p> <img src="images\secretary.png" width="50"> Hola, ¿en que podemos ayudarle? </p>
+
+      </div>
+      <div class="content-whatsapp -bottom">
+        <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+
+
+
+
+        <button class="send-msPopup" id="send-btn" type="button">
+          <i class="material-icons icon-font-color--black">send</i>
+        </button>
+
+      </div>
+    </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+      <div class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+      </div>
+    </button>
+    <div class="circle-anime"></div>
+  </div>
+  <script src="js\script2.js"></script>
 </body>
 <!-- Modal -->
 

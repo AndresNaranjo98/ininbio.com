@@ -202,7 +202,7 @@ if (isset($_SESSION['rol'])) {
           ?>
             <div class="pr">
               <div class="imghere">
-                <img src="<?php echo $row[$i][6]; ?>" alt="">
+                <img src="<?php echo $row[$i][4]; ?>" alt="">
               </div>
               <div style="text-align: center;">
                 <div class="name"> <?php echo $row[$i][1]; ?> </div>
@@ -211,7 +211,7 @@ if (isset($_SESSION['rol'])) {
               <div class="media-icons">
               <form action="carrito.php" method="post">
                   <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="cantidad" id="cantidad" value="1">
@@ -232,7 +232,7 @@ if (isset($_SESSION['rol'])) {
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
                     <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
                     <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
                     <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
@@ -251,7 +251,7 @@ if (isset($_SESSION['rol'])) {
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                     <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
                     <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                     <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
                     <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>

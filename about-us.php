@@ -1,42 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['rol'])) {
-  switch ($_SESSION['rol']) {
-    case 1:
-      // header('location: index.php');
-?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="#"><span class="icon novi-icon icon-md mdi mdi-logout"></span></a></li>';
-          };
-        }
-      </script>
-    <?php
-      break;
-    case 2:
-      // header('location: index.php');
-    ?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="cursor: pointer;" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
-            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart']))?0:count($_SESSION['cart']); ?></span></a></li>';
-          };
-        }
-      </script>
-<?php
-      break;
-    default:
-  }
-}
-
-?>
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
@@ -96,26 +57,31 @@ if (isset($_SESSION['rol'])) {
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png"  width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
               </div>
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
@@ -123,36 +89,38 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 30%;">
-            <div class="rd-navbar-main" >
+          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+            <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-              <ul class="rd-navbar-nav menu-horizontal">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                      <!-- <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li> -->
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  </li>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -163,8 +131,8 @@ if (isset($_SESSION['rol'])) {
 
     <!-- Working at CaseCraft-->
     <section class="section novi-background section-xl">
-    <div class="fondoAbout">
-        <p class="tituloAbout">
+      <div class="fondoAbout">
+        <p class="tituloAbout" style="font-size: 30px;">
           ¿Quiénes Somos?
         </p>
       </div>
@@ -172,9 +140,9 @@ if (isset($_SESSION['rol'])) {
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
           <div class="col-md-10 col-lg-6 col-xl-5">
             <p class="about-subtitle">ININBIO</p>
-            <p>Inovaciones Industriales biotecnológicas</p>
+            <p style="color: black; font-size: 25px;">Inovaciones Industriales biotecnológicas</p>
             <br>
-            <p>Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
+            <p style="text-align: justify; font-size: 20px; color: black;">Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
               levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de
               fórmulas novedosas de acuerdo a sus necesidades.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
@@ -185,19 +153,19 @@ if (isset($_SESSION['rol'])) {
       </div>
     </section>
     <!-- Advantages and Achievements-->
-    <section class="section novi-background section-md text-center bg-gray-100">
+    <section class="section novi-background section-md text-center" style="background-color: #2f545a;">
       <div class="container">
-        <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Ideología y Ética Empresarial</span></h3>
+        <h3 class="text-uppercase wow-outer" style="color: white;"><span class="wow slideInUp">Ideología y Ética Empresarial</span></h3>
         <!-- <p class="wow-outer"><span class="text-width-1 wow slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p> -->
         <div class="row row-30">
           <div class="col-sm-6 col-lg-4 wow-outer">
             <!-- Box Minimal-->
             <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-bullseye wow fadeIn" style="color: white;"></div>
+              <div class="box-chloe__icon novi-icon fa-solid fa-bullseye wow fadeIn" style="color: white; margin-top: 5px;"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Misión</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">
-                  Crear empresas que produzcan, comercialicen productos y servicios únicos e innovadores
+                <h3 class="box-minimal-title wow slideInDown" style="color: white;">Misión</h3>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
+                  Crear productos y servicios únicos e innovadores
                   que ofrezcan a nuestros clientes una solución integral para garantizar los principios de
                   sustentabilidad y sostenibilidad, logrando la fidelidad de clientes y proveedores, a través
                   de motivar y perfeccionar a nuestra herramienta más importante, el capital humano.
@@ -209,12 +177,12 @@ if (isset($_SESSION['rol'])) {
           <div class="col-sm-6 col-lg-4 wow-outer">
             <!-- Box Minimal-->
             <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-eye wow fadeIn" style="color: white;"></div>
+              <div class="box-chloe__icon novi-icon fa-solid fa-eye wow fadeIn" style="color: white; margin-top: 5px;"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Visión</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">
+                <h3 class="box-minimal-title wow slideInDown" style="color: white;">Visión</h3>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
                   En 2026 somos un grupo referente en innovación biotecnológica, comercialización y de
-                  servicio, aliados fundamentales con cada uno de nuestros clientes de la industria de
+                  servicios, aliados fundamentales con cada uno de nuestros clientes de la industria de
                   bebidas alcohólicas y de consumo.
                 </p>
               </div>
@@ -223,17 +191,17 @@ if (isset($_SESSION['rol'])) {
           <div class="col-sm-6 col-lg-4 wow-outer">
             <!-- Box Minimal-->
             <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-balance-scale wow fadeIn" style="color: white;"></div>
+              <div class="box-chloe__icon novi-icon fa-solid fa-balance-scale wow fadeIn" style="color: white; margin-top: 5px;"></div>
               <div class="box-minimal-main wow-outer">
-                <h4 class="box-minimal-title wow slideInDown" style="color: white;">Códigos de Ética</h4>
-                <p class="wow fadeInUpSmall" style="color: white;">* Calidad.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Justicia.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Innovación.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Coherencia.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Comunicación.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Confianza.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Compromiso.</p>
-                <p class="wow fadeInUpSmall" style="color: white;">* Lealtad.</p>
+                <h3 class="box-minimal-title wow slideInDown" style="color: white;">Ética</h3>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Calidad.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Justicia.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Innovación.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Coherencia.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Comunicación.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Confianza.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Compromiso.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Lealtad.</p>
               </div>
             </article>
           </div>
@@ -250,12 +218,12 @@ if (isset($_SESSION['rol'])) {
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-1-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Juan Andres Aguilar Naranjo</a></h5>
+                <h5 class="profile-creative-title"><p>Juan Andres Aguilar Naranjo</p></h5>
                 <p class="profile-creative-position">Jefe de departamento de TI</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
                 </div>
-                <p>Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
+                <p class="descriptionPuest">Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
               </div>
             </article>
           </div>
@@ -265,12 +233,12 @@ if (isset($_SESSION['rol'])) {
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-2-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Hortencia Piña</a></h5>
+                <h5 class="profile-creative-title"><p>Hortencia Piña</p></h5>
                 <p class="profile-creative-position">Jefe de departamento de Bioquimica</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
                 </div>
-                <p>John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial.</p>
+                <p class="descriptionPuest">John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial.</p>
               </div>
             </article>
           </div>
@@ -280,12 +248,12 @@ if (isset($_SESSION['rol'])) {
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-3-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Jose Martin Martinez</a></h5>
+                <h5 class="profile-creative-title"><P>Jose Martin Martinez</P></h5>
                 <p class="profile-creative-position">Jefe de departamento de Mecatronica</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
                 </div>
-                <p>Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
+                <p class="descriptionPuest">Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
               </div>
             </article>
           </div>
@@ -295,12 +263,12 @@ if (isset($_SESSION['rol'])) {
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Rafael Sánchez Alvarado</a></h5>
+                <h5 class="profile-creative-title"><p>Rafael Sánchez Alvarado</p></h5>
                 <p class="profile-creative-position">Esclavo del Andres</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
                 </div>
-                <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
             </article>
           </div>
@@ -310,12 +278,12 @@ if (isset($_SESSION['rol'])) {
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Benjamin Ibarra Hernandez</a></h5>
+                <h5 class="profile-creative-title"><p>Benjamin Ibarra Hernandez</p></h5>
                 <p class="profile-creative-position">Dueño</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
                 </div>
-                <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
             </article>
           </div>
@@ -325,12 +293,12 @@ if (isset($_SESSION['rol'])) {
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><a href="#">Manuel Pinkye</a></h5>
+                <h5 class="profile-creative-title"><p>Manuel Pinkye</p></h5>
                 <p class="profile-creative-position">Diseñador</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
                 </div>
-                <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
             </article>
           </div>
@@ -338,23 +306,23 @@ if (isset($_SESSION['rol'])) {
       </div>
     </section>
     <footer class="section novi-background footer-advanced bg-gray-700">
-        <div class="footer-advanced-main">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-                </p>
-              </div>
-              <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+      <div class="footer-advanced-main">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+              <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+              </p>
+            </div>
+            <div class="col-sm-7 col-md-5 col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
               </span>
-              <p class="footer-advanced-text">
+              <p class="footer-advanced-text" style="color: white; font-size: 20px;">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -366,50 +334,58 @@ if (isset($_SESSION['rol'])) {
                 </ul>
               </div>
             </div>
-              <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
-                <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"> </div></a></div>
-                </div>
+            <div class="col-sm-5 col-md-7 col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
+              <div class="row row-x-10" data-lightgallery="group">
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                    <div class="thumbnail-minimal-caption"> </div>
+                  </a></div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <hr />
+      </div>
+      <div class="footer-advanced-aside">
         <div class="container">
-          <hr/>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-              <!-- Rights-->
-              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-            </div>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+            <!-- Rights-->
+            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="card" style="--i:url(img1.jpg)">
+      <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
           </div>
       </div> -->
-      </footer>
+    </footer>
   </div>
 
   <div class="modal fade bd-example-modal-sm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -447,41 +423,41 @@ if (isset($_SESSION['rol'])) {
   <script src="js\contador.js"></script>
 
 
-<link rel="stylesheet" href="css\whats.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css\whats.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
-<link rel="stylesheet" href="css\whats2.css">
-<div class="nav-bottom">
-         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-          <div class="popup-whatsapp fadeIn">
-              <div class="content-whatsapp -top"><button type="button" class="closePopup">
-                    <i class="material-icons icon-font-color">close</i>
-                  </button> 
-                
-                 <p>  <img src="images\secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
-                 
-              </div>
-              <div class="content-whatsapp -bottom">
-                <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-                 
-                 
-                
-        
-                  <button class="send-msPopup" id="send-btn" type="button">
-                      <i class="material-icons icon-font-color--black">send</i>
-                  </button>
+  <link rel="stylesheet" href="css\whats2.css">
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="popup-whatsapp fadeIn">
+      <div class="content-whatsapp -top"><button type="button" class="closePopup">
+          <i class="material-icons icon-font-color">close</i>
+        </button>
 
-              </div>
-          </div>
-          <button type="button" id="whats-openPopup" class="whatsapp-button">
-              <div class="float" >
-<i class="fa fa-whatsapp my-float"></i></div>
-          </button>
-          <div class="circle-anime"></div>
+        <p> <img src="images\secretary.png" width="50"> Hola, ¿en que podemos ayudarle? </p>
+
       </div>
-      <script  src="js\script2.js"></script>
+      <div class="content-whatsapp -bottom">
+        <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+
+
+
+
+        <button class="send-msPopup" id="send-btn" type="button">
+          <i class="material-icons icon-font-color--black">send</i>
+        </button>
+
+      </div>
+    </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+      <div class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+      </div>
+    </button>
+    <div class="circle-anime"></div>
+  </div>
+  <script src="js\script2.js"></script>
 </body>
 
 </html>
