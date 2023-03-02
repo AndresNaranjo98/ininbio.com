@@ -140,9 +140,9 @@
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
           <div class="col-md-10 col-lg-6 col-xl-5">
             <p class="about-subtitle">ININBIO</p>
-            <p style="color: black; font-size: 25px;">Inovaciones Industriales biotecnológicas</p>
+            <p style="color: black; font-size: 25px;">Inovaciones Industriales Biotecnológicas</p>
             <br>
-            <p style="text-align: justify; font-size: 20px; color: black;">Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
+            <p style="text-align: justify; font-size: 20px; color: black; font-weight: normal;">Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
               levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de
               fórmulas novedosas de acuerdo a sus necesidades.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->

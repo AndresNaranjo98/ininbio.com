@@ -122,12 +122,26 @@
       </div>
     </header>
 
-    <section class="section novi-background section-xl" style="margin-top: 30px;">
+    <section class="section novi-background section-xl" style="margin-top: 30px; max-width: 100%; background : url('./images/19366.jpg') no-repeat; background-size: cover;">
 
       <div class="row">
-        <div class="col-12 col-md-7 px-0 px-md-2" style="display: flex; max-width: 100%;">
-          <div class="container pr-0 pl-0 pr-md-4 pl-md-5 aos-init aos-animate" style="background-color: #E0E0E0;">
-            <p style="font-size: 30px; font-weight: normal; color: black;">AQUÍ IRÁ EL TEXTO POR ICONO SELECCIONADO</p>
+        <div class="col-12 col-md-7">
+          <div class="container">
+          <img src="./images/inSitu.jpg" id="imagenIcono" style="width: 100%; height: 350px;">
+            <p id="tituloIcono" style="font-size: 30px; color: black; font-weight: normal; text-align: center; text-transform: uppercase;">Servicio de Análisis In Situ</p>
+            <!-- <p style="font-size: 30px; font-weight: normal; color: black;">AQUÍ IRÁ EL TEXTO POR ICONO SELECCIONADO</p> -->
+            <p id="descripcionIcono" style="font-size: 20px; color: black; font-weight: normal; text-align: justify;">Nuestro equipo técnico y científico hace análisis a sus procesos de fermentación
+              para lograr un diagnóstico sobre la eficiencia del proceso y las sugerencias para obtener mejores resultados.
+              <br>
+              <br>
+              •Análisis de PH<br>
+              •Análisis de temperatura.<br>
+              •Análisis de población.<br>
+              •Análisis de viabilidad.<br>
+              •Caracterización morfológica.<br>
+              •Análisis de °BRIX.<br>
+              •Análisis de Riqueza Alcohólica.
+            </p>
           </div>
         </div>
         <div class="col-md-5" style="display: flex;">
@@ -135,19 +149,19 @@
             <div class="col-md-8">
               <div class="row">
                 <div class="col-6 text-center">
-                <img src="./images/iconoServicios/magnifying.png" style="width: 100px;" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
+                  <img src="./images/iconoServicios/magnifying.png" style="width: 100px;" onclick="inSitu('./images/inSitu.jpg')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Servicio de Análisis In Situ</p>
                 </div>
                 <div class="col-6 text-center">
-                <img src="./images/iconoServicios/stem-cell-therapy.png" style="width: 100px;" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
+                  <img src="./images/iconoServicios/stem-cell-therapy.png" style="width: 100px;" onclick="nutriEspecifico('./images/nutrientesEspecificos.jpg')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Desarrollo de Nutrientes Específicos</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                <img src="./images/iconoServicios/cepas.png" style="width: 100px;" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
+                  <img src="./images/iconoServicios/cepas.png" style="width: 100px;" onclick="aislamientoCepas('');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Aislamiento y Selección de Cepas</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                <img src="./images/iconoServicios/pipette.png" style="width: 100px;" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
+                  <img src="./images/iconoServicios/pipette.png" style="width: 100px;" onclick="propagacionCepas('./images/propagacionCepas.jpg');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Trabajos de Propagación de Cepas de Levadura</p>
                 </div>
               </div>
@@ -155,95 +169,47 @@
           </div>
         </div>
       </div>
-
     </section>
+
+    <script>
+      function nutriEspecifico(urlImagen) {
+        var miDiv = document.getElementById("imagenIcono");
+        document.getElementById('tituloIcono').innerHTML = 'Desarrollo de Nutrientes Específicos';
+        document.getElementById('descripcionIcono').innerHTML = 'ININBIO desarrolla fórmulas para los procesos de fermentación específicos mencionados en nuestro catálogo, pero a veces incursionamos en fórmulas muy específicas para algunos clientes porque sus procesos son especiales con requisitos nutricionales determinados.';
+        miDiv.src = urlImagen;
+        miDiv.style.width = '100%';
+        miDiv.style.height = '350px';
+      }
+
+      function inSitu(urlImagen) {
+        var miDiv = document.getElementById("imagenIcono");
+        document.getElementById('tituloIcono').innerHTML = 'Servicio de Análisis In Situ';
+        document.getElementById('descripcionIcono').innerHTML = 'Nuestro equipo técnico y científico hace análisis a sus procesos de fermentación para lograr un diagnóstico sobre la eficiencia del proceso y las sugerencias para obtener mejores resultados.<br><br>•Análisis de PH<br>•Análisis de temperatura.<br>•Análisis de población.<br>•Análisis de viabilidad.<br>•Caracterización morfológica.<br>•Análisis de °BRIX.<br>•Análisis de Riqueza Alcohólica.';
+        miDiv.src = urlImagen;
+        miDiv.style.width = '100%';
+        miDiv.style.height = '350px';
+      }
+
+      function aislamientoCepas() {
+        var miDiv = document.getElementById("imagenIcono");
+        document.getElementById('tituloIcono').innerHTML = 'Aislamiento y Selección de Cepas';
+        document.getElementById('descripcionIcono').innerHTML = 'En ININBIO, la selección y el aislamiento de las cepas se realizaron con el objetivo de encontrar levaduras con características de gran interés para la fermentación alcohólica, destinadas a la fabricación de bebidas alcohólicas, o para lograr la diferenciación de cepas de levaduras que tengan un gran valor industrial ya conocido.';
+        miDiv.src = urlImagen;
+        miDiv.style.width = '100%';
+        miDiv.style.height = '350px';
+      }
+
+      function propagacionCepas(urlImagen) {
+        var miDiv = document.getElementById("imagenIcono");
+        document.getElementById('tituloIcono').innerHTML = 'Trabajos de Propagación de Cepas de Levadura';
+        document.getElementById('descripcionIcono').innerHTML = 'Dentro de nuestros servicios se encuentra la asesoría para hacer más eficiente la propagación y contar con mejores técnicas de reproducción celular.';
+        miDiv.src = urlImagen;
+        miDiv.style.width = '100%';
+        miDiv.style.height = '350px';
+      }
+    </script>
 
     <!-- Working at CaseCraft-->
-    <section class="section novi-background section-xl" style="margin-top: 30px;">
-      <div class="container">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <h3 class="text-uppercase">Servicio de análisis in SITU.</h3>
-            <br>
-            <p>Nuestro equipo técnico y científico hace análisis a sus procesos de fermentación
-              para lograr un diagnóstico sobre la eficiencia del proceso y las sugerencias para obtener mejores resultados.</p>
-
-            <p>•Análisis de PH.</p>
-            <p>•Análisis de temperatura.</p>
-            <p>•Análisis de población.</p>
-            <p>•Análisis de viabilidad.</p>
-            <p>•Caracterización morfológica</p>
-            <p>•Análisis de °BRIX.</p>
-            <p>•Análisis de Riqueza Alcohólica</p>
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/Cofepris.png" alt="" width="570" height="388" />
-          </div>
-        </div>
-    </section>
-    <div class="container">
-      <hr />
-    </div>
-    <section class="section novi-background section-lg">
-      <div class="container">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <!-- <h3 class="text-uppercase">REGISTRO COFEPRIS</h3> -->
-
-            <br>
-            <h3 class="text-uppercase">Desarrollo de nutrientes específicos</h3>
-            <p>ININBIO desarrolla fórmulas para los procesos de fermentación específicos mencionados en nuestro catálogo,
-              pero a veces desarrolla fórmulas muy específicas en algunos clientes porque sus procesos son especiales con requisitos nutricionales muy específicos.</p>
-            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/Cofepris.png" alt="" width="570" height="388" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="container">
-      <hr />
-    </div>
-    <section class="section novi-background section-lg">
-      <div class="container">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <!-- <h3 class="text-uppercase">REGISTRO COFEPRIS</h3> -->
-
-            <br>
-            <h3 class="text-uppercase">Aislamiento y selección de cepas</h3>
-            <p>En ININBIO, la selección y el aislamiento de las cepas se realizaron con el objetivo de encontrar levaduras con características de gran interés para
-              la fermentación alcohólica, destinadas a la fabricación de bebidas alcohólicas, o para lograr la diferenciación de cepas de levaduras que tengan un gran
-              valor industrial ya conocido.</p>
-            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/Cofepris.png" alt="" width="570" height="388" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="container">
-      <hr />
-    </div>
-    <section class="section novi-background section-lg">
-      <div class="container">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <!-- <h3 class="text-uppercase">REGISTRO COFEPRIS</h3> -->
-
-            <br>
-            <h3 class="text-uppercase">Trabajos de propagación de cepas de levadura</h3>
-            <p>Dentro de nuestros servicios se encuentra la asesoría para hacer más eficiente la propagación y contar con mejores técnicas de reproducción celular.</p>
-            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/Cofepris.png" alt="" width="570" height="388" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  </div>
-  </div>
-  </section>
 
   <footer class="section novi-background footer-advanced bg-gray-700">
     <div class="footer-advanced-main">

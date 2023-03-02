@@ -1,47 +1,8 @@
-<?php
-session_start();
-if (isset($_SESSION['rol'])) {
-  switch ($_SESSION['rol']) {
-    case 1:
-      // header('location: index.php');
-?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="#"><span class="icon novi-icon icon-md mdi mdi-logout"></span></a></li>';
-          };
-        }
-      </script>
-    <?php
-      break;
-    case 2:
-      // header('location: index.php');
-    ?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="cursor: pointer;" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
-            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart']))?0:count($_SESSION['cart']); ?></span></a></li>';
-          };
-        }
-      </script>
-<?php
-      break;
-    default:
-  }
-}
-
-?>
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Ininbio/Certificacones</title>
+  <title>Ininbio/Certificaciones</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,18 +65,23 @@ if (isset($_SESSION['rol'])) {
                   <article class="unit align-items-center">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
@@ -123,7 +89,7 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 30%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
             <div class="rd-navbar-main" >
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
@@ -143,16 +109,18 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                    <!-- <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li> -->
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  </li>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -162,62 +130,58 @@ if (isset($_SESSION['rol'])) {
     </header>
 
     <!-- Working at CaseCraft-->
-    <section class="section novi-background section-xl">
-      <div class="fondoCertificaciones">
-        <p class="tituloCertificaciones">
+      <div class="fondoCertificaciones" style="margin-top: 100px;">
+        <p class="tituloCertificaciones" style="font-size: 30px;">
           CONOCE NUESTRAS CERTIFICACIONES
         </p>
       </div>
+    <section class="section novi-background section-lg fondoFDA" style="margin-top: 25px;">
       <div class="container" style="margin-top: 30px;">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/FDA.png" alt="" width="570" height="388" />
+        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse fondoFDA">
+          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/registroFDA.png" alt="" width="570" height="388" />
           </div>
           <div class="col-md-10 col-lg-6 col-xl-5">
             <h3 class="text-uppercase">REGISTRO FDA</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p> El registro FDA (Food and Drug Administration) mediante el cual los productos ininbio están registrados es la agencia
+            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;"> El registro FDA (Food and Drug Administration) mediante el cual los productos de Ininbio están registrados es la agencia
               privada encargada de proporcionar asistencia en el cumplimiento de la Administración de Alimentos y Medicamentos de los
               Estados Unidos para la industria alimentaria de Latinoamérica, por lo cual este registro avala la seguridad de los productos
-              (nutrientes para la fermentación alcohólica) que ininbio produce.</p>
+              (nutrientes para la fermentación alcohólica) que producimos.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>
 
         </div>
       </div>
     </section>
-    <div class="container">
-      <hr />
-    </div>
-    <section class="section novi-background section-lg">
+
+    <section class="section novi-background section-lg fondoCofepris">
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
           <div class="col-md-10 col-lg-6 col-xl-5">
             <h3 class="text-uppercase">REGISTRO COFEPRIS</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p>Los productos ininbio de igual manera cuentan con registro COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios)
+            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;">Los productos ininbio de igual manera cuentan con registro COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios)
               lo cual avala que los productos fabricados por ininbio son seguros y libres de cualquier riesgo sanitario.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/Cofepris.png" alt="" width="570" height="388" />
+          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/registroCofepris.png" title="https://www.freepik.es/foto-gratis/tecnologo-uniforme-blanco-control-calidad-fabrica-produccion-industrial_11450614.htm#query=comprobando%20calidad&position=4&from_view=search&track=robertav1 Imagen de aleksandarlittlewolf en Freepik" width="570" height="388" />
           </div>
         </div>
       </div>
     </section>
-    <div class="container">
-      <hr />
-    </div>
-    <section class="section novi-background section-lg">
+
+    <section class="section novi-background section-lg fondoKosher">
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/kosher.jpeg" alt="" width="570" height="280" />
+          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/certificadoKosher.png" title="https://www.freepik.es/foto-gratis/garantia-concepto-certificado-autorizado-aprobado_17433688.htm#query=certificaci%C3%B3n&position=21&from_view=search&track=robertav1 Imagen de rawpixel.com en Freepik" width="570" height="280" />
           </div>
           <div class="col-md-10 col-lg-6 col-xl-5">
             <h3 class="text-uppercase">CERTIFICACION KOSHER</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p>Los productos elaborados por ininbio cuentan con la certificación KOSHER lo cual avala que los nutrientes para la fermentación
+            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;">Los productos elaborados por ininbio cuentan con la certificación KOSHER lo cual avala que los nutrientes para la fermentación
               alcohólica son inocuos para la comunidad judía haciéndolos de igual manera para la industria alimentaria.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>
@@ -230,19 +194,19 @@ if (isset($_SESSION['rol'])) {
           <div class="container">
             <div class="row row-50">
               <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
+                <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+                <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
                   ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
                 </p>
               </div>
               <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
               </span>
-              <p class="footer-advanced-text">
+              <p class="footer-advanced-text" style="color: white; font-size: 20px;">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+              <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -255,7 +219,7 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
               <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
                 <div class="row row-x-10" data-lightgallery="group">
                   <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
                       <div class="thumbnail-minimal-caption"></div></a></div>
