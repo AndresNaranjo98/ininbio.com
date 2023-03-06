@@ -65,18 +65,23 @@
                   <article class="unit align-items-center">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
@@ -84,7 +89,7 @@
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 30%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
@@ -96,7 +101,7 @@
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <!-- <li class="rd-nav-item active"><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
@@ -104,16 +109,18 @@
                   <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                      <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                      <!-- <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li> -->
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  </li> -->
+                  <!-- <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -157,7 +164,7 @@
                   <p style="font-size: 20px; color: black; font-weight: normal;">Desarrollo de Nutrientes Específicos</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/cepas.png" style="width: 100px;" onclick="aislamientoCepas('');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
+                  <img src="./images/iconoServicios/cepas.png" style="width: 100px;" onclick="aislamientoCepas('./images/aislamientoCepas.jpg');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Aislamiento y Selección de Cepas</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
@@ -190,7 +197,7 @@
         miDiv.style.height = '350px';
       }
 
-      function aislamientoCepas() {
+      function aislamientoCepas(urlImagen) {
         var miDiv = document.getElementById("imagenIcono");
         document.getElementById('tituloIcono').innerHTML = 'Aislamiento y Selección de Cepas';
         document.getElementById('descripcionIcono').innerHTML = 'En ININBIO, la selección y el aislamiento de las cepas se realizaron con el objetivo de encontrar levaduras con características de gran interés para la fermentación alcohólica, destinadas a la fabricación de bebidas alcohólicas, o para lograr la diferenciación de cepas de levaduras que tengan un gran valor industrial ya conocido.';
@@ -216,19 +223,19 @@
       <div class="container">
         <div class="row row-50">
           <div class="col-lg-4">
-            <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-            <p class="footer-advanced-text">
+            <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+            <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
               ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
             </p>
           </div>
           <div class="col-sm-7 col-md-5 col-lg-4">
-            <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+            <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
             </span>
-            <p class="footer-advanced-text">
+            <p class="footer-advanced-text" style="color: white; font-size: 20px;">
               Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
             </p>
             <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+              <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
               <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                 <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                 <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -241,7 +248,7 @@
             </div>
           </div>
           <div class="col-sm-5 col-md-7 col-lg-4">
-            <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
+            <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
             <div class="row row-x-10" data-lightgallery="group">
               <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
                   <div class="thumbnail-minimal-caption"></div>
