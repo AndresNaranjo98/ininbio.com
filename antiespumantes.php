@@ -93,29 +93,35 @@ if (isset($_SESSION['rol'])) {
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
               <!-- RD Navbar Panel-->
+
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png"  width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
               </div>
+
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
@@ -135,7 +141,7 @@ if (isset($_SESSION['rol'])) {
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
@@ -143,16 +149,17 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -162,7 +169,11 @@ if (isset($_SESSION['rol'])) {
     </header>
 
     <section class="section novi-background section-xl" style="margin-top: 30px;">
-      <h1 style="text-align: center;">Antiespumantes</h1>
+    <div class="fondoProductos">
+        <p class="tituloProductos">
+          Antiespumantes
+        </p>
+      </div>
       <hr class="my-4" />
       <!-- <h3 style="text-align: center;">TEQUILA</h3> -->
       <!-- <hr class="my-4" /> -->
@@ -197,23 +208,23 @@ if (isset($_SESSION['rol'])) {
           ?>
             <div class="pr">
               <div class="imghere">
-                <img src="<?php echo $row[$i][4]; ?>" alt="">
+                <img src="<?php echo $row[$i][6]; ?>" alt="">
               </div>
               <div style="text-align: center;">
                 <div class="name"> <?php echo $row[$i][1]; ?> </div>
                 <!-- <div class="job">$<?php echo $row[$i][3]; ?> USD</div> -->
               </div>
               <div class="media-icons">
-              <form action="carrito.php" method="post">
+              <!-- <form action="carrito.php" method="post">
                   <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="cantidad" id="cantidad" value="1">
                   <button  id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">                
                   <a href="#" type="submit" name="addProduct" value="add"><i style=" padding-top: 25%;" class="fa-solid fa-cart-shopping"></i></a>
                 </button>
-          </form>
+          </form> -->
           <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i style=" padding-top: 25%;" class="fa-solid fa-info"></i></a>
               </div>
             </div>
@@ -227,29 +238,29 @@ if (isset($_SESSION['rol'])) {
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
-                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
+                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][4]; ?>
                     <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
                     <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                       <form action="carrito.php" method="post">
-                        <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
+                        <!-- <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
                           <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
                           </button>
                           <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
                           <button type="button" style="width: 30px; height: 30px;" data-action="increment">
                             <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
-                          </button>
+                          </button> -->
                         </p>
                     </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                     <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
+                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
                     <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
                     <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                    <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
+                    <!-- <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button> -->
                     </form>
                   </div>
                 </div>

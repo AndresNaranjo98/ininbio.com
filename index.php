@@ -78,8 +78,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -96,10 +95,10 @@
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-                <ul class="rd-navbar-nav menu-horizontal">
+              <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item">
+                  <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
@@ -109,18 +108,17 @@
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item">
+                  <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                      <!-- <li><a class="rd-nav-link" href="typography.php">Productos</a></li> -->
+                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
-                      <li><a class="rd-nav-link" href="desarrollot.php">Desarrollo Tecnologico</a></li>
+                      <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  </li>
                   <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
                   <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
@@ -134,7 +132,7 @@
 
     <section class="section swiper-container swiper-slider" data-loop="true" data-slide-effect="fade" data-autoplay="4759" data-simulate-touch="true">
       <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide_video" data-slide-bg="images/imagen-vino.jpg">
+        <div class="swiper-slide swiper-slide_video" data-slide-bg="images/ADN.jfif">
           <div class="container">
             <div class="jumbotron-classic-content">
               <div class="wow-outer">
@@ -146,16 +144,16 @@
               <!-- <p class="text-white wow-outer"> -->
               <ul class="text-white font-weight-bold wow-outer wow slideInDown">
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
-                  <div style="margin-left: 5px;">Ajustables a su proceso de fermentación</div>
+                  <div style="margin-left: 5px; font-size: 22px">Ajustables a su proceso de fermentación</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
-                  <div style="margin-left: 5px;">Poseen actividad enzimática </div>
+                  <div style="margin-left: 5px; font-size: 22px">Poseen actividad enzimática </div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
-                  <div style="margin-left: 5px;">Productos con grado alimenticio</div>
+                  <div style="margin-left: 5px; font-size: 22px">Productos con grado alimenticio</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
-                  <div style="margin-left: 5px;">100% Mexicano</div>
+                  <div style="margin-left: 5px; font-size: 22px">100% Mexicano</div>
                 </li>
               </ul>
               <!-- </p> -->
@@ -173,13 +171,16 @@
               <!-- <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Rent & Sale</span></h1> -->
               <ul class="text-white font-weight-bold wow-outer wow slideInDown">
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
-                  <div style="margin-left: 5px;">Medalla de oro a la Calidad y Servicio</div>
+                  <div style="margin-left: 5px; font-size: 22px">Medalla de oro a la Calidad y Servicio</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
-                  <div style="margin-left: 5px;">Productos con certificado KOSHER</div>
+                  <div style="margin-left: 5px; font-size: 22px">Productos con certificado KOSHER</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
-                  <div style="margin-left: 5px;">Planta de producción con certificado FDA</div>
+                  <div style="margin-left: 5px; font-size: 22px">Planta de producción con certificado FDA</div>
+                </li>                
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
+                  <div style="margin-left: 5px; font-size: 22px">Registro COFEPRIS</div>
                 </li>
                 <!-- <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span><div style="margin-left: 5px;">100% Mexicano</div></li> -->
               </ul>
@@ -187,7 +188,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide" data-slide-bg="images/estudios-gratuitos.jpg">
+        <div class="swiper-slide" data-slide-bg="images/estudios-gratuitos.png">
           <div class="container">
             <div class="jumbotron-classic-content">
               <div class="wow-outer">
@@ -198,19 +199,19 @@
               <!-- <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Founded in 1989, our company is a team of renowned property management and real estate experts always ready to help you.</span></p> -->
               <ul class="text-white font-weight-bold wow-outer wow slideInDown">
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
-                  <div style="margin-left: 5px;">Análisis In Situ</div>
+                  <div style="margin-left: 5px; font-size: 22px">Análisis In Situ</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
-                  <div style="margin-left: 5px;">Aislamiento de selección de cepas</div>
+                  <div style="margin-left: 5px; font-size: 22px">Aislamiento de selección de cepas</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500"></span>
-                  <div style="margin-left: 5px;">Trabajos de propagación de cepas</div>
+                  <div style="margin-left: 5px; font-size: 22px">Trabajos de propagación de cepas</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
-                  <div style="margin-left: 5px;">Desarrollo de nutrientes específicos</div>
+                  <div style="margin-left: 5px; font-size: 22px">Desarrollo de nutrientes específicos</div>
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
-                  <div style="margin-left: 5px;">Estudios de caracterización genética</div>
+                  <div style="margin-left: 5px; font-size: 22px">Estudios de caracterización genética</div>
                 </li>
                 <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="typography.php" data-wow-delay=".4s" style="font-size: 20px; font-weight: normal;">Conoce más</a></div>
             </div>
@@ -239,93 +240,92 @@
     $result = $sentencia->get_result();
     ?>
 
-    <section class="section novi-background section-md text-center">
+<section class="section novi-background section-md text-center">
       <div class="container">
         <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Nuestros productos más vendidos</span></h3>
         <div class="row row-lg-50 row-35 offset-top-2">
-          <?php
-          $row = $result->fetch_all();
-          for ($i = 0; $i < count($row); ++$i) {
-            $idPro = $row[$i][0];
-          ?>
-            <div class="col-md-6 wow-outer">
+        <?php
+            $row = $result->fetch_all();
+            for ($i = 0; $i < count($row); ++$i) {
+              $idPro = $row[$i][0];
+            ?>
+          <div class="col-md-6 wow-outer">
               <!-- Post Modern-->
               <article class="post-modern wow slideInLeft" style="text-align: center;">
                 <tr>
-                  <div class="card" style="--i:url(../<?php echo $row[$i][4]; ?>)">
+                  <div class="card" style="--i:url(../<?php echo $row[$i][6]; ?>)">
                     <div class="content">
                       <br>
                       <br>
                       <br>
                       <br>
-                      <form action="carrito.php" method="post">
-                        <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                        <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
-                        <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                        <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                        <input type="hidden" name="cantidad" id="cantidad" value="1">
-                        <button id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">
-                          <p class="fa-sharp fa-solid fa-cart-plus fa-2x iconoProducto" id="Click" style=" color: #71c500; cursor: pointer;"></p>
-                        </button>
-                        <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
-                      </form>
+                      <!-- <form action="carrito.php" method="post">
+                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="cantidad" id="cantidad" value="1">
+                  <button  id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">                
+                  <p class="fa-sharp fa-solid fa-cart-plus fa-2x iconoProducto" id="Click" style=" color: #71c500; cursor: pointer;"></p>
+                </button> -->
+                <br>
+                <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
+          <!-- </form> -->
                     </div>
                   </div>
-                  <h4 class="post-modern-title">
-                    <p class="post-modern-title" style="font-weight: normal; font-size: 30px;"><?php echo $row[$i][1]; ?></p>
-                  </h4>
+                  <h4 class="post-modern-title"><p class="post-modern-title"><?php echo $row[$i][1];?></p></h4>
                   <ul class="post-modern-meta">
-                    <!-- <li><p style="color: #2c9182;">$<?php echo $row[$i][3]; ?> USD * kg</p></li> -->
-                    <li style="text-transform:capitalize; color: #71c500; font-size: 20px;">Categoría: <?php echo $row[$i][5]; ?> </li>
+                    <li><p style="color: #2c9182;"><?php echo $row[$i][4]; ?></p></li>
+                    <li style="text-transform: capitalize; color: #71c500;"><?php echo $row[$i][5]; ?> </li>
                   </ul>
                   <!-- <p style="font-weight: normal;">Categoria: <?php echo $row[$i][5]; ?> </p> -->
                 </tr>
               </article>
-            </div>
+          </div>
 
-            <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <div class="cerrar" aria-hidden="true">&times;</div>
-                    </button>
+          <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="cerrar" aria-hidden="true">&times;</div>
+                  </button>
+                </div>
+                <div class="modal-body" style="text-align: left;">
+                  <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
+                  <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][4]; ?><br>
+                  <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
+                  <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                    <form action="carrito.php" method="post">
+                      <!-- <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
+                        <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
+                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
+                        </button>
+                        <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
+                        <button type="button" style="width: 30px; height: 30px;" data-action="increment">
+                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
+                        </button> -->
+                      </p>
                   </div>
-                  <div class="modal-body" style="text-align: left;">
-                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
-                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
-                    <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
-                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                      <form action="carrito.php" method="post">
-                        <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
-                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
-                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
-                          </button>
-                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
-                          <button type="button" style="width: 30px; height: 30px;" data-action="increment">
-                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
-                          </button>
-                        </p>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
-                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][4], $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                    <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button>
-                    </form>
-                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                  <!-- <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>"> -->
+                  <!-- <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button> -->
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
 
           <?php
-          }
-          ?>
-          <div class="col-md-12 wow-outer"><a class="button button-primary button-md" href="typography.php" style="font-size: 20px; font-weight: normal;">Ver más productos</a></div>
+            }
+            ?>
+          <div class="col-md-12 wow-outer"><a class="button button-primary button-md" href="typography.php">Ver más productos</a></div>
         </div>
       </div>
     </section>
@@ -434,7 +434,7 @@
       </div>
     </section>
 
-    <section class="section novi-background section-lg text-center" style="background-color: #2c9182;">
+    <section class="section novi-background section-lg text-center" style="background-color: #2c9182; font-size: 20px;">
       <div class="container">
         <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">Testimonios</span></h3>
         <!-- Owl Carousel-->

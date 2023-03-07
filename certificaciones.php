@@ -54,15 +54,17 @@
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
               <!-- RD Navbar Panel-->
+
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png"  width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
               </div>
+
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
                       <ul class="list-0" style="font-size: 20px; font-weight: normal;">
@@ -75,8 +77,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -109,7 +110,7 @@
                   <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <!-- <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li> -->
+                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -117,7 +118,6 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  </li>
                   <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
                   <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
@@ -130,11 +130,33 @@
     </header>
 
     <!-- Working at CaseCraft-->
-      <div class="fondoCertificaciones" style="margin-top: 100px;">
+    <br><br>
+      <div class="fondoInvestigaciones" style="margin-top: 100px;">
         <p class="tituloCertificaciones" style="font-size: 30px;">
           CONOCE NUESTRAS CERTIFICACIONES
         </p>
       </div>
+      
+      <br><br>
+      <section class="section novi-background section-lg fondoMedalla">
+      <div class="container">
+        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+          <div class="col-md-10 col-lg-6 col-xl-5">
+            <h3 class="text-uppercase">MEDALLA DE ORO A LA CALIDAD Y SERVICIO</h3>
+            <!-- <p class="about-subtitle">ININBIO</p> -->
+            <br>
+            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;">
+            ININBIO recibe de la Organización Mundial de Mercadotecnia, S.C., la Medalla de Oro a la Calidad y el Servicio 2019, demostrando  
+            su liderazgo en la calidad del servicio al ser empresa líder en el ramo de Nutrición Celular en procesos de Fermentación Alc
+          </p>
+            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
+          </div>
+          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/CCC.png" title="https://www.freepik.es/foto-gratis/tecnologo-uniforme-blanco-control-calidad-fabrica-produccion-industrial_11450614.htm#query=comprobando%20calidad&position=4&from_view=search&track=robertav1 Imagen de aleksandarlittlewolf en Freepik" width="570" height="388" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
     <section class="section novi-background section-lg fondoFDA" style="margin-top: 25px;">
       <div class="container" style="margin-top: 30px;">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse fondoFDA">
@@ -154,7 +176,7 @@
         </div>
       </div>
     </section>
-
+<br><br>
     <section class="section novi-background section-lg fondoCofepris">
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
@@ -171,7 +193,7 @@
         </div>
       </div>
     </section>
-
+    <br><br>
     <section class="section novi-background section-lg fondoKosher">
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
@@ -188,7 +210,7 @@
         </div>
       </div>
     </section>
-
+    <br><br><br><br>
     <footer class="section novi-background footer-advanced bg-gray-700">
         <div class="footer-advanced-main">
           <div class="container">

@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Ininbio/Diagnósticos Gratuitos</title>
+  <title>Ininbio/Servicios</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,15 +54,17 @@
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
               <!-- RD Navbar Panel-->
+
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
                 <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
               </div>
+
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
                       <ul class="list-0" style="font-size: 20px; font-weight: normal;">
@@ -75,8 +77,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45 Col. Centro</a></li>
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -93,23 +94,23 @@
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-                <ul class="rd-navbar-nav menu-horizontal">
+              <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item">
+                  <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <!-- <li class="rd-nav-item active"><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
+                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item">
+                  <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                      <!-- <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li> -->
+                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -117,10 +118,9 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  </li>
                   <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
-                  </li> -->
-                  <!-- <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
+                  </li>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -156,19 +156,19 @@
             <div class="col-md-8">
               <div class="row">
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/magnifying.png" style="width: 100px;" onclick="inSitu('./images/inSitu.jpg')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
+                  <img src="./images/iconoServicios/magnifying.png" style="width: 100px; cursor: pointer;" onclick="inSitu('./images/inSitu.jpg')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Servicio de Análisis In Situ</p>
                 </div>
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/stem-cell-therapy.png" style="width: 100px;" onclick="nutriEspecifico('./images/nutrientesEspecificos.jpg')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
+                  <img src="./images/iconoServicios/stem-cell-therapy.png" style="width: 100px; cursor: pointer;" onclick="nutriEspecifico('./images/nutrientesEspecificos.jpg')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Desarrollo de Nutrientes Específicos</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/cepas.png" style="width: 100px;" onclick="aislamientoCepas('./images/aislamientoCepas.jpg');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
+                  <img src="./images/iconoServicios/cepas.png" style="width: 100px; cursor: pointer;" onclick="aislamientoCepas('./images/aislamientoCepas.jpg');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Aislamiento y Selección de Cepas</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/pipette.png" style="width: 100px;" onclick="propagacionCepas('./images/propagacionCepas.jpg');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
+                  <img src="./images/iconoServicios/pipette.png" style="width: 100px; cursor: pointer;" onclick="propagacionCepas('./images/propagacionCepas.jpg');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Trabajos de Propagación de Cepas de Levadura</p>
                 </div>
               </div>

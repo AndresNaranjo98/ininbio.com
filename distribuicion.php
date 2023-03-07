@@ -41,7 +41,7 @@ if (isset($_SESSION['rol'])) {
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Ininbio/Productos</title>
+  <title>Ininbio/Distribuición</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -135,7 +135,7 @@ if (isset($_SESSION['rol'])) {
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li>
+                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
@@ -143,16 +143,17 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item" >
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos y servicios</a></li>
+                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a>
+                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -161,7 +162,46 @@ if (isset($_SESSION['rol'])) {
       </div>
     </header>
 
+    <section class="section novi-background section-xl">
+      <div class="fondoInvestigaciones">
+        <p class="tituloInvestigaciones" style="font-size: 30px;">
+          Puntos de Distribuición
+        </p>
+      </div>
+      <div style="margin-top: 30px;" class="fondoDistribuicion">
+        <div class="container">
+          <br>
+        <h3 style="text-align: center; margin-top: 30px; color: white;">Estación La Joya</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1678132831176!6m8!1m7!1s_w6hsu5m0yKVSpusTMHLog!2m2!1d20.57948172550611!2d-102.3991599317537!3f349.576519683138!4f3.426228507179829!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
+              <article class="unit align-items-center" style="text-align: center; font-size: 20px; color: black; font-weight: normal;">
+                    <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                    <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Carretera a Betania KM 3 <br>Ayotlan, Jalisco</a></div>
+                  </article>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div style="margin-top: 100px;" class="fondoDistribuicion">
+        <div class="container">
+          <br>
+        <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Estación Tequila</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+            <div class="col-md-10 col-lg-6 col-xl-5">
+
+              <article class="unit align-items-center" style="text-align: center; font-size: 20px; color: black; font-weight: normal;">
+                    <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                    <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">910 Carr. Guadalajara-Tepic <br>Tequila, Jalisco</a></div>
+                  </article>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1678132529203!6m8!1m7!1sy_KskdhzuWehQDXR9F-Iww!2m2!1d20.87631130490256!2d-103.8108683838134!3f202.54!4f-6.560000000000002!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
 <footer class="section novi-background footer-advanced bg-gray-700">
         <div class="footer-advanced-main">

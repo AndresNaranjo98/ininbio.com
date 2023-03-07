@@ -18148,6 +18148,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 .fondoKosher {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(166%2c 166%2c 166%2c 1)'%3e%3c/rect%3e%3cpath d='M0 0L613.81 0L0 67.3z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 67.3L613.81 0L760.0899999999999 0L0 309.32z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 309.32L760.0899999999999 0L1183.01 0L0 374.95z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 374.95L1183.01 0L1229.96 0L0 488.84z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L1437.05 560L1440 292.76z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 292.76L1437.05 560L1002.98 560L1440 268.3z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 268.3L1002.98 560L826.89 560L1440 259.38z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 259.38L826.89 560L790.85 560L1440 254.71z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 /* Estilo Fondo FDA */
@@ -18155,6 +18156,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 .fondoFDA {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1008%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(207%2c 162%2c 109%2c 1)'%3e%3c/rect%3e%3cpath d='M1440 0L1040.58 0L1440 276.75z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1040.58 0L1440 276.75L1440 348.39L533.26 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M533.26 0L1440 348.39L1440 455.04999999999995L512.95 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M512.95 0L1440 455.04999999999995L1440 525.49L475.7900000000001 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L421.6 560L0 518.61z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 518.61L421.6 560L981.32 560L0 481.43z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 481.43L981.32 560L1159.3400000000001 560L0 239.22z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 239.22000000000003L1159.3400000000001 560L1183.3000000000002 560L0 141.33000000000004z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1008'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 /* Estilo Fondo Técnicas De Levadura */
@@ -18163,6 +18165,13 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	background-image: url('../images/fondoNutricionCelualr.jpg');
 	background-size: cover;
 	background-attachment: fixed;
+}
+
+.fondoDistribuicion {
+	background-image: url('../images/fondo_distribuicion.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+
 }
 
 /* Estilo Fondo Nutrición Celular */
@@ -18176,6 +18185,14 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
 .fondoCofepris {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1012%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(115%2c 123%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M0 0L699.13 0L0 249.5z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 249.5L699.13 0L1045.62 0L0 391.95z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 391.95L1045.62 0L1212.1399999999999 0L0 477.74z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 477.74L1212.1399999999999 0L1295.1899999999998 0L0 490.93z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L1249.4 560L1440 349.64z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 349.64L1249.4 560L884.0600000000002 560L1440 307.73z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 307.73L884.0600000000001 560L786.45 560L1440 150.25000000000003z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 150.25L786.45 560L285.66 560L1440 108.22999999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1012'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.fondoMedalla {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(166%2c 166%2c 166%2c 1)'%3e%3c/rect%3e%3cpath d='M0 0L613.81 0L0 67.3z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 67.3L613.81 0L760.0899999999999 0L0 309.32z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 309.32L760.0899999999999 0L1183.01 0L0 374.95z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 374.95L1183.01 0L1229.96 0L0 488.84z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L1437.05 560L1440 292.76z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 292.76L1437.05 560L1002.98 560L1440 268.3z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 268.3L1002.98 560L826.89 560L1440 259.38z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 259.38L826.89 560L790.85 560L1440 254.71z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 /* Estilo Fondo Conservación Levadura */
