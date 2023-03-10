@@ -54,29 +54,35 @@
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
               <!-- RD Navbar Panel-->
+
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png"  width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
               </div>
+
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>

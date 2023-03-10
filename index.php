@@ -288,9 +288,9 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <div class="cerrar" aria-hidden="true">&times;</div>
-                  </button>
+                  </button> -->
                 </div>
                 <div class="modal-body" style="text-align: left;">
                   <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
@@ -310,6 +310,7 @@
                   </div>
                 </div>
                 <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal2<?php echo $idPro ?>" style="background-color: #4D9083; color: white;">Solicitar Ficha Técnica</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                   <!-- <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
                   <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
@@ -321,6 +322,81 @@
               </div>
             </div>
           </div>
+
+
+          <div class="modal fade" id="modal2<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLongTitle">Solicitar Ficha Técnica</h5>
+      <!-- <button type="button" class="close" aria-label="Close">
+        <a href="typography.php">
+        <div class="cerrar" aria-hidden="true">&times;</div>
+      </a>
+      </button> -->
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
+  </div>
+
+<div class="modal-body">
+<form action="enviar.php" method="post">
+
+<div class="form-group">
+<label for="producto">Producto</label>
+<input type="text" name="producto" id="producto" class="form-control" placeholder="" value="<?php echo $row[$i][1]; ?>" required/>
+</div>
+
+<div class="row wow slideInUp">
+<div class="col-md-6">
+  <div class="form-group">
+    <label for="nombre">Nombre*</label>
+  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required/>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="form-group">
+  <label for="nombre"></label>
+  <input type="text" name="apellidos" id="apellido" class="form-control" placeholder="Apellidos" value="" required/>
+  </div>
+</div>
+</div>
+<br>
+<div class="form-group">
+<label for="empresa">Empresa*</label>
+<input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required/>
+</div>
+<br>
+<div class="form-group">
+<label for="telefono">Telefono*</label>
+<input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" id="telefono" name="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required/>
+</div>
+<br>
+<div class="form-group">
+<label for="correo">Correo*</label>
+<input type="email" name="correo" class="form-control" id="correo" placeholder="Correo" value="" required/>
+</div>
+<br>
+<div class="form-group">
+<label for="mensaje">Motivo De Solicitud*</label>
+<textarea type="text" name="mensaje" class="form-control" placeholder="" id="mensaje" value="" required rows="4" cols=""></textarea>
+</div>
+<br>
+
+<div style="text-align: center">
+<button type="submit" name="send" class="button button-primary button-winona button-md wow slideInRight">Enviar</button>
+<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button> -->
+</div>
+            </div>
+</form>
+</div>
+
+
+</div>
+
+
+</div>  
+
 
           <?php
             }

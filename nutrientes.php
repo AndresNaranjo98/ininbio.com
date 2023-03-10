@@ -41,7 +41,7 @@ if (isset($_SESSION['rol'])) {
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Ininbio/Productos</title>
+  <title>Ininbio/Nutrientes</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,29 +93,35 @@ if (isset($_SESSION['rol'])) {
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
               <!-- RD Navbar Panel-->
+
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png"  width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
               </div>
+
               <div class="rd-navbar-collapse">
                 <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                 <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <ul class="list-0">
+                      <ul class="list-0" style="font-size: 20px; font-weight: normal;">
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7560</a></li>
                         <li><a class="link-default" href="tel:#">+55 (352) 522-7561</a></li>
                       </ul>
                     </div>
                   </article>
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama No. 45 Col. Centro C.P. 59300, <br> La Piedad, Michoacán, México</a></div>
+                    <div class="unit-body">
+                      <ul class="list-0">
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                      </ul>
+                    </div>
                   </article>
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
-                  <article class="unit align-items-center">
+                  <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
                     <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
@@ -267,9 +273,9 @@ if (isset($_SESSION['rol'])) {
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <div class="cerrar" aria-hidden="true">&times;</div>
-                    </button>
+                    </button> -->
                   </div>
                   <div class="modal-body">
                     <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
@@ -289,17 +295,92 @@ if (isset($_SESSION['rol'])) {
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
-                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                    <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                    <!-- <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button> -->
-                    </form>
-                  </div>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal2<?php echo $idPro ?>" style="background-color: #4D9083; color: white;">Solicitar Ficha Técnica</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                  <!-- <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
+                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>"> -->
+                  <!-- <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button> -->
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
+
+
+          <div class="modal fade" id="modal2<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLongTitle">Solicitar Ficha Técnica</h5>
+      <!-- <button type="button" class="close" aria-label="Close">
+        <a href="typography.php">
+        <div class="cerrar" aria-hidden="true">&times;</div>
+      </a>
+      </button> -->
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
+  </div>
+
+<div class="modal-body">
+<form action="enviar.php" method="post">
+
+<div class="form-group">
+<label for="producto">Producto</label>
+<input type="text" name="producto" id="producto" class="form-control" placeholder="" value="<?php echo $row[$i][1]; ?>" required/>
+</div>
+
+<div class="row wow slideInUp">
+<div class="col-md-6">
+  <div class="form-group">
+    <label for="nombre">Nombre*</label>
+  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required/>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="form-group">
+  <label for="nombre"></label>
+  <input type="text" name="apellidos" id="apellido" class="form-control" placeholder="Apellidos" value="" required/>
+  </div>
+</div>
+</div>
+<br>
+<div class="form-group">
+<label for="empresa">Empresa*</label>
+<input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required/>
+</div>
+<br>
+<div class="form-group">
+<label for="telefono">Telefono*</label>
+<input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" id="telefono" name="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required/>
+</div>
+<br>
+<div class="form-group">
+<label for="correo">Correo*</label>
+<input type="email" name="correo" class="form-control" id="correo" placeholder="Correo" value="" required/>
+</div>
+<br>
+<div class="form-group">
+<label for="mensaje">Motivo De Solicitud*</label>
+<textarea type="text" name="mensaje" class="form-control" placeholder="" id="mensaje" value="" required rows="4" cols=""></textarea>
+</div>
+<br>
+
+<div style="text-align: center">
+<button type="submit" name="send" class="button button-primary button-winona button-md wow slideInRight">Enviar</button>
+<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button> -->
+</div>
+            </div>
+</form>
+</div>
+
+
+</div>
+
+
+</div>  
           <?php
           }
           ?>
