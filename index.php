@@ -95,10 +95,10 @@
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-              <ul class="rd-navbar-nav menu-horizontal">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
@@ -108,10 +108,10 @@
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
+                      <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -119,7 +119,7 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                    <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
                   <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
@@ -178,7 +178,7 @@
                 </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Planta de producción con certificado FDA</div>
-                </li>                
+                </li>
                 <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Registro COFEPRIS</div>
                 </li>
@@ -240,168 +240,145 @@
     $result = $sentencia->get_result();
     ?>
 
-<section class="section novi-background section-md text-center">
+    <section class="section novi-background section-md text-center">
       <div class="container">
         <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Nuestros productos más vendidos</span></h3>
         <div class="row row-lg-50 row-35 offset-top-2">
-        <?php
-            $row = $result->fetch_all();
-            for ($i = 0; $i < count($row); ++$i) {
-              $idPro = $row[$i][0];
-            ?>
-          <div class="col-md-6 wow-outer">
+          <?php
+          $row = $result->fetch_all();
+          for ($i = 0; $i < count($row); ++$i) {
+            $idPro = $row[$i][0];
+          ?>
+            <div class="col-md-6 wow-outer">
               <!-- Post Modern-->
               <article class="post-modern wow slideInLeft" style="text-align: center;">
                 <tr>
-                  <div class="card" style="--i:url(../<?php echo $row[$i][6]; ?>)">
+                  <div class="card" style="--i:url(../<?php echo $row[$i][4]; ?>)">
                     <div class="content">
                       <br>
                       <br>
                       <br>
                       <br>
-                      <!-- <form action="carrito.php" method="post">
-                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="cantidad" id="cantidad" value="1">
-                  <button  id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">                
-                  <p class="fa-sharp fa-solid fa-cart-plus fa-2x iconoProducto" id="Click" style=" color: #71c500; cursor: pointer;"></p>
-                </button> -->
-                <br>
-                <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
-          <!-- </form> -->
+                      <br>
+                      <a class="fa-solid fa-circle-info fa-2x iconoProducto" href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>" style="color: #2c9182;"></a>
                     </div>
                   </div>
-                  <h4 class="post-modern-title"><p class="post-modern-title"><?php echo $row[$i][1];?></p></h4>
+                  <h3 class="post-modern-title">
+                    <p class="post-modern-title"><?php echo $row[$i][1]; ?></p>
+                  </h3>
                   <ul class="post-modern-meta">
-                    <li><p style="color: #2c9182;"><?php echo $row[$i][4]; ?></p></li>
-                    <li style="text-transform: capitalize; color: #71c500;"><?php echo $row[$i][5]; ?> </li>
+                    <li>
+                      <p style="color: #2c9182; text-transform: capitalize; font-size: 25px;"><?php echo $row[$i][6]; ?></p>
+                    </li>
+                    <li style="text-transform: capitalize; color: #71c500; font-size: 25px;"><?php echo $row[$i][5]; ?> </li>
                   </ul>
                   <!-- <p style="font-weight: normal;">Categoria: <?php echo $row[$i][5]; ?> </p> -->
                 </tr>
               </article>
-          </div>
+            </div>
 
-          <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <div class="cerrar" aria-hidden="true">&times;</div>
-                  </button> -->
-                </div>
-                <div class="modal-body" style="text-align: left;">
-                  <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
-                  <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][4]; ?><br>
-                  <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
-                  <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                    <form action="carrito.php" method="post">
-                      <!-- <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
-                        <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
-                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
-                        </button>
-                        <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
-                        <button type="button" style="width: 30px; height: 30px;" data-action="increment">
-                          <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
-                        </button> -->
-                      </p>
+            <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="text-align: left;">
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
+                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?><br>
+                    <aside style="font-weight: normal; color: black; margin-top: 10px; text-align: justify;"><?php echo $row[$i][2]; ?></aside><br>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalFicha<?php echo $idPro ?>" data-dismiss="modal" style="background-color: #4D9083; color: white;">Solicitar Ficha Técnica</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                   </div>
                 </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal2<?php echo $idPro ?>" style="background-color: #4D9083; color: white;">Solicitar Ficha Técnica</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
-                  <!-- <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>"> -->
-                  <!-- <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button> -->
+              </div>
+            </div>
+
+            <div class="modal fade" id="modalFicha<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Solicitud Ficha Técnica</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="color: black; font-weight: normal;">
+                    <form action="enviar.php" method="post">
+                      <div class="form-group">
+                        <label for="producto">
+                          Producto
+                        </label>
+                        <input type="text" name="producto" id="producto" class="form-control" value="<?php echo $row[$i][1]; ?>" required>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="nombre">
+                              Nombre(s)
+                            </label>
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="apellidos">
+                              Apellidos
+                            </label>
+                            <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Apellidos" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="empresa">
+                              Empresa
+                            </label>
+                            <input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="telefono">
+                              Teléfono
+                            </label>
+                            <input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" name="telefono" id="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="correo">
+                              Correo
+                            </label>
+                            <input type="email" name="correo" id="correo" class="form-control" placeholder="Correo" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="mensaje">
+                              Motivo de Solicitud
+                            </label>
+                            <textarea name="mensaje" id="mensaje" class="form-control" placeholder="" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" name="send" class="btn btn-secondary" style="background-color: #2c9182; color: white;">Enviar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                  </div>
                   </form>
                 </div>
               </div>
             </div>
-          </div>
-
-
-          <div class="modal fade" id="modal2<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLongTitle">Solicitar Ficha Técnica</h5>
-      <!-- <button type="button" class="close" aria-label="Close">
-        <a href="typography.php">
-        <div class="cerrar" aria-hidden="true">&times;</div>
-      </a>
-      </button> -->
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <div class="cerrar" aria-hidden="true">&times;</div>
-                    </button>
-  </div>
-
-<div class="modal-body">
-<form action="enviar.php" method="post">
-
-<div class="form-group">
-<label for="producto">Producto</label>
-<input type="text" name="producto" id="producto" class="form-control" placeholder="" value="<?php echo $row[$i][1]; ?>" required/>
-</div>
-
-<div class="row wow slideInUp">
-<div class="col-md-6">
-  <div class="form-group">
-    <label for="nombre">Nombre*</label>
-  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required/>
-  </div>
-</div>
-<div class="col-md-6">
-  <div class="form-group">
-  <label for="nombre"></label>
-  <input type="text" name="apellidos" id="apellido" class="form-control" placeholder="Apellidos" value="" required/>
-  </div>
-</div>
-</div>
-<br>
-<div class="form-group">
-<label for="empresa">Empresa*</label>
-<input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required/>
-</div>
-<br>
-<div class="form-group">
-<label for="telefono">Telefono*</label>
-<input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" id="telefono" name="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required/>
-</div>
-<br>
-<div class="form-group">
-<label for="correo">Correo*</label>
-<input type="email" name="correo" class="form-control" id="correo" placeholder="Correo" value="" required/>
-</div>
-<br>
-<div class="form-group">
-<label for="mensaje">Motivo De Solicitud*</label>
-<textarea type="text" name="mensaje" class="form-control" placeholder="" id="mensaje" value="" required rows="4" cols=""></textarea>
-</div>
-<br>
-
-<div style="text-align: center">
-<button type="submit" name="send" class="button button-primary button-winona button-md wow slideInRight">Enviar</button>
-<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button> -->
-</div>
-            </div>
-</form>
-</div>
-
-
-</div>
-
-
-</div>  
-
-
           <?php
-            }
-            ?>
-          <div class="col-md-12 wow-outer"><a class="button button-primary button-md" href="typography.php">Ver más productos</a></div>
+          }
+          ?>
+          <div class="col-md-12 wow-outer"><a class="button button-primary button-md" href="typography.php" style="font-size: 20px;">Ver más productos</a></div>
         </div>
       </div>
     </section>
@@ -453,7 +430,7 @@
     <section class="section novi-background section-lg" style="background-color: #182f3e;">
       <div class="container">
         <div class="row row-30">
-        <div class="col-sm-6 col-lg-6 wow-outer">
+          <div class="col-sm-6 col-lg-6 wow-outer">
             <!-- Box Minimal-->
             <article class="box-minimal">
               <div class="box-chloe__icon novi-icon fa-solid fa-flask-vial wow fadeIn" style="color: white;" data-wow-delay=".1s"></div>
@@ -473,9 +450,9 @@
               <div class="box-minimal-main wow-outer">
                 <h4 class="box-minimal-title wow slideInDown" style="color: white; font-size: 30px;" data-wow-delay=".1s">Estudios, Evaluación Y Factibilidad De Cepas</h4>
                 <p class="wow fadeInUpSmall" style="color: white; text-align: justify; font-size: 20px;" data-wow-delay=".1s">
-                Mediante la evaluación y factibilidad de cepas determinamos si una cepa en particular es adecuada para su uso en una 
-                aplicación específica. Esto implicar la evaluación de su capacidad para producir un compuesto de interés, su resistencia 
-                a las condiciones adversas, entre otros factores.
+                  Mediante la evaluación y factibilidad de cepas determinamos si una cepa en particular es adecuada para su uso en una
+                  aplicación específica. Esto implicar la evaluación de su capacidad para producir un compuesto de interés, su resistencia
+                  a las condiciones adversas, entre otros factores.
                 </p>
               </div>
             </article>
@@ -742,14 +719,9 @@
       </div>
       <div class="content-whatsapp -bottom">
         <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-
-
-
-
         <button class="send-msPopup" id="send-btn" type="button">
           <i class="material-icons icon-font-color--black">send</i>
         </button>
-
       </div>
     </div>
     <button type="button" id="whats-openPopup" class="whatsapp-button">

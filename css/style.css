@@ -3182,7 +3182,7 @@ textarea.form-input {
 	top: 50%;
 	width: 1px;
 	height: 1.5em;
-	background: #e8e9ee;
+	background: #000000;
 	transform: translate3d(0, -50%, 0);
 }
 
@@ -7512,6 +7512,9 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 	}
 	* + .row {
 		margin-top: 40px;
+	}
+	.estacionDirecciones{
+		margin-top: 150px;
 	}
 	* + .text-block {
 		margin-top: 30px;
@@ -18203,3 +18206,59 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	background-attachment: fixed;
 	background-position: center center;
 }
+
+/* Estilo Fondo FMT */
+
+.fondoFMT {
+	background-image: url('../images/3326663.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fondoSistema {
+	display: flex;
+	justify-content: space-between;
+}
+
+.imagenIzquierda {
+	width: 50%;
+	background-color: #00529B;
+}
+
+.imagenIzquierda:last-child {
+	text-align: right;
+	background-color: #000000;
+  }
+
+  .textoNeon {
+	text-transform: uppercase;
+	text-shadow:
+		0 0 5px rgb(255, 0, 0,1),
+		0 0 10px rgba(255, 0, 0,1),
+		0 0 20px rgba(255, 0, 0,1),
+		0 0 40px rgba(255, 0, 0,1),
+		0 0 80px rgba(255, 0, 0,1),
+		0 0 90px rgba(255, 0, 0,1),
+		0 0 100px rgba(255, 0, 0,1),
+		0 0 140px rgba(255, 0, 0,1),
+		0 0 180px rgba(255, 0, 0,1);
+  }
+
+  .textoNeon2 {
+	text-transform: uppercase;
+	text-shadow:
+		0 0 5px rgb(113, 197, 0,1),
+		0 0 10px rgba(113, 197, 0,1),
+		0 0 20px rgba(113, 197, 0,1),
+		0 0 40px rgba(113, 197, 0,1),
+		0 0 80px rgba(113, 197, 0,1),
+		0 0 90px rgba(113, 197, 0,1),
+		0 0 100px rgba(113, 197, 0,1),
+		0 0 140px rgba(113, 197, 0,1),
+		0 0 180px rgba(113, 197, 0,1);
+  }

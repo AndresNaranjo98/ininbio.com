@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$database = "ininbio_sitio";
+$database = "ininbiowebapp";
 $username = "root";
-$password = "12345";
+$password = "Ininbio.TI2022";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection

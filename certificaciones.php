@@ -129,15 +129,13 @@
       </div>
     </header>
 
-    <!-- Working at CaseCraft-->
-    <br><br>
       <div class="fondoInvestigaciones" style="margin-top: 100px;">
         <p class="tituloCertificaciones" style="font-size: 30px;">
-          CONOCE NUESTRAS CERTIFICACIONES
+          CERTIFICACIONES
         </p>
       </div>
       
-      <br><br>
+      <br>
       <section class="section novi-background section-lg fondoMedalla">
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">

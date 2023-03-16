@@ -140,7 +140,7 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 30%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
             <div class="rd-navbar-main" >
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 

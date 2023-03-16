@@ -1,42 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['rol'])) {
-  switch ($_SESSION['rol']) {
-    case 1:
-      // header('location: index.php');
-?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="#"><span class="icon novi-icon icon-md mdi mdi-logout"></span></a></li>';
-          };
-        }
-      </script>
-    <?php
-      break;
-    case 2:
-      // header('location: index.php');
-    ?>
-      <script>
-        window.onload = function() {
-          what();
-
-          function what() {
-            document.getElementById('loginRegister').innerHTML = '<li id="loginRegister" class="rd-nav-item rd-nav-link" style="cursor: pointer;" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="icon novi-icon icon-md mdi mdi-logout"></span></li>';
-            document.getElementById('productosInCart').innerHTML = '<li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span class="icon novi-icon icon-sm mdi mdi-cart"><?php echo (empty($_SESSION['cart']))?0:count($_SESSION['cart']); ?></span></a></li>';
-          };
-        }
-      </script>
-<?php
-      break;
-    default:
-  }
-}
-
-?>
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
@@ -129,14 +90,14 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 30%;">
-            <div class="rd-navbar-main" >
+          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+            <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-              <ul class="rd-navbar-nav menu-horizontal">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
@@ -146,10 +107,10 @@ if (isset($_SESSION['rol'])) {
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
+                      <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -157,7 +118,7 @@ if (isset($_SESSION['rol'])) {
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                    <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
                   </li>
                   <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
@@ -168,57 +129,81 @@ if (isset($_SESSION['rol'])) {
       </div>
     </header>
 
-    <section class="section novi-background section-xl" style=" max-width: 100%; background : url('./images/circuito.jpg') no-repeat; background-size: cover;">
-    <p id="tituloIcono" style="font-size: 30px; color: white; font-weight: normal; text-align: center; text-transform: uppercase;">FMT (FERMENTATION MIND THINKING) & ININBIO SYSTEM</p>
-
-<br>
-<br>
-<br>
-      <div class="row">
-        <div class="col-12 col-md-7">
-
+    <section class="section novi-background section-xl">
+      <div class="fondoFMT">
+        <p class="tituloInvestigaciones" style="font-size: 30px;">
+          Fermentation Mind Thinking (FMT) & Ininbio System
+        </p>
+      </div>
+      <div style="margin-top: 30px; background-color: black;">
         <div class="container">
-          <img src="./images/Karen FMT F.png" id="imagenIcono" style="width: 275px; height: 550px;">
-          <img src="./images/Karen FMT.png" id="imagenIcono" style="width: 275px; height: 550px;">
+          <div class="row justify-content-center justify-content-lg-between flex-lg-row-reverse">
+            <div class="col-md-10 col-lg-6 col-xl-6" style="width: 100%;">
+              <img class="img-responsive" src="images/Pp2.png">
+            </div>
+            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 50px;">
+              <p class="textoNeon" style="color: gray; text-align: center; font-size: 40px;">El futuro del proceso de fermentación está aquí</p>
+              <p style="margin-top: 50px; text-align: justify; font-size: 25px; color: white; font-weight: normal;">
+                El Sistema Integrado de Monitoreo para la Fermentación de las Bebidas Alcohólicas
+                consta de varios sensores que monitorean las
+                variables de interés y que en conjunto, permiten al sistema de
+                control realizar los algoritmos de funcionamiento para mostrar
+                el valor de las variables deseadas.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <p id="tituloIcono" style="font-size: 30px; color: white; font-weight: normal; text-align: center; text-transform: uppercase;">Sistema Integrado De Monitoreo <br>
-        Para La Fermentación De Las Bebidas Alcohólicas.
-        </p>
-            <!-- <p style="font-size: 30px; font-weight: normal; color: black;">AQUÍ IRÁ EL TEXTO POR ICONO SELECCIONADO</p> -->
-            <p id="descripcionIcono" style="font-size: 20px; color: white; font-weight: normal;">
-            El sistema consta de varios sensores que monitorean las<br>
-            variables de interés y que en conjunto, permiten al sistema de
-            control realizar los algoritmos de funcionamiento para mostrar
-            el valor de las variables deseadas. <br>
-            El sistema de monitoreo para la fermentación de bebidas 
-            alcohólicas envía la información a la base de datos para 
-            después hacer un registro de éstos, logrando así llevar un
-            control de los procesos monitoreados.
+      </div>
+      <div style="background-color: black;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
+            <img class="img-responsive" src="images/manoCelular.png">
+          </div>
+          <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 50px;">
+            <p class="textoNeon2" style="color: white; text-align: center; font-size: 40px;">Monitorea tu fermentación desde la palma de tu mano</p>
+            <p style="margin-top: 50px; text-align: justify; font-size: 25px; color: white; font-weight: normal;">
+            El Sistema Integrado de Monitoreo para la Fermentación de Bebidas 
+            Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente 
+            sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
+            mejor control de forma automatizada sobre los procesos monitoreados.
             </p>
+          </div>
         </div>
       </div>
+      </div>
+      <!-- <div class="fondoSistema" style="margin-top: 30px;">
+        <div class="imagenIzquierda">
+          <img class="img-responsive" src="images/Pp2.png" style="width: 100%; height: 100%;">
+        </div>
+        <div class="imagenIzquierda">
+          <div class="container">
+            <h3 class="textoNeon" style="color: white; text-align: center; margin-top: 30px;">El futuro del proceso de fermentación está aquí</h3>
+            <p style="margin-top: 30px; text-align: justify; font-size: 20px; color: white; font-weight: normal;">ININBIO trabaja en conjunto con la Universidad Nacional Autónoma de México (UNAM), para dar un amplio servicio de técnicas
+              de conservación de levaduras, ya que esto permite al industrial tener siempre su misma levadura sin contaminación.</p>
+          </div>
+        </div>
+      </div> -->
     </section>
 
-<footer class="section novi-background footer-advanced bg-gray-700">
-        <div class="footer-advanced-main">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-                </p>
-              </div>
-              <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+    <footer class="section novi-background footer-advanced bg-gray-700">
+      <div class="footer-advanced-main">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
+              <p class="footer-advanced-text">
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+              </p>
+            </div>
+            <div class="col-sm-7 col-md-5 col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
               </span>
               <p class="footer-advanced-text">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -230,44 +215,52 @@ if (isset($_SESSION['rol'])) {
                 </ul>
               </div>
             </div>
-              <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
-                <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"> </div></a></div>
-                </div>
+            <div class="col-sm-5 col-md-7 col-lg-4">
+              <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
+              <div class="row row-x-10" data-lightgallery="group">
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                    <div class="thumbnail-minimal-caption"> </div>
+                  </a></div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <hr />
+      </div>
+      <div class="footer-advanced-aside">
         <div class="container">
-          <hr/>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-              <!-- Rights-->
-              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-            </div>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+            <!-- Rights-->
+            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="card" style="--i:url(img1.jpg)">
+      <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
@@ -329,41 +322,41 @@ if (isset($_SESSION['rol'])) {
   <script src="js\contador.js"></script>
 
 
-<link rel="stylesheet" href="css\whats.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css\whats.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
-<link rel="stylesheet" href="css\whats2.css">
-<div class="nav-bottom">
-         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-          <div class="popup-whatsapp fadeIn">
-              <div class="content-whatsapp -top"><button type="button" class="closePopup">
-                    <i class="material-icons icon-font-color">close</i>
-                  </button> 
-                
-                 <p>  <img src="images\secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
-                 
-              </div>
-              <div class="content-whatsapp -bottom">
-                <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-                 
-                 
-                
-        
-                  <button class="send-msPopup" id="send-btn" type="button">
-                      <i class="material-icons icon-font-color--black">send</i>
-                  </button>
+  <link rel="stylesheet" href="css\whats2.css">
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="popup-whatsapp fadeIn">
+      <div class="content-whatsapp -top"><button type="button" class="closePopup">
+          <i class="material-icons icon-font-color">close</i>
+        </button>
 
-              </div>
-          </div>
-          <button type="button" id="whats-openPopup" class="whatsapp-button">
-              <div class="float" >
-<i class="fa fa-whatsapp my-float"></i></div>
-          </button>
-          <div class="circle-anime"></div>
+        <p> <img src="images\secretary.png" width="50"> Hola, ¿en que podemos ayudarle? </p>
+
       </div>
-      <script  src="js\script2.js"></script>
+      <div class="content-whatsapp -bottom">
+        <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+
+
+
+
+        <button class="send-msPopup" id="send-btn" type="button">
+          <i class="material-icons icon-font-color--black">send</i>
+        </button>
+
+      </div>
+    </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+      <div class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+      </div>
+    </button>
+    <div class="circle-anime"></div>
+  </div>
+  <script src="js\script2.js"></script>
 </body>
 
 </html>
