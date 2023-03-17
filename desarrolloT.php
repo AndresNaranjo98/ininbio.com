@@ -135,56 +135,95 @@
           Fermentation Mind Thinking (FMT) & Ininbio System
         </p>
       </div>
-      <div style="margin-top: 30px; background-color: black;">
-        <div class="container">
-          <div class="row justify-content-center justify-content-lg-between flex-lg-row-reverse">
-            <div class="col-md-10 col-lg-6 col-xl-6" style="width: 100%;">
-              <img class="img-responsive" src="images/Pp2.png">
+      <div class="fondoImagenSistema" style="margin-top: 30px;">
+        <div class="container" style="width: 100vw;">
+          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
             </div>
-            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 50px;">
-              <p class="textoNeon" style="color: gray; text-align: center; font-size: 40px;">El futuro del proceso de fermentación está aquí</p>
-              <p style="margin-top: 50px; text-align: justify; font-size: 25px; color: white; font-weight: normal;">
-                El Sistema Integrado de Monitoreo para la Fermentación de las Bebidas Alcohólicas
-                consta de varios sensores que monitorean las
-                variables de interés y que en conjunto, permiten al sistema de
-                control realizar los algoritmos de funcionamiento para mostrar
-                el valor de las variables deseadas.
+            <div class="col-md-10 col-lg-6 col-xl-6" style="width: 50vw; background-color: transparent; margin-top: 150px;">
+              <div class="consoleContainer" style="font-size: 40px; font-weight: bold;">
+                <span class="fuenteTitulo" id="text"></span>
+                <div class="console-underscore" id="console">&#95;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <div class="container">
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
+              <img class="img-responsive" src="images/126086.png">
+            </div>
+            <div class="col-md-10 col-lg-6 col-xl-5">
+              <h3 style="color: black; text-align: center; margin-top: 30px;">Monitorea tu fermentación desde la palma de tu mano</h3>
+              <p class="fuenteTitulo" style="margin-top: 30px; text-align: justify; font-size: 20px; color: black; font-weight: normal;">
+                El Sistema Integrado de Monitoreo para la Fermentación de Bebidas
+                Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente
+                sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
+                mejor control de forma automatizada sobre los procesos monitoreados.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div style="background-color: black;">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
-            <img class="img-responsive" src="images/manoCelular.png">
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 50px;">
-            <p class="textoNeon2" style="color: white; text-align: center; font-size: 40px;">Monitorea tu fermentación desde la palma de tu mano</p>
-            <p style="margin-top: 50px; text-align: justify; font-size: 25px; color: white; font-weight: normal;">
-            El Sistema Integrado de Monitoreo para la Fermentación de Bebidas 
-            Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente 
-            sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
-            mejor control de forma automatizada sobre los procesos monitoreados.
-            </p>
-          </div>
-        </div>
-      </div>
-      </div>
-      <!-- <div class="fondoSistema" style="margin-top: 30px;">
-        <div class="imagenIzquierda">
-          <img class="img-responsive" src="images/Pp2.png" style="width: 100%; height: 100%;">
-        </div>
-        <div class="imagenIzquierda">
-          <div class="container">
-            <h3 class="textoNeon" style="color: white; text-align: center; margin-top: 30px;">El futuro del proceso de fermentación está aquí</h3>
-            <p style="margin-top: 30px; text-align: justify; font-size: 20px; color: white; font-weight: normal;">ININBIO trabaja en conjunto con la Universidad Nacional Autónoma de México (UNAM), para dar un amplio servicio de técnicas
-              de conservación de levaduras, ya que esto permite al industrial tener siempre su misma levadura sin contaminación.</p>
-          </div>
-        </div>
-      </div> -->
+
     </section>
+
+    <script>
+      consoleText(['EL FUTURO DE LA FERMENTACIÓN ESTÁ CON NOSOTROS...'], 'text', ['#C6C6C6']);
+
+      function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id);
+        target.setAttribute('style', 'color:' + colors[0]);
+        window.setInterval(function() {
+
+          if (letterCount === 0 && waiting === false) {
+            waiting = true;
+            target.innerHTML = words[0].substring(0, letterCount)
+            window.setTimeout(function() {
+              var usedColor = colors.shift();
+              colors.push(usedColor);
+              var usedWord = words.shift();
+              words.push(usedWord);
+              x = 1;
+              target.setAttribute('style', 'color:' + colors[0])
+              letterCount += x;
+              waiting = false;
+            }, 1000)
+          } else if (letterCount === words[0].length + 1 && waiting === false) {
+            waiting = true;
+            window.setTimeout(function() {
+              x = -1;
+              letterCount += x;
+              waiting = false;
+            }, 1000)
+          } else if (waiting === false) {
+            target.innerHTML = words[0].substring(0, letterCount)
+            letterCount += x;
+          }
+        }, 120)
+        window.setInterval(function() {
+          if (visible === true) {
+            con.className = 'console-underscore hidden'
+            visible = false;
+
+          } else {
+            con.className = 'console-underscore'
+
+            visible = true;
+          }
+        }, 400)
+      }
+    </script>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
       <div class="footer-advanced-main">

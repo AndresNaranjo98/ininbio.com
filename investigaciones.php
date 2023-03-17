@@ -138,7 +138,8 @@
       <div style="margin-top: 30px;" class="fondoTecnicas">
         <div class="container">
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;"><img class="img-responsive" src="images/cerrar-cientifico-borroso-sosteniendo-placa-petri.jpg" title="Imagen de https://www.freepik.es/foto-gratis/cerrar-cientifico-borroso-sosteniendo-placa-petri_12892395.htm#page=2&query=laboratorio%20celulas&position=9&from_view=search&track=robertav1#position=9&page=2&query=laboratorio%20celulas Freepik" width="570" height="388" />
+            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
+            <img class="img-responsive" src="images/cerrar-cientifico-borroso-sosteniendo-placa-petri.jpg" title="Imagen de https://www.freepik.es/foto-gratis/cerrar-cientifico-borroso-sosteniendo-placa-petri_12892395.htm#page=2&query=laboratorio%20celulas&position=9&from_view=search&track=robertav1#position=9&page=2&query=laboratorio%20celulas Freepik" width="570" height="388" />
             </div>
             <div class="col-md-10 col-lg-6 col-xl-5">
               <h3 style="color: white; text-align: center; margin-top: 30px;">Trabajos de Técnicas de Conservación de Levaduras</h3>

@@ -18262,3 +18262,41 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 		0 0 140px rgba(113, 197, 0,1),
 		0 0 180px rgba(113, 197, 0,1);
   }
+
+  /* Efectos Para Texto Sistema */
+
+  .hidden {
+	opacity:0;
+  }
+
+  .consoleContainer {
+	display:flex;
+	color: black;
+  }
+
+  .console-underscore {
+	display:inline-block;
+	position:relative;
+	top:-0.14em;
+  }
+
+  /* fondoImagenSistema */
+.fondoImagenSistema {
+  background-image: url('../images/Pp2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 80vh;
+}
+
+.fondoCelularMano {
+	background-image: url('../images/126086.png');
+	background-size: contain;
+	width: 100vw;
+	background-repeat: no-repeat;
+	height: 80vh;
+}
+
+.fuenteTitulo {
+	font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
