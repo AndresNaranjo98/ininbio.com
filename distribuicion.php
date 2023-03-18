@@ -194,7 +194,7 @@ if (isset($_SESSION['rol'])) {
         <div class="container">
           <br>
           <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Tequila, Jalisco</h3>
-          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+          <div class="row row-50 justify-content-center justify-content-lg-between">
             <iframe src="https://www.google.com/maps/embed?pb=!4v1678132529203!6m8!1m7!1sy_KskdhzuWehQDXR9F-Iww!2m2!1d20.87631130490256!2d-103.8108683838134!3f202.54!4f-6.560000000000002!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
               <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
@@ -212,19 +212,19 @@ if (isset($_SESSION['rol'])) {
         <div class="container">
           <div class="row row-50">
             <div class="col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-              <p class="footer-advanced-text">
+              <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+              <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
                 ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
               </p>
             </div>
             <div class="col-sm-7 col-md-5 col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+              <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
               </span>
-              <p class="footer-advanced-text">
+              <p class="footer-advanced-text" style="color: white; font-size: 20px;">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-                <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -237,7 +237,7 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
             <div class="col-sm-5 col-md-7 col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
+              <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
                     <div class="thumbnail-minimal-caption"></div>

@@ -18270,8 +18270,9 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   }
 
   .consoleContainer {
-	display:flex;
-	color: black;
+	color: #C6C6C6;
+	font-size: 40px;
+	font-weight: bold;
   }
 
   .console-underscore {
@@ -18299,4 +18300,107 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
 .fuenteTitulo {
 	font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.tenedor {
+  background-image: url('../images/Pp2.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-end; */
+  align-items: center;
+  height: 500px; /* altura deseada */
+}
+
+.testo {
+  width: 50%;
+  margin-bottom: 0%;
+}
+
+.desFMT {
+	margin-top: 25px;
+	color: white;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.imagenMano {
+	background-image: url('../images/imagenMano.png');
+	background-size: cover;
+	background-position: center;
+	/* background-repeat: no-repeat; */
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: flex-end; */
+	align-items: center;
+	height: 600px; /* altura deseada */
+  }
+  
+  .textoMano {
+	width: 50%;
+	max-width: 600px; /* ancho máximo deseado */
+	margin-left: auto;
+	margin-right: 20px;
+	text-align: left;
+	color: black;
+  }
+
+  .tituloCelular {
+	margin-top: 30px; 
+	text-align: justify; 
+	font-size: 20px; 
+	color: black; 
+	font-weight: normal;
+  }
+
+  .tituloPrincipal {
+	color: black; 
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase;
+  }
+
+@media screen and (max-width: 767px) {
+  .testo {
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+	margin-bottom: 10%;
+  }
+
+  .consoleContainer {
+	font-size: 5px;
+	font-weight: bold;
+  }
+
+  .tenedor {
+	height: 200px; /* altura deseada */
+  }
+
+  .imagenMano {
+	height: 200px;
+  }
+
+  .tituloCelular {
+	font-size: 10px;
+  }
+
+  .tituloPrincipal {
+	font-size: 10px;
+  }
+
+  .textoMano {
+	width: 50%;
+	margin-top: -10%;
+  }
+
+  .desFMT {
+	margin-top: 25px;
+	color: white;
+	font-size: 6px;
+	font-weight: normal;
+}
+
 }

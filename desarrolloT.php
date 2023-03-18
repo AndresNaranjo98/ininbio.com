@@ -135,40 +135,62 @@
           Fermentation Mind Thinking (FMT) & Ininbio System
         </p>
       </div>
-      <div class="fondoImagenSistema" style="margin-top: 30px;">
-        <div class="container" style="width: 100vw;">
-          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
-            </div>
-            <div class="col-md-10 col-lg-6 col-xl-6" style="width: 50vw; background-color: transparent; margin-top: 150px;">
-              <div class="consoleContainer" style="font-size: 40px; font-weight: bold;">
-                <span class="fuenteTitulo" id="text"></span>
-                <div class="console-underscore" id="console">&#95;
-                </div>
+
+      <div>
+        <div class="tenedor">
+          <div class="testo">
+            <div class="consoleContainer">
+              <span class="fuenteTitulo" id="text"></span>
+              <div class="console-underscore" id="console">&#95;
               </div>
+            </div>
+            <div class="container">
+              <p class="desFMT">
+                Medición, integración e innovación son palabras que describen al equipo FMT y a su plataforma Ininbio System. 
+                Más que un sistema de vanguardia es la combinación perfecta de medición y monitoreo, es el apoyo incondicional en tu proceso que te 
+                ayudará a cumplir tus objetivos de eficiencia de fermentación gracias a su Inteligencia Artificial que brinda sugerencias y 
+                predicciones.Y gracias a su plataforma, Ininbio System, te permitirá visualizar estas variables en cualquier lugar en el que tengas 
+                acceso a internet.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <div style="margin-top: 30px;">
-        <div class="container">
-          <div class="row row-50 justify-content-center justify-content-lg-between">
-            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
-              <img class="img-responsive" src="images/126086.png">
-            </div>
-            <div class="col-md-10 col-lg-6 col-xl-5">
-              <h3 style="color: black; text-align: center; margin-top: 30px;">Monitorea tu fermentación desde la palma de tu mano</h3>
-              <p class="fuenteTitulo" style="margin-top: 30px; text-align: justify; font-size: 20px; color: black; font-weight: normal;">
-                El Sistema Integrado de Monitoreo para la Fermentación de Bebidas
-                Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente
-                sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
-                mejor control de forma automatizada sobre los procesos monitoreados.
-              </p>
-            </div>
+        <div class="imagenMano">
+          <div class="textoMano">
+            <p class="tituloPrincipal">Monitorea tu fermentación desde la palma de tu mano</p>
+            <p class="tituloCelular">
+              El Sistema Integrado de Monitoreo para la Fermentación de Bebidas
+              Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente
+              sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
+              mejor control de forma automatizada sobre los procesos monitoreados.
+            </p>
           </div>
         </div>
       </div>
+
+      
+
+      <!-- <div style="margin-top: 30px;">
+          <div class="container">
+            <div class="row row-50 justify-content-center justify-content-lg-between">
+              <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
+                <img class="img-responsive" src="images/126086.png">
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-5">
+                <h3 style="color: black; text-align: center; margin-top: 30px;">Monitorea tu fermentación desde la palma de tu mano</h3>
+                <p class="fuenteTitulo" style="margin-top: 30px; text-align: justify; font-size: 20px; color: black; font-weight: normal;">
+                  El Sistema Integrado de Monitoreo para la Fermentación de Bebidas
+                  Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente
+                  sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
+                  mejor control de forma automatizada sobre los procesos monitoreados.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
 
     </section>
 
@@ -230,19 +252,19 @@
         <div class="container">
           <div class="row row-50">
             <div class="col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-              <p class="footer-advanced-text">
+              <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+              <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
                 ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
               </p>
             </div>
             <div class="col-sm-7 col-md-5 col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+              <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
               </span>
-              <p class="footer-advanced-text">
+              <p class="footer-advanced-text" style="color: white; font-size: 20px;">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-                <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -255,7 +277,7 @@
               </div>
             </div>
             <div class="col-sm-5 col-md-7 col-lg-4">
-              <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
+              <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
