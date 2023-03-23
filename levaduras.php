@@ -52,6 +52,7 @@ if (isset($_SESSION['rol'])) {
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
   <style>
     .ie-panel {
       display: none;
@@ -72,6 +73,7 @@ if (isset($_SESSION['rol'])) {
 </head>
 
 <body>
+  <div id="google_translate_element"></div>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -129,14 +131,14 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
-            <div class="rd-navbar-main" >
+          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
+            <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-              <ul class="rd-navbar-nav menu-horizontal">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
@@ -146,10 +148,10 @@ if (isset($_SESSION['rol'])) {
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
+                      <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -157,9 +159,9 @@ if (isset($_SESSION['rol'])) {
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="translate" class="rd-nav-item">
+                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -168,8 +170,8 @@ if (isset($_SESSION['rol'])) {
       </div>
     </header>
 
-    <section class="section novi-background section-xl" style="margin-top: 30px;">
-    <div class="fondoProductos">
+    <section class="section novi-background section-xl">
+      <div class="fondoProductos">
         <p class="tituloProductos">
           Levaduras
         </p>
@@ -201,146 +203,120 @@ if (isset($_SESSION['rol'])) {
           <?php
           $row = $result->fetch_all();
           for ($i = 0; $i < count($row); ++$i) {
-            // while($row = $result->fetch_array()){
             $idPro = $row[$i][0];
-            // print_r($row[$i]);
-
           ?>
             <div class="pr">
               <div class="imghere">
-                <img src="<?php echo $row[$i][6]; ?>" alt="">
+                <img src="<?php echo $row[$i][4]; ?>" alt="">
               </div>
               <div style="text-align: center;">
                 <div class="name"> <?php echo $row[$i][1]; ?> </div>
                 <!-- <div class="job">$<?php echo $row[$i][3]; ?> USD</div> -->
               </div>
               <div class="media-icons">
-              <!-- <form action="carrito.php" method="post">
-                  <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="cantidad" id="cantidad" value="1">
-                  <button  id="Click" type="submit" name="addProduct" value="add" style=" border: none; background: none;">                
-                  <a href="#" id="Click" type="submit" name="addProduct" value="add"><i style=" padding-top: 25%;" class="fa-solid fa-cart-shopping"></i></a>
-                </button>
-          </form> -->
-          <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i style=" padding-top: 25%;" class="fa-solid fa-info"></i></a>
+                <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i style=" padding-top: 25%;" class="fa-solid fa-info"></i></a>
               </div>
             </div>
+
             <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Información del producto</h5>
-                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <div class="cerrar" aria-hidden="true">&times;</div>
-                    </button> -->
+                    </button>
                   </div>
                   <div class="modal-body">
-                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][6]; ?>" alt="" />
-                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][4]; ?>
-                    <aside style="font-weight: normal; color: black; margin-top: 10px;"><?php echo $row[$i][2]; ?></aside><br>
-                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                      <form action="carrito.php" method="post">
-                        <!-- <p style="text-align: center; font-weight: bold; color: black;">Cantidad de productos:
-                          <button type="button" style="width: 30px; height: 30px;" data-action="decrement">
-                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">−</span>
-                          </button>
-                          <input id="cantidad" name="cantidad" style="width: 50px; text-align: center;" value="1">
-                          <button type="button" style="width: 30px; height: 30px;" data-action="increment">
-                            <span class="m-auto text-2xl font-thin" style="font-weight: bold; color: black;">+</span>
-                          </button> -->
-                        </p>
-                    </div>
+                    <img style="width: 250px; height: 250px; float: left; margin-right: 15px;" src="<?php echo $row[$i][4]; ?>" alt="" />
+                    <p style="font-weight: normal; color: black;">Categoria:</p><?php echo $row[$i][5]; ?>
+                    <aside style="font-weight: normal; color: black; margin-top: 10px; text-align: justify;"><?php echo $row[$i][2]; ?></aside><br>
                   </div>
                   <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal2<?php echo $idPro ?>" style="background-color: #4D9083; color: white;">Solicitar Ficha Técnica</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
-                  <!-- <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($idPro, $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="imagen" id="imagen" value="<?php echo openssl_encrypt($row[$i][6], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="nombreProducto" id="nombreProducto" value="<?php echo openssl_encrypt($row[$i][1], $method_encrypt, $key_encrypt); ?>">
-                  <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($row[$i][3], $method_encrypt, $key_encrypt); ?>"> -->
-                  <!-- <button type="submit" name="addProduct" value="add" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">¡Comprar ahora!</button> -->
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalFicha<?php echo $idPro ?>" data-dismiss="modal" style="background-color: #4D9083; color: white;">Solicitar Ficha Técnica</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="modalFicha<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Solicitud Ficha Técnica</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <div class="cerrar" aria-hidden="true">&times;</div>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="color: black; font-weight: normal;">
+                    <form action="enviar.php" method="post">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="producto">
+                              Producto
+                            </label>
+                            <input type="text" name="producto" id="producto" class="form-control" value="<?php echo $row[$i][1]; ?>" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="nombre">
+                              Nombre(s)
+                            </label>
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="apellidos">
+                              Apellidos
+                            </label>
+                            <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Apellidos" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="empresa">
+                              Empresa
+                            </label>
+                            <input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="telefono">
+                              Teléfono
+                            </label>
+                            <input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" name="telefono" id="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="correo">
+                              Correo
+                            </label>
+                            <input type="email" name="correo" id="correo" class="form-control" placeholder="Correo" value="" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="mensaje">
+                              Motivo de Solicitud
+                            </label>
+                            <textarea name="mensaje" id="mensaje" class="form-control" placeholder="" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" name="send" class="btn btn-secondary" style="background-color: #2c9182; color: white;">Enviar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
+                  </div>
                   </form>
                 </div>
               </div>
             </div>
-          </div>
-
-
-          <div class="modal fade" id="modal2<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLongTitle">Solicitar Ficha Técnica</h5>
-      <!-- <button type="button" class="close" aria-label="Close">
-        <a href="typography.php">
-        <div class="cerrar" aria-hidden="true">&times;</div>
-      </a>
-      </button> -->
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <div class="cerrar" aria-hidden="true">&times;</div>
-                    </button>
-  </div>
-
-<div class="modal-body">
-<form action="enviar.php" method="post">
-
-<div class="form-group">
-<label for="producto">Producto</label>
-<input type="text" name="producto" id="producto" class="form-control" placeholder="" value="<?php echo $row[$i][1]; ?>" required/>
-</div>
-
-<div class="row wow slideInUp">
-<div class="col-md-6">
-  <div class="form-group">
-    <label for="nombre">Nombre*</label>
-  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required/>
-  </div>
-</div>
-<div class="col-md-6">
-  <div class="form-group">
-  <label for="nombre"></label>
-  <input type="text" name="apellidos" id="apellido" class="form-control" placeholder="Apellidos" value="" required/>
-  </div>
-</div>
-</div>
-<br>
-<div class="form-group">
-<label for="empresa">Empresa*</label>
-<input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required/>
-</div>
-<br>
-<div class="form-group">
-<label for="telefono">Telefono*</label>
-<input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" id="telefono" name="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required/>
-</div>
-<br>
-<div class="form-group">
-<label for="correo">Correo*</label>
-<input type="email" name="correo" class="form-control" id="correo" placeholder="Correo" value="" required/>
-</div>
-<br>
-<div class="form-group">
-<label for="mensaje">Motivo De Solicitud*</label>
-<textarea type="text" name="mensaje" class="form-control" placeholder="" id="mensaje" value="" required rows="4" cols=""></textarea>
-</div>
-<br>
-
-<div style="text-align: center">
-<button type="submit" name="send" class="button button-primary button-winona button-md wow slideInRight">Enviar</button>
-<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button> -->
-</div>
-            </div>
-</form>
-</div>
-
-
-</div>
-
-
-</div>  
           <?php
           }
           ?>
@@ -391,24 +367,24 @@ if (isset($_SESSION['rol'])) {
       });
     </script>
 
-<footer class="section novi-background footer-advanced bg-gray-700">
-        <div class="footer-advanced-main">
-          <div class="container">
-            <div class="row row-50">
-              <div class="col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
-                <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
-                </p>
-              </div>
-              <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h5>
+    <footer class="section novi-background footer-advanced bg-gray-700">
+      <div class="footer-advanced-main">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
+              <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+              </p>
+            </div>
+            <div class="col-sm-7 col-md-5 col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Horario de Oficina</h4>
               </span>
-              <p class="footer-advanced-text">
+              <p class="footer-advanced-text" style="color: white; font-size: 20px;">
                 Lunes a Viernes de 8:00 a.m. a 6:00 p.m.
               </p>
               <div style="margin-top: 20px;">
-              <h5 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h5>
+                <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
                   <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
@@ -420,44 +396,52 @@ if (isset($_SESSION['rol'])) {
                 </ul>
               </div>
             </div>
-              <div class="col-sm-5 col-md-7 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Galería de Productos</h5>
-                <div class="row row-x-10" data-lightgallery="group">
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"></div></a></div>
-                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt=""/>
-                      <div class="thumbnail-minimal-caption"> </div></a></div>
-                </div>
+            <div class="col-sm-5 col-md-7 col-lg-4">
+              <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
+              <div class="row row-x-10" data-lightgallery="group">
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                    <div class="thumbnail-minimal-caption"></div>
+                  </a></div>
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                    <div class="thumbnail-minimal-caption"> </div>
+                  </a></div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <hr />
+      </div>
+      <div class="footer-advanced-aside">
         <div class="container">
-          <hr/>
-        </div>
-        <div class="footer-advanced-aside">
-          <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x"/></a>
-              <!-- Rights-->
-              <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
-              <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
-            </div>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+            <!-- Rights-->
+            <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
+            <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="card" style="--i:url(img1.jpg)">
+      <!-- <div class="card" style="--i:url(img1.jpg)">
           <div class="content">
             <i class="fa-sharp fa-solid fa-house"></i>
               <a href="#">Ver Detalles</a>
@@ -493,6 +477,14 @@ if (isset($_SESSION['rol'])) {
       location.href = 'cerrarSesion.php?logout=true';
       localStorage.clear();
     }
+
+    document.getElementById("translate").onclick = function traductorGoogle() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element');
+    }
   </script>
 
 
@@ -517,6 +509,8 @@ if (isset($_SESSION['rol'])) {
   <script src="js/boton.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>

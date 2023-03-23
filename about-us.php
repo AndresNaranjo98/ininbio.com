@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+
   <style>
     .ie-panel {
       display: none;
@@ -33,6 +35,7 @@
 </head>
 
 <body>
+  <div id="google_translate_element"></div>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -90,14 +93,14 @@
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-              <ul class="rd-navbar-nav menu-horizontal">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
@@ -107,10 +110,10 @@
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
+                      <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -118,9 +121,9 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="translate" class="rd-nav-item">
+                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -147,7 +150,8 @@
               fórmulas novedosas de acuerdo a sus necesidades.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>
-          <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/main-logo.png" alt="" width="300" height="250" />
+          <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 5%;">
+            <iframe width="560" height="400" src="https://www.youtube.com/embed/k3uHN6LZpg8?&autoplay=1&mute=1&controls=1" title="Ininbio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -218,10 +222,14 @@
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-1-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><p>Juan Andres Aguilar Naranjo</p></h5>
+                <h5 class="profile-creative-title">
+                  <p>Juan Andres Aguilar Naranjo</p>
+                </h5>
                 <p class="profile-creative-position">Jefe de departamento de TI</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
+                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  </div>
                 </div>
                 <p class="descriptionPuest">Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
               </div>
@@ -233,10 +241,14 @@
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-2-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><p>Hortencia Piña</p></h5>
+                <h5 class="profile-creative-title">
+                  <p>Hortencia Piña</p>
+                </h5>
                 <p class="profile-creative-position">Jefe de departamento de Bioquimica</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
+                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  </div>
                 </div>
                 <p class="descriptionPuest">John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial.</p>
               </div>
@@ -248,10 +260,14 @@
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-3-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><P>Jose Martin Martinez</P></h5>
+                <h5 class="profile-creative-title">
+                  <P>Jose Martin Martinez</P>
+                </h5>
                 <p class="profile-creative-position">Jefe de departamento de Mecatronica</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
+                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  </div>
                 </div>
                 <p class="descriptionPuest">Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
               </div>
@@ -263,10 +279,14 @@
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><p>Rafael Sánchez Alvarado</p></h5>
+                <h5 class="profile-creative-title">
+                  <p>Rafael Sánchez Alvarado</p>
+                </h5>
                 <p class="profile-creative-position">Esclavo del Andres</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
+                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  </div>
                 </div>
                 <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
@@ -278,10 +298,14 @@
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><p>Benjamin Ibarra Hernandez</p></h5>
+                <h5 class="profile-creative-title">
+                  <p>Benjamin Ibarra Hernandez</p>
+                </h5>
                 <p class="profile-creative-position">Dueño</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
+                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  </div>
                 </div>
                 <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
@@ -293,10 +317,14 @@
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
-                <h5 class="profile-creative-title"><p>Manuel Pinkye</p></h5>
+                <h5 class="profile-creative-title">
+                  <p>Manuel Pinkye</p>
+                </h5>
                 <p class="profile-creative-position">Diseñador</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><p style="margin-top: 0px;">1-800-1324-567</p></div>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
+                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  </div>
                 </div>
                 <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
@@ -408,12 +436,15 @@
     </div>
   </div>
 
-  <!-- <script>
-    document.getElementById("cerrar").onclick = function() {
-      location.href = 'cerrarSesion.php?logout=true';
-      localStorage.clear();
+  <script>
+    document.getElementById("translate").onclick = function traductorGoogle() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element');
     }
-  </script> -->
+  </script>
 
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
@@ -421,6 +452,7 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
   <link rel="stylesheet" href="css\whats.css">

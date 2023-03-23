@@ -52,6 +52,7 @@ if (isset($_SESSION['rol'])) {
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
   <style>
     .ie-panel {
       display: none;
@@ -72,6 +73,7 @@ if (isset($_SESSION['rol'])) {
 </head>
 
 <body>
+  <div id="google_translate_element"></div>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -129,7 +131,7 @@ if (isset($_SESSION['rol'])) {
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
@@ -157,9 +159,9 @@ if (isset($_SESSION['rol'])) {
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                    <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="translate" class="rd-nav-item">
+                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -317,6 +319,14 @@ if (isset($_SESSION['rol'])) {
       location.href = 'cerrarSesion.php?logout=true';
       localStorage.clear();
     }
+
+    document.getElementById("translate").onclick = function traductorGoogle() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element');
+    }
   </script>
 
 
@@ -341,11 +351,10 @@ if (isset($_SESSION['rol'])) {
   <script src="js/boton.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
-
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 
   <link rel="stylesheet" href="css\whats2.css">
   <div class="nav-bottom">

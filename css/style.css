@@ -18078,7 +18078,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	text-align: center;
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: x-large;
+	font-size: 30px;
 }
 
 /* Estilo Titulo Certificaciones */
@@ -18304,26 +18304,29 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
 .tenedor {
   background-image: url('../images/Pp2.png');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   /* justify-content: flex-end; */
-  align-items: center;
-  height: 500px; /* altura deseada */
+  /* align-items: center; */
+  height: 80vh; /* altura deseada */
+  width: 100%;
 }
 
 .testo {
   width: 50%;
-  margin-bottom: 0%;
+  /* margin-top: 10%; */
 }
 
 .desFMT {
-	margin-top: 25px;
+	/* margin-top: 10%; */
 	color: white;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: normal;
+	text-align: justify;
+	
 }
 
 .imagenMano {
@@ -18335,16 +18338,17 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	flex-wrap: wrap;
 	/* justify-content: flex-end; */
 	align-items: center;
-	height: 600px; /* altura deseada */
+	height: 100vh; /* altura deseada */
+	width: 100%;
   }
   
   .textoMano {
 	width: 50%;
-	max-width: 600px; /* ancho máximo deseado */
-	margin-left: auto;
-	margin-right: 20px;
-	text-align: left;
+	/* max-width: 600px; ancho máximo deseado */
+	margin-left: 45%;
+	margin-right: auto;
 	color: black;
+	margin-bottom: 10%;
   }
 
   .tituloCelular {
@@ -18363,16 +18367,27 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	text-transform: uppercase;
   }
 
-@media screen and (max-width: 767px) {
-  .testo {
-    /* margin-right: 10px; */
-    /* margin-left: 10px; */
-	margin-bottom: 10%;
+  .imagenMonitoreo {
+	background-image: url('../images/monitoreoFermentacion.jpg');
+	background-size: cover;
+	background-position: center;
+	/* background-repeat: no-repeat; */
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: flex-end; */
+	align-items: center;
+	height: 750px; /* altura deseada */
   }
+
+@media screen and (max-width: 767px) {
 
   .consoleContainer {
 	font-size: 5px;
 	font-weight: bold;
+  }
+
+  .testo {
+	margin-top: 10%;
   }
 
   .tenedor {
@@ -18393,14 +18408,63 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
   .textoMano {
 	width: 50%;
-	margin-top: -10%;
+	margin-top: -5%;
   }
 
   .desFMT {
-	margin-top: 25px;
+	margin-top: 0%;
 	color: white;
 	font-size: 6px;
 	font-weight: normal;
 }
 
 }
+
+/* Hover Sobre Imagen De FMT */
+
+.imagenPrueba {
+	position: relative; /* Para que el texto aparezca encima de la imagen */
+	display: inline-block; /* Para que el contenedor tenga el tamaño de la imagen */
+	/* height: 90vh; altura deseada */
+	/* width: 100%; */
+  }
+  
+  .imagenPrueba:hover img {
+	opacity: 0.3; /* Difuminar la imagen cuando se hace hover */
+  }
+
+  .imagenPrueba .textoPrueba {
+	position: absolute; /* Para que el texto aparezca encima de la imagen */
+	top: 50%; /* Posición vertical del texto */
+	left: 50%; /* Posición horizontal del texto */
+	transform: translate(-50%, -50%); /* Centrar el texto */
+	color: black; /* Color del texto */
+	font-size: 24px; /* Tamaño de letra del texto */
+	font-weight: normal; /* Grosor de letra del texto */
+	text-align: center; /* Alinear el texto al centro */
+	opacity: 0; /* El texto no se muestra hasta que se hace hover */
+	transition: opacity 0.3s ease-in-out; /* Animación al mostrar y ocultar el texto */
+  }
+
+  .imagenPrueba:hover .textoPrueba {
+	opacity: 1; /* Mostrar el texto cuando se hace hover */
+  }
+
+  /* Similitud CIDAM */
+
+  .bordesCirculares {
+	width: 100px;
+	cursor: pointer;
+	border-radius: 50px;
+	border-style: solid;
+	border-color: #71c500;
+	border-width: 5px;
+  }
+
+  .bordesCirculares:hover {
+  	-webkit-transform: scale(1.25);
+  	-moz-transform: scale(1.25);
+  	-ms-transform: scale(1.25);
+  	-o-transform: scale(1.25);
+  	transform: scale(1.25);
+  }

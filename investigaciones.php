@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
   <style>
     .ie-panel {
       display: none;
@@ -33,6 +34,7 @@
 </head>
 
 <body>
+  <div id="google_translate_element"></div>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -90,14 +92,14 @@
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
-              <ul class="rd-navbar-nav menu-horizontal">
+                <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
@@ -107,10 +109,10 @@
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" >
+                  <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
-                    <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
+                      <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
@@ -118,9 +120,9 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="translate" class="rd-nav-item">
+                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -139,7 +141,7 @@
         <div class="container">
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
             <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
-            <img class="img-responsive" src="images/cerrar-cientifico-borroso-sosteniendo-placa-petri.jpg" title="Imagen de https://www.freepik.es/foto-gratis/cerrar-cientifico-borroso-sosteniendo-placa-petri_12892395.htm#page=2&query=laboratorio%20celulas&position=9&from_view=search&track=robertav1#position=9&page=2&query=laboratorio%20celulas Freepik" width="570" height="388" />
+              <img class="img-responsive" src="images/cerrar-cientifico-borroso-sosteniendo-placa-petri.jpg" title="Imagen de https://www.freepik.es/foto-gratis/cerrar-cientifico-borroso-sosteniendo-placa-petri_12892395.htm#page=2&query=laboratorio%20celulas&position=9&from_view=search&track=robertav1#position=9&page=2&query=laboratorio%20celulas Freepik" width="570" height="388" />
             </div>
             <div class="col-md-10 col-lg-6 col-xl-5">
               <h3 style="color: white; text-align: center; margin-top: 30px;">Trabajos de Técnicas de Conservación de Levaduras</h3>
@@ -278,6 +280,14 @@
       location.href = 'cerrarSesion.php?logout=true';
       localStorage.clear();
     }
+
+    document.getElementById("translate").onclick = function traductorGoogle() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element');
+    }
   </script>
 
   <div class="snackbars" id="form-output-global"></div>
@@ -285,11 +295,10 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
-
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 
   <link rel="stylesheet" href="css\whats2.css">
   <div class="nav-bottom">

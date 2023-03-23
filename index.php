@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
   <style>
     .ie-panel {
       display: none;
@@ -33,7 +34,7 @@
 </head>
 
 <body>
-
+  <div id="google_translate_element"></div>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -91,7 +92,7 @@
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
@@ -119,9 +120,9 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                    <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="translate" class="rd-nav-item">
+                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -299,8 +300,8 @@
               </div>
             </div>
 
-            <div class="modal fade" id="modalFicha<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal fade" id="modalFicha<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Solicitud Ficha Técnica</h5>
@@ -310,14 +311,16 @@
                   </div>
                   <div class="modal-body" style="color: black; font-weight: normal;">
                     <form action="enviar.php" method="post">
-                      <div class="form-group">
-                        <label for="producto">
-                          Producto
-                        </label>
-                        <input type="text" name="producto" id="producto" class="form-control" value="<?php echo $row[$i][1]; ?>" required>
-                      </div>
                       <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="producto">
+                              Producto
+                            </label>
+                            <input type="text" name="producto" id="producto" class="form-control" value="<?php echo $row[$i][1]; ?>" required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="nombre">
                               Nombre(s)
@@ -325,7 +328,7 @@
                             <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" value="" required>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="apellidos">
                               Apellidos
@@ -333,7 +336,7 @@
                             <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Apellidos" value="" required>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="empresa">
                               Empresa
@@ -341,7 +344,7 @@
                             <input type="text" name="empresa" id="Empresa" class="form-control" placeholder="Empresa" value="" required>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="telefono">
                               Teléfono
@@ -349,7 +352,7 @@
                             <input type="number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" name="telefono" id="telefono" class="form-control" placeholder="Teléfono e.g.888 888 8888" value="" required>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="correo">
                               Correo
@@ -357,7 +360,7 @@
                             <input type="email" name="correo" id="correo" class="form-control" placeholder="Correo" value="" required>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                           <div class="form-group">
                             <label for="mensaje">
                               Motivo de Solicitud
@@ -682,6 +685,14 @@
       location.href = 'cerrarSesion.php?logout=true';
       localStorage.clear();
     }
+
+    document.getElementById("translate").onclick = function traductorGoogle() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element');
+    }
   </script>
 
 
@@ -700,7 +711,7 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
-
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

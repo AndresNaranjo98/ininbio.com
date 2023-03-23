@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
   <style>
     .ie-panel {
       display: none;
@@ -33,6 +34,7 @@
 </head>
 
 <body>
+  <div class="google-translate-container" id="google_translate_element"></div>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -90,7 +92,7 @@
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 25%;">
+          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
@@ -118,9 +120,14 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                    <!-- <li id="loginRegister" class="rd-nav-item"><a class="rd-nav-link" href="login.php"><span style="cursor: pointer; font-size: 19px" class="icon novi-icon icon-md mdi mdi-account"></span></a>
+                  <li id="translate" class="rd-nav-item">
+                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
+                    <!-- <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
+                      <li>
+                        <div class="google-translate-container" id="google_translate_element"></div>
+                      </li>
+                    </ul> -->
                   </li>
-                  <li id="productosInCart" class="rd-nav-item"><a class="rd-nav-link" href="carrito.php"><span style="font-size: 19px" class="icon novi-icon icon-sm mdi mdi-cart"></span></a> -->
                 </ul>
               </div>
             </div>
@@ -136,7 +143,7 @@
         </p>
       </div>
 
-      <div>
+      <div style="margin-top: 30px;">
         <div class="tenedor">
           <div class="testo">
             <div class="consoleContainer">
@@ -144,15 +151,15 @@
               <div class="console-underscore" id="console">&#95;
               </div>
             </div>
-            <div class="container">
+            <!-- <div class="container"> -->
               <p class="desFMT">
-                Medición, integración e innovación son palabras que describen al equipo FMT y a su plataforma Ininbio System. 
-                Más que un sistema de vanguardia es la combinación perfecta de medición y monitoreo, es el apoyo incondicional en tu proceso que te 
-                ayudará a cumplir tus objetivos de eficiencia de fermentación gracias a su Inteligencia Artificial que brinda sugerencias y 
-                predicciones.Y gracias a su plataforma, Ininbio System, te permitirá visualizar estas variables en cualquier lugar en el que tengas 
+                Medición, integración e innovación son palabras que describen al equipo FMT y a su plataforma Ininbio System.
+                Más que un sistema de vanguardia es la combinación perfecta de medición y monitoreo, es el apoyo incondicional en tu proceso que te
+                ayudará a cumplir tus objetivos de eficiencia de fermentación gracias a su Inteligencia Artificial que brinda sugerencias y
+                predicciones.Y gracias a su plataforma, Ininbio System, te permitirá visualizar estas variables en cualquier lugar en el que tengas
                 acceso a internet.
               </p>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -171,7 +178,37 @@
         </div>
       </div>
 
-      
+      <!-- <div style="margin-top: 30px;">
+        <div class="imagenMonitoreo">
+          <div class="textoMonitoreo">
+            <p class="tituloMonitoreo">Monitorea tu fermentación desde la palma de tu mano</p>
+            <p class="tituloMonitoreo">
+              El Sistema Integrado de Monitoreo para la Fermentación de Bebidas
+              Alcohólicas envía la información para que sea almacenada en una base de datos y posteriormente
+              sea visualizada de manera gráfica en dispositivos móviles, logrando así llevar a cabo un
+              mejor control de forma automatizada sobre los procesos monitoreados.
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <div style="margin-top: 30px;">
+        <div class="imagenPrueba">
+          <img src="./images/monitoreoFermentacion.jpg" alt="Descripción de la imagen">
+          <div class="textoPrueba">
+            El equipo FMT permite la medición integrada de las variables:
+            <ul class="wow-outer wow slideInDown" style="margin-top: 25px; margin-bottom: 25px;">
+              <li style="display: flex; text-align: left;"><span class="mdi mdi-arrow-right-bold" style="margin-top: 5px;"></span>°Brix (método patentado que permite la medición global de su tina de fermentación).</li>
+              <li style="display: flex;"><span class="mdi mdi-arrow-right-bold" style="margin-top: 5px;"></span>Riqueza Alcohólica.</li>
+              <li style="display: flex;"><span class="mdi mdi-arrow-right-bold" style="margin-top: 5px;"></span>Eficiencia de fermentación.</li>
+              <li style="display: flex;"><span class="mdi mdi-arrow-right-bold" style="margin-top: 5px;"></span>Temperatura.</li>
+              <li style="display: flex;"><span class="mdi mdi-arrow-right-bold" style="margin-top: 5px;"></span>pH.</li>
+            </ul>
+            Y gracias a su plataforma, Ininbio System, te da la posibilidad de visualizar estas variables en cualquier lugar en el que tengas acceso a internet.
+          </div>
+        </div>
+      </div>
+
 
       <!-- <div style="margin-top: 30px;">
           <div class="container">
@@ -357,6 +394,25 @@
       location.href = 'cerrarSesion.php?logout=true';
       localStorage.clear();
     }
+
+    // var mouseEvent = document.getElementById("translate");
+    // mouseEvent.addEventListener("mouseover", function traductorGoogle() {
+    //   new google.translate.TranslateElement({
+    //       pageLanguage: 'es',
+    //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    //       // includedLanguages: 'en,fr,de',
+    //     },
+    //     'google_translate_element');
+    // });
+
+    document.getElementById("translate").addEventListener("click", function traductorGoogle() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'es',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          // includedLanguages: 'en,fr,de',
+        },
+        'google_translate_element');
+    });
   </script>
 
 
@@ -381,11 +437,10 @@
   <script src="js/boton.js"></script>
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
-
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 
   <link rel="stylesheet" href="css\whats2.css">
   <div class="nav-bottom">
@@ -418,6 +473,7 @@
     <div class="circle-anime"></div>
   </div>
   <script src="js\script2.js"></script>
+
 </body>
 
 </html>
