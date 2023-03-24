@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
   <style>
     .ie-panel {
@@ -96,7 +97,6 @@
           <div class="rd-navbar-main-outer" style="padding-left: 20%;">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
-
                 <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
@@ -105,14 +105,13 @@
                     <ul class="menu-vertical" style="text-align: center;">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
                   <li class="rd-nav-item">
                     <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
-                    <ul class="menu-vertical" style="text-align: center;">
+                    <ul class="menu-vertical" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="text-align: center;">
                       <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
@@ -122,7 +121,7 @@
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   <li id="translate" class="rd-nav-item">
-                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
+                    <a class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate hide"></span></a>
                   </li>
                 </ul>
               </div>
@@ -151,7 +150,7 @@
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>
           <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 5%;">
-            <iframe width="560" height="400" src="https://www.youtube.com/embed/k3uHN6LZpg8?&autoplay=1&mute=1&controls=1" title="Ininbio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="videoResponsivo" src="https://www.youtube.com/embed/k3uHN6LZpg8?&autoplay=1&mute=1&controls=1" title="Ininbio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -212,20 +211,29 @@
         </div>
       </div>
     </section>
+
+    <!-- <section>
+    <div class="slider-for">
+      <div>Hola</div>
+      <div>PPPP</div>
+      <div>your content</div>
+    </div>
+    </section> -->
+
     <section class="section novi-background section-lg text-center">
       <div class="container">
         <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Nuestro Equipo de Trabajo</span></h3>
-        <div class="row row-50 row-xxl-70 justify-content-center justify-content-lg-start">
-          <div class="col-md-10 col-lg-6 wow-outer">
+        <div class="row row-50 row-xxl-70 justify-content-center justify-content-lg-start autoplay">
+          <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft">
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-1-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>Juan Andres Aguilar Naranjo</p>
+                  <p>Eduardo Benjamín Ibarra Hernández</p>
                 </h5>
-                <p class="profile-creative-position">Jefe de departamento de TI</p>
+                <p class="profile-creative-position">CEO y Director General Grupo Ininbio</p>
                 <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
                     <p style="margin-top: 0px;">1-800-1324-567</p>
@@ -235,16 +243,16 @@
               </div>
             </article>
           </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
+          <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-2-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>Hortencia Piña</p>
+                  <p>José Martín Martínez Vera</p>
                 </h5>
-                <p class="profile-creative-position">Jefe de departamento de Bioquimica</p>
+                <p class="profile-creative-position">Jefa de Departamento De Mecatrónica</p>
                 <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
                     <p style="margin-top: 0px;">1-800-1324-567</p>
@@ -254,16 +262,16 @@
               </div>
             </article>
           </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
+          <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft">
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-3-270x273.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <P>Jose Martin Martinez</P>
+                  <P>Jorge Luis Salazar Martínez</P>
                 </h5>
-                <p class="profile-creative-position">Jefe de departamento de Mecatronica</p>
+                <p class="profile-creative-position"></p>
                 <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
                     <p style="margin-top: 0px;">1-800-1324-567</p>
@@ -273,7 +281,7 @@
               </div>
             </article>
           </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
+          <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
@@ -292,7 +300,7 @@
               </div>
             </article>
           </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
+          <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
@@ -311,7 +319,7 @@
               </div>
             </article>
           </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
+          <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
               <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
@@ -333,6 +341,7 @@
         </div>
       </div>
     </section>
+
     <footer class="section novi-background footer-advanced bg-gray-700">
       <div class="footer-advanced-main">
         <div class="container">
@@ -443,6 +452,11 @@
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE
         },
         'google_translate_element');
+
+      function toggleTranslateIcon() {
+        var translateIcon = document.getElementById("translate-icon");
+        translateIcon.classList.toggle("hide");
+      }
     }
   </script>
 
@@ -453,7 +467,43 @@
   <script src="js/script.js"></script>
   <script src="js\contador.js"></script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+  <script type="text/javascript">
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+    function aplicarMediaQuery() {
+      $('.autoplay').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+      });
+    }
+
+    function noAplicarMediaQuery() {
+      $('.autoplay').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+      });
+    }
+
+    if (mediaQuery.matches) {
+      aplicarMediaQuery();
+    } else {
+      noAplicarMediaQuery();
+    }
+
+    // mediaQuery.addEventListener('change', (e) => {
+    //   if (e.matches) {
+    //     aplicarMediaQuery();
+    //   } else {
+    //     noAplicarMediaQuery();
+    //   }
+    // });
+  </script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

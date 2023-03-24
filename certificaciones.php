@@ -142,11 +142,11 @@
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
           <div class="col-md-10 col-lg-6 col-xl-5">
-            <h3 class="text-uppercase">MEDALLA DE ORO A LA CALIDAD Y SERVICIO</h3>
+            <h3 class="text-uppercase" style="text-align: center; font-weight: normal;">MEDALLA DE ORO A LA CALIDAD Y SERVICIO</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;">
-              ININBIO recibe de la Organización Mundial de Mercadotecnia, S.C., la Medalla de Oro a la Calidad y el Servicio 2019, demostrando
+            <p style="font-size: 25px; font-weight: normal; text-align: justify; color: black;">
+              Ininbio recibe de la Organización Mundial de Mercadotecnia, S.C., la Medalla de Oro a la Calidad y el Servicio 2019, demostrando
               su liderazgo en la calidad del servicio al ser empresa líder en el ramo de Nutrición Celular en procesos de Fermentación Alcohólica.
             </p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
@@ -163,10 +163,10 @@
           <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/registroFDA.png" alt="" width="570" height="388" />
           </div>
           <div class="col-md-10 col-lg-6 col-xl-5">
-            <h3 class="text-uppercase">REGISTRO FDA</h3>
+            <h3 class="text-uppercase" style="text-align: center; font-weight: normal;">REGISTRO FDA</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;"> El registro FDA (Food and Drug Administration) mediante el cual los productos de Ininbio están registrados es la agencia
+            <p style="font-size: 25px; font-weight: normal; text-align: justify; color: black;"> El registro FDA (Food and Drug Administration) mediante el cual los productos de Ininbio están registrados es la agencia
               privada encargada de proporcionar asistencia en el cumplimiento de la Administración de Alimentos y Medicamentos de los
               Estados Unidos para la industria alimentaria de Latinoamérica, por lo cual este registro avala la seguridad de los productos
               (nutrientes para la fermentación alcohólica) que producimos.</p>
@@ -181,10 +181,10 @@
       <div class="container">
         <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
           <div class="col-md-10 col-lg-6 col-xl-5">
-            <h3 class="text-uppercase">REGISTRO COFEPRIS</h3>
+            <h3 class="text-uppercase" style="text-align: center; font-weight: normal;">REGISTRO COFEPRIS</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;">Los productos ininbio de igual manera cuentan con registro COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios)
+            <p style="font-size: 25px; font-weight: normal; text-align: justify; color: black;">Los productos bajo la marca Ininbio cuentan con registro COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios)
               lo cual avala que los productos fabricados por ininbio son seguros y libres de cualquier riesgo sanitario.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>
@@ -200,10 +200,10 @@
           <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="images/certificadoKosher.png" title="https://www.freepik.es/foto-gratis/garantia-concepto-certificado-autorizado-aprobado_17433688.htm#query=certificaci%C3%B3n&position=21&from_view=search&track=robertav1 Imagen de rawpixel.com en Freepik" width="570" height="280" />
           </div>
           <div class="col-md-10 col-lg-6 col-xl-5">
-            <h3 class="text-uppercase">CERTIFICACION KOSHER</h3>
+            <h3 class="text-uppercase" style="text-align: center; font-weight: normal;">CERTIFICACIÓN KOSHER</h3>
             <!-- <p class="about-subtitle">ININBIO</p> -->
             <br>
-            <p style="font-size: 20px; font-weight: normal; text-align: justify; color: black;">Los productos elaborados por ininbio cuentan con la certificación KOSHER lo cual avala que los nutrientes para la fermentación
+            <p style="font-size: 25px; font-weight: normal; text-align: justify; color: black;">Los productos elaborados por Ininbio cuentan con la certificación KOSHER lo cual avala que los nutrientes para la fermentación
               alcohólica son inocuos para la comunidad judía haciéndolos de igual manera para la industria alimentaria.</p>
             <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
           </div>

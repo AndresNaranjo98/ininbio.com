@@ -18379,7 +18379,17 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	height: 750px; /* altura deseada */
   }
 
+  .videoResponsivo {
+	width : 100%;
+	height : 100%;
+  }
+
 @media screen and (max-width: 767px) {
+
+	.videoResponsivo {
+	width : 100%;
+	height : 100%;
+  }
 
   .consoleContainer {
 	font-size: 5px;
@@ -18467,4 +18477,12 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   	-ms-transform: scale(1.25);
   	-o-transform: scale(1.25);
   	transform: scale(1.25);
+  }
+
+  .menu-vertical.active ~ #translate .translate-icon {
+	display: none;
+  }
+
+  .hide {
+	display: none;
   }
