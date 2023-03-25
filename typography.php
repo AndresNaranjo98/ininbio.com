@@ -78,7 +78,7 @@ if (isset($_SESSION['rol'])) {
 </head>
 
 <body>
-  <div id="google_translate_element"></div>
+  <!-- <div id="google_translate_element"></div> -->
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -144,7 +144,7 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
@@ -154,7 +154,7 @@ if (isset($_SESSION['rol'])) {
                     </ul>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
+                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Productos</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
@@ -165,7 +165,12 @@ if (isset($_SESSION['rol'])) {
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   <li id="translate" class="rd-nav-item">
-                    <p class="rd-nav-link"><span style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
+                    <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
+                    <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
+                      <li>
+                        <div class="google-translate-container" id="google_translate_element"></div>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -505,12 +510,27 @@ if (isset($_SESSION['rol'])) {
       localStorage.clear();
     }
 
-    document.getElementById("translate").onclick = function traductorGoogle() {
+    // document.getElementById("translate").onclick = function traductorGoogle() {
+    //   new google.translate.TranslateElement({
+    //       pageLanguage: 'es',
+    //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    //     },
+    //     'google_translate_element');
+    // }
+
+    var mouseEvent = document.getElementById("translate");
+    mouseEvent.addEventListener("mouseover", function traductorGoogle() {
       new google.translate.TranslateElement({
           pageLanguage: 'es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          // includedLanguages: 'en,fr,de',
         },
         'google_translate_element');
+    });
+
+    function toggleTranslateIcon() {
+      var translateIcon = document.getElementById("translate-icon");
+      translateIcon.classList.toggle("hide");
     }
   </script>
 

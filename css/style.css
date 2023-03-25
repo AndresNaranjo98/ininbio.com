@@ -18384,7 +18384,60 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	height : 100%;
   }
 
+  /* Hover Sobre Imagen De FMT */
+
+.imagenPrueba {
+	position: relative; /* Para que el texto aparezca encima de la imagen */
+	display: inline-block; /* Para que el contenedor tenga el tamaño de la imagen */
+	/* height: 90vh; altura deseada */
+	/* width: 100%; */
+  }
+  
+  .imagenPrueba:hover img {
+	opacity: 0.3; /* Difuminar la imagen cuando se hace hover */
+  }
+
+  .imagenPrueba img {
+	width: 100vw;
+	height: 100vh;
+  }
+
+  .imagenPrueba .textoPrueba {
+	position: absolute; /* Para que el texto aparezca encima de la imagen */
+	top: 50%; /* Posición vertical del texto */
+	left: 50%; /* Posición horizontal del texto */
+	transform: translate(-50%, -50%); /* Centrar el texto */
+	color: black; /* Color del texto */
+	font-size: 24px; /* Tamaño de letra del texto */
+	font-weight: normal; /* Grosor de letra del texto */
+	text-align: center; /* Alinear el texto al centro */
+	opacity: 0; /* El texto no se muestra hasta que se hace hover */
+	transition: opacity 0.3s ease-in-out; /* Animación al mostrar y ocultar el texto */
+  }
+
+  .imagenPrueba:hover .textoPrueba {
+	opacity: 1; /* Mostrar el texto cuando se hace hover */
+  }
+
 @media screen and (max-width: 767px) {
+
+	.imagenPrueba img {
+		width: 100vw;
+		height: 50vh;
+	  }
+
+	.imagenPrueba .textoPrueba {
+		position: absolute; /* Para que el texto aparezca encima de la imagen */
+		top: 50%; /* Posición vertical del texto */
+		left: 50%; /* Posición horizontal del texto */
+		transform: translate(-50%, -50%); /* Centrar el texto */
+		color: black; /* Color del texto */
+		font-size: 12px; /* Tamaño de letra del texto */
+		font-weight: normal; /* Grosor de letra del texto */
+		text-align: center; /* Alinear el texto al centro */
+		opacity: 0; /* El texto no se muestra hasta que se hace hover */
+		transition: opacity 0.3s ease-in-out; /* Animación al mostrar y ocultar el texto */
+	}
 
 	.videoResponsivo {
 	width : 100%;
@@ -18430,36 +18483,6 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
 }
 
-/* Hover Sobre Imagen De FMT */
-
-.imagenPrueba {
-	position: relative; /* Para que el texto aparezca encima de la imagen */
-	display: inline-block; /* Para que el contenedor tenga el tamaño de la imagen */
-	/* height: 90vh; altura deseada */
-	/* width: 100%; */
-  }
-  
-  .imagenPrueba:hover img {
-	opacity: 0.3; /* Difuminar la imagen cuando se hace hover */
-  }
-
-  .imagenPrueba .textoPrueba {
-	position: absolute; /* Para que el texto aparezca encima de la imagen */
-	top: 50%; /* Posición vertical del texto */
-	left: 50%; /* Posición horizontal del texto */
-	transform: translate(-50%, -50%); /* Centrar el texto */
-	color: black; /* Color del texto */
-	font-size: 24px; /* Tamaño de letra del texto */
-	font-weight: normal; /* Grosor de letra del texto */
-	text-align: center; /* Alinear el texto al centro */
-	opacity: 0; /* El texto no se muestra hasta que se hace hover */
-	transition: opacity 0.3s ease-in-out; /* Animación al mostrar y ocultar el texto */
-  }
-
-  .imagenPrueba:hover .textoPrueba {
-	opacity: 1; /* Mostrar el texto cuando se hace hover */
-  }
-
   /* Similitud CIDAM */
 
   .bordesCirculares {
@@ -18479,10 +18502,23 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   	transform: scale(1.25);
   }
 
-  .menu-vertical.active ~ #translate .translate-icon {
-	display: none;
-  }
-
   .hide {
 	display: none;
   }
+
+/* Estilo Sección Equipo De Trabajo */
+
+  .fondoEquipoTrabajo {
+  	background-image: url('../images/ADN2.png');
+  	background-size: cover;
+  }
+
+  .slick-prev:before {
+  	color: white;
+  }
+
+  .slick-next:before {
+  	color: white;
+  }
+
+

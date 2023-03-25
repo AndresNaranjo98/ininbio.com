@@ -36,7 +36,7 @@
 </head>
 
 <body>
-  <div id="google_translate_element"></div>
+  <!-- <div id="google_translate_element"></div> -->
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
@@ -101,7 +101,7 @@
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" style="text-align: center;">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
@@ -110,8 +110,8 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" style="cursor: pointer; font-size: 19px">Productos</p>
-                    <ul class="menu-vertical" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="text-align: center;">
+                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Productos</p>
+                    <ul class="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
                       <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
@@ -121,7 +121,12 @@
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
                   <li id="translate" class="rd-nav-item">
-                    <a class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate hide"></span></a>
+                    <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
+                    <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
+                      <li>
+                        <div class="google-translate-container" id="google_translate_element"></div>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -220,9 +225,9 @@
     </div>
     </section> -->
 
-    <section class="section novi-background section-lg text-center">
+    <section class="section novi-background section-lg text-center fondoEquipoTrabajo">
       <div class="container">
-        <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Nuestro Equipo de Trabajo</span></h3>
+        <h3 class="text-uppercase wow-outer"><span class="wow slideInUp" style="color: white;">Nuestro Equipo de Trabajo</span></h3>
         <div class="row row-50 row-xxl-70 justify-content-center justify-content-lg-start autoplay">
           <div class="wow-outer">
             <!-- Profile Creative-->
@@ -231,15 +236,15 @@
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>Eduardo Benjamín Ibarra Hernández</p>
+                  <p style="color: white;">Eduardo Benjamín Ibarra Hernández</p>
                 </h5>
-                <p class="profile-creative-position">CEO y Director General Grupo Ininbio</p>
+                <p class="profile-creative-position" style="color: white;">CEO y Director General Grupo Ininbio</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
-                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div>
-                <p class="descriptionPuest">Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
+                <p class="descriptionPuest" style="color: white;">Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
               </div>
             </article>
           </div>
@@ -250,15 +255,15 @@
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>José Martín Martínez Vera</p>
+                  <p style="color: white;">Jorge Luis Salazar Martínez</p>
                 </h5>
-                <p class="profile-creative-position">Jefa de Departamento De Mecatrónica</p>
+                <p class="profile-creative-position" style="color: white;">Asesor</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
-                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div>
-                <p class="descriptionPuest">John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial.</p>
+                <p class="descriptionPuest" style="color: white;">Creativo y amante de las actividades al aire libre 😎.</p>
               </div>
             </article>
           </div>
@@ -269,15 +274,15 @@
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <P>Jorge Luis Salazar Martínez</P>
+                  <p style="color: white;">José Martín Martínez Vera</p>
                 </h5>
-                <p class="profile-creative-position"></p>
+                <p class="profile-creative-position" style="color: white;">Coordinador de Desarrollo</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
-                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div>
-                <p class="descriptionPuest">Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
+                <p class="descriptionPuest" style="color: white;">Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
               </div>
             </article>
           </div>
@@ -288,15 +293,15 @@
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>Rafael Sánchez Alvarado</p>
+                  <p style="color: white;">Juan Andrés Aguilar Naranjo</p>
                 </h5>
-                <p class="profile-creative-position">Esclavo del Andres</p>
+                <p class="profile-creative-position" style="color: white;">Coordinador Departamento de T.I.</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
-                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div>
-                <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
             </article>
           </div>
@@ -307,15 +312,15 @@
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>Benjamin Ibarra Hernandez</p>
+                  <p style="color: white;">Rosalinda Damián Bolaños</p>
                 </h5>
-                <p class="profile-creative-position">Dueño</p>
+                <p class="profile-creative-position" style="color: white;">Encargada de Ventas</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
-                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div>
-                <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
             </article>
           </div>
@@ -326,15 +331,91 @@
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p>Manuel Pinkye</p>
+                  <p style="color: white;">Roberto González García</p>
                 </h5>
-                <p class="profile-creative-position">Diseñador</p>
+                <p class="profile-creative-position" style="color: white;">Co-encargado de Ventas</p>
                 <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span>
-                    <p style="margin-top: 0px;">1-800-1324-567</p>
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div>
-                <p class="descriptionPuest">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+              </div>
+            </article>
+          </div>
+          <div class="wow-outer">
+            <!-- Profile Creative-->
+            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              </figure>
+              <div class="profile-creative-main">
+                <h5 class="profile-creative-title">
+                  <p style="color: white;">Paz de la Cruz Marín</p>
+                </h5>
+                <p class="profile-creative-position" style="color: white;">Encargada de Compras</p>
+                <div class="profile-creative-contacts">
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
+                  </div>
+                </div>
+                <p class="descriptionPuest" style="color: white;">Disfruto de las manualidades, una buena charla con mi hija, caminar con ella y ver doramas juntas.</p>
+              </div>
+            </article>
+          </div>
+          <div class="wow-outer">
+            <!-- Profile Creative-->
+            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              </figure>
+              <div class="profile-creative-main">
+                <h5 class="profile-creative-title">
+                  <p style="color: white;">Diego Alberto Huaracha López</p>
+                </h5>
+                <p class="profile-creative-position" style="color: white;">Encargado de Contabilidad</p>
+                <div class="profile-creative-contacts">
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
+                  </div>
+                </div>
+                <p class="descriptionPuest" style="color: white;">Apasionado del deporte y disfruto los momentos en familia, pareja y seres queridos.</p>
+              </div>
+            </article>
+          </div>
+          <div class="wow-outer">
+            <!-- Profile Creative-->
+            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              </figure>
+              <div class="profile-creative-main">
+                <h5 class="profile-creative-title">
+                  <p style="color: white;">Feliciano Sánchez Romero</p>
+                </h5>
+                <p class="profile-creative-position" style="color: white;">Gerente de Planta</p>
+                <div class="profile-creative-contacts">
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
+                  </div>
+                </div>
+                <p class="descriptionPuest" style="color: white;">Apasionado del manejo y control de procesos de fermentación industrial. Interpretar a Chopin en el piano y disfrutar de la compañía de mi familia.</p>
+              </div>
+            </article>
+          </div>
+          <div class="wow-outer">
+            <!-- Profile Creative-->
+            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              </figure>
+              <div class="profile-creative-main">
+                <h5 class="profile-creative-title">
+                  <p style="color: white;">Luisa Ibarra Hernández</p>
+                </h5>
+                <p class="profile-creative-position" style="color: white;">Gerente de Calidad</p>
+                <div class="profile-creative-contacts">
+                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
+                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
+                  </div>
+                </div>
+                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
               </div>
             </article>
           </div>
@@ -446,17 +527,27 @@
   </div>
 
   <script>
-    document.getElementById("translate").onclick = function traductorGoogle() {
+    // document.getElementById("translate").onclick = function traductorGoogle() {
+    //   new google.translate.TranslateElement({
+    //       pageLanguage: 'es',
+    //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    //     },
+    //     'google_translate_element');
+    // }
+
+    var mouseEvent = document.getElementById("translate");
+    mouseEvent.addEventListener("mouseover", function traductorGoogle() {
       new google.translate.TranslateElement({
           pageLanguage: 'es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          // includedLanguages: 'en,fr,de',
         },
         'google_translate_element');
+    });
 
-      function toggleTranslateIcon() {
-        var translateIcon = document.getElementById("translate-icon");
-        translateIcon.classList.toggle("hide");
-      }
+    function toggleTranslateIcon() {
+      var translateIcon = document.getElementById("translate-icon");
+      translateIcon.classList.toggle("hide");
     }
   </script>
 
