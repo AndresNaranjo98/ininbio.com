@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="./images/logoWeb.png" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -88,13 +88,13 @@
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
                   <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
-                    <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
+                    <div class="unit-body"><a class="link-default notranslate" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
                 </div>
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
+          <div class="rd-navbar-main-outer">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
                 <ul class="rd-navbar-nav menu-horizontal">
@@ -143,27 +143,27 @@
           ¿Quiénes Somos?
         </p>
       </div>
-      <div class="container" style="margin-top: 30px;">
-        <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <div class="col-md-10 col-lg-6 col-xl-5">
-            <p class="about-subtitle">ININBIO</p>
+      <div class="contenedorVideo">
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-10 col-lg-6 col-xl-5">
+            <p class="about-subtitle notranslate">ININBIO</p>
             <p style="color: black; font-size: 25px;">Inovaciones Industriales Biotecnológicas</p>
             <br>
             <p style="text-align: justify; font-size: 20px; color: black; font-weight: normal;">Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
               levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de
-              fórmulas novedosas de acuerdo a sus necesidades.</p>
-            <!-- <a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a> -->
-          </div>
-          <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 5%;">
-            <iframe class="videoResponsivo" src="https://www.youtube.com/embed/k3uHN6LZpg8?&autoplay=1&mute=1&controls=1" title="Ininbio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
+              fórmulas novedosas de acuerdo a sus necesidades.</p> -->
+
+          <video class="videoResponsivo" autoplay controls loop muted>
+            <source src="./images/video/INIBIO_0323_Entrevista_v3.mp4" type="video/mp4">
+            TU NAVEGADOR NO ES COMPATIBLE CON LA ETIQUETA VIDEOS DE HTML 5
+          </video>
+        <!-- </div> -->
       </div>
     </section>
     <!-- Advantages and Achievements-->
-    <section class="section novi-background section-md text-center" style="background-color: #2f545a;">
+    <section class="section novi-background section-md text-center fondoVideoEmpresarial">
       <div class="container">
-        <h3 class="text-uppercase wow-outer" style="color: white;"><span class="wow slideInUp">Ideología y Ética Empresarial</span></h3>
+        <h3 class="text-uppercase wow-outer" style="color: white; margin-top: 5%;"><span class="wow slideInUp">Ideología y Ética Empresarial</span></h3>
         <!-- <p class="wow-outer"><span class="text-width-1 wow slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p> -->
         <div class="row row-30">
           <div class="col-sm-6 col-lg-4 wow-outer">
@@ -173,10 +173,10 @@
               <div class="box-minimal-main wow-outer">
                 <h3 class="box-minimal-title wow slideInDown" style="color: white;">Misión</h3>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
-                  Crear productos y servicios únicos e innovadores
+                  Ser una empresa que produzca y comercialice productos y servicios únicos e innovadores
                   que ofrezcan a nuestros clientes una solución integral para garantizar los principios de
                   sustentabilidad y sostenibilidad, logrando la fidelidad de clientes y proveedores, a través
-                  de motivar y perfeccionar a nuestra herramienta más importante, el capital humano.
+                  de motivar y perfeccionar a nuestra herramienta más importante, el CAPITAL HUMANO.
 
                 </p>
               </div>
@@ -189,9 +189,9 @@
               <div class="box-minimal-main wow-outer">
                 <h3 class="box-minimal-title wow slideInDown" style="color: white;">Visión</h3>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
-                  En 2026 somos un grupo referente en innovación biotecnológica, comercialización y de
-                  servicios, aliados fundamentales con cada uno de nuestros clientes de la industria de
-                  bebidas alcohólicas y de consumo.
+                  En 2026 seremos un grupo referente en innovación biotecnológica, tecnológica, 
+                  comercialización y de servicios, aliados fundamentales con cada uno de nuestros 
+                  clientes de la industria de bebidas alcohólicas y agroindustrial.
                 </p>
               </div>
             </article>
@@ -232,18 +232,18 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-1-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Eduardo Benjamín Ibarra Hernández</p>
                 </h5>
                 <p class="profile-creative-position" style="color: white;">CEO y Director General Grupo Ininbio</p>
-                <div class="profile-creative-contacts">
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
+                </div> -->
                 <p class="descriptionPuest" style="color: white;">Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
               </div>
             </article>
@@ -251,18 +251,18 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-2-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Jorge Luis Salazar Martínez</p>
                 </h5>
                 <p class="profile-creative-position" style="color: white;">Asesor</p>
-                <div class="profile-creative-contacts">
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
+                </div> -->
                 <p class="descriptionPuest" style="color: white;">Creativo y amante de las actividades al aire libre 😎.</p>
               </div>
             </article>
@@ -270,94 +270,94 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-3-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">José Martín Martínez Vera</p>
                 </h5>
-                <p class="profile-creative-position" style="color: white;">Coordinador de Desarrollo</p>
-                <div class="profile-creative-contacts">
+                <p class="profile-creative-position" style="color: white;">Coordinador Departamento de Desarrollo</p>
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
-                <p class="descriptionPuest" style="color: white;">Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
+                </div> -->
+                <p class="descriptionPuest" style="color: white;">Apasionado de las motocicletas, la mecánica y la automatización. Si algo no existe, me la rifo.</p>
               </div>
             </article>
           </div>
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Juan Andrés Aguilar Naranjo</p>
                 </h5>
                 <p class="profile-creative-position" style="color: white;">Coordinador Departamento de T.I.</p>
-                <div class="profile-creative-contacts">
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
-                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                </div> -->
+                <p class="descriptionPuest" style="color: white;">Intrínseco, fanático a ver y practicar fútbol, gamer de pasatiempo, amante de los momentos con seres queridos así como del tiempo a solas.</p>
               </div>
             </article>
           </div>
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Rosalinda Damián Bolaños</p>
                 </h5>
-                <p class="profile-creative-position" style="color: white;">Encargada de Ventas</p>
-                <div class="profile-creative-contacts">
+                <p class="profile-creative-position" style="color: white;">Encargada Departamento de Ventas</p>
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
-                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                </div> -->
+                <p class="descriptionPuest" style="color: white;">Apasionada de manejar por la carretera y de interactuar con los clientes, me encanta la playa y pasar el tiempo a solas para pensar en nuevos proyectos.</p>
               </div>
             </article>
           </div>
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Roberto González García</p>
                 </h5>
-                <p class="profile-creative-position" style="color: white;">Co-encargado de Ventas</p>
-                <div class="profile-creative-contacts">
+                <p class="profile-creative-position" style="color: white;">Co-encargado Departamento de Ventas</p>
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
-                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                </div> -->
+                <p class="descriptionPuest" style="color: white;">Disfruto mucho mi familia, viajar y conocer personas.</p>
               </div>
             </article>
           </div>
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Paz de la Cruz Marín</p>
                 </h5>
-                <p class="profile-creative-position" style="color: white;">Encargada de Compras</p>
-                <div class="profile-creative-contacts">
+                <p class="profile-creative-position" style="color: white;">Encargada Departamento de Compras</p>
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
+                </div> -->
                 <p class="descriptionPuest" style="color: white;">Disfruto de las manualidades, una buena charla con mi hija, caminar con ella y ver doramas juntas.</p>
               </div>
             </article>
@@ -365,37 +365,37 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Diego Alberto Huaracha López</p>
                 </h5>
-                <p class="profile-creative-position" style="color: white;">Encargado de Contabilidad</p>
-                <div class="profile-creative-contacts">
+                <p class="profile-creative-position" style="color: white;">Encargado Departamento de Contabilidad</p>
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
-                <p class="descriptionPuest" style="color: white;">Apasionado del deporte y disfruto los momentos en familia, pareja y seres queridos.</p>
+                </div> -->
+                <p class="descriptionPuest" style="color: white;">Apasionado del deporte, disfruto los momentos en familia, pareja y seres queridos.</p>
               </div>
             </article>
           </div>
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Feliciano Sánchez Romero</p>
                 </h5>
                 <p class="profile-creative-position" style="color: white;">Gerente de Planta</p>
-                <div class="profile-creative-contacts">
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
+                </div> -->
                 <p class="descriptionPuest" style="color: white;">Apasionado del manejo y control de procesos de fermentación industrial. Interpretar a Chopin en el piano y disfrutar de la compañía de mi familia.</p>
               </div>
             </article>
@@ -403,19 +403,19 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="170" height="172" />
+              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
               </figure>
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p style="color: white;">Luisa Ibarra Hernández</p>
+                  <p style="color: white;">Luisa Adriana Ibarra Hernández</p>
                 </h5>
                 <p class="profile-creative-position" style="color: white;">Gerente de Calidad</p>
-                <div class="profile-creative-contacts">
+                <!-- <div class="profile-creative-contacts">
                   <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
-                </div>
-                <p class="descriptionPuest" style="color: white;">Maries goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                </div> -->
+                <p class="descriptionPuest" style="color: white;">"No encuentres la falta, encuentra el remedio (Henry Ford)."</p>
               </div>
             </article>
           </div>
@@ -539,8 +539,8 @@
     mouseEvent.addEventListener("mouseover", function traductorGoogle() {
       new google.translate.TranslateElement({
           pageLanguage: 'es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          // includedLanguages: 'en,fr,de',
+          layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+          includedLanguages: 'en,fr,de',
         },
         'google_translate_element');
     });
@@ -549,6 +549,20 @@
       var translateIcon = document.getElementById("translate-icon");
       translateIcon.classList.toggle("hide");
     }
+
+    function readCookie(name) {
+      var c = document.cookie.split('; '),
+        cookies = {},
+        i, C;
+
+      for (i = c.length - 1; i >= 0; i--) {
+        C = c[i].split('=');
+        cookies[C[0]] = C[1];
+      }
+
+      return cookies[name];
+    }
+    console.log(readCookie('googtrans'));
   </script>
 
   <!-- Global Mailform Output-->
@@ -568,7 +582,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 7000,
       });
     }
 
@@ -577,7 +591,7 @@
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 7000,
       });
     }
 

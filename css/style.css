@@ -18053,6 +18053,10 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	display: block;
 }
 
+.menu-horizontal {
+	text-align: center;
+}
+
 .menu-vertical li a {
 	display: block;
 	color: white;
@@ -18323,10 +18327,10 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 .desFMT {
 	/* margin-top: 10%; */
 	color: white;
-	font-size: 20px;
+	font-size: 1.5vw;
 	font-weight: normal;
 	text-align: justify;
-	
+	margin-left: -2%;
 }
 
 .imagenMano {
@@ -18419,33 +18423,42 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	opacity: 1; /* Mostrar el texto cuando se hace hover */
   }
 
-@media screen and (max-width: 767px) {
-
-	.imagenPrueba img {
-		width: 100vw;
-		height: 50vh;
-	  }
-
-	.imagenPrueba .textoPrueba {
-		position: absolute; /* Para que el texto aparezca encima de la imagen */
-		top: 50%; /* Posición vertical del texto */
-		left: 50%; /* Posición horizontal del texto */
-		transform: translate(-50%, -50%); /* Centrar el texto */
-		color: black; /* Color del texto */
-		font-size: 12px; /* Tamaño de letra del texto */
-		font-weight: normal; /* Grosor de letra del texto */
-		text-align: center; /* Alinear el texto al centro */
-		opacity: 0; /* El texto no se muestra hasta que se hace hover */
-		transition: opacity 0.3s ease-in-out; /* Animación al mostrar y ocultar el texto */
-	}
-
-	.videoResponsivo {
-	width : 100%;
-	height : 100%;
+  .fondoVideoEmpresarial {
+	background-color: #2f545a; 
+	margin-top: -11%;
   }
 
+@media screen and (max-width: 767px) {
+
+.imagenPrueba img {
+	width: 100vw;
+	height: 50vh;
+	}
+
+.imagenPrueba .textoPrueba {
+	position: absolute; /* Para que el texto aparezca encima de la imagen */
+	top: 50%; /* Posición vertical del texto */
+	left: 50%; /* Posición horizontal del texto */
+	transform: translate(-50%, -50%); /* Centrar el texto */
+	color: black; /* Color del texto */
+	font-size: 10px; /* Tamaño de letra del texto */
+	font-weight: normal; /* Grosor de letra del texto */
+	text-align: center; /* Alinear el texto al centro */
+	opacity: 0; /* El texto no se muestra hasta que se hace hover */
+	transition: opacity 0.3s ease-in-out; /* Animación al mostrar y ocultar el texto */
+}
+
+.videoResponsivo {
+width : 100%;
+height : 100%;
+}
+
+.fondoEquipoTrabajo {
+	background-position: center;
+}
+
   .consoleContainer {
-	font-size: 5px;
+	font-size: 8px;
 	font-weight: bold;
   }
 
@@ -18479,11 +18492,16 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	color: white;
 	font-size: 6px;
 	font-weight: normal;
+	margin-left: -10%;
 }
+
+.fondoVideoEmpresarial { 
+	margin-top: -16%;
+  }
 
 }
 
-  /* Similitud CIDAM */
+  /* Similitud Sección CIDAM */
 
   .bordesCirculares {
 	width: 100px;
@@ -18521,4 +18539,38 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   	color: white;
   }
 
+/* Estilo Plugin Translate */
 
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple img {
+	display: none !important;
+}
+
+.goog-tooltip {
+	display: none !important;
+}
+
+.goog-tooltip:hover {
+	display: none !important;
+}
+
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.goog-logo-link {
+    display:none !important;
+} 
+    
+.goog-te-gadget{
+    color: transparent !important;
+}
+
+/* Estilo Video Corporativo */
+
+.contenedorVideo {
+	position: relative;
+	height: 100%;
+}

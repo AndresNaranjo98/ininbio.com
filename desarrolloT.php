@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="./images/logoWeb.png" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -86,13 +86,13 @@
                   <!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a> -->
                   <article class="unit align-items-center" style="font-size: 20px; font-weight: normal;">
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-email"></span></div>
-                    <div class="unit-body"><a class="link-default" href="tel:#">contacto@ininbio.com</a></div>
+                    <div class="unit-body"><a class="link-default notranslate" href="tel:#">contacto@ininbio.com</a></div>
                   </article>
                 </div>
               </div>
             </div>
           </div>
-          <div class="rd-navbar-main-outer" style="padding-left: 20%;">
+          <div class="rd-navbar-main-outer">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
 
@@ -151,7 +151,7 @@
               <div class="console-underscore" id="console">&#95;
               </div>
             </div>
-            <!-- <div class="container"> -->
+            <div class="container">
               <p class="desFMT">
                 Medición, integración e innovación son palabras que describen al equipo FMT y a su plataforma Ininbio System.
                 Más que un sistema de vanguardia es la combinación perfecta de medición y monitoreo, es el apoyo incondicional en tu proceso que te
@@ -159,7 +159,7 @@
                 predicciones.Y gracias a su plataforma, Ininbio System, te permitirá visualizar estas variables en cualquier lugar en el que tengas
                 acceso a internet.
               </p>
-            <!-- </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -391,8 +391,8 @@
     mouseEvent.addEventListener("mouseover", function traductorGoogle() {
       new google.translate.TranslateElement({
           pageLanguage: 'es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          // includedLanguages: 'en,fr,de',
+          layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+          includedLanguages: 'en,fr,de',
         },
         'google_translate_element');
     });
