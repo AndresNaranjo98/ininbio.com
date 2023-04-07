@@ -138,7 +138,7 @@
 
     <section class="section swiper-container swiper-slider" data-loop="true" data-slide-effect="fade" data-autoplay="4759" data-simulate-touch="true">
       <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide_video" data-slide-bg="images/ADN.jfif">
+        <div class="swiper-slide swiper-slide_video responsiveImage" data-slide-bg="images/ADN.png">
           <div class="container">
             <div class="jumbotron-classic-content">
               <div class="wow-outer">
@@ -149,16 +149,16 @@
               <br>
               <!-- <p class="text-white wow-outer"> -->
               <ul class="text-white font-weight-bold wow-outer wow slideInDown">
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target" style="margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Ajustables a su proceso de fermentación</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target" style="margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Poseen actividad enzimática </div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target" style="margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Productos con grado alimenticio</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target" style="margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">100% Mexicano</div>
                 </li>
               </ul>
@@ -176,16 +176,16 @@
               <br>
               <!-- <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Rent & Sale</span></h1> -->
               <ul class="text-white font-weight-bold wow-outer wow slideInDown">
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold; margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Medalla de oro a la Calidad y Servicio</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold; margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Productos con certificado KOSHER</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold; margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Planta de producción con certificado FDA</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-trophy-award" style="color: gold; margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Registro COFEPRIS</div>
                 </li>
                 <!-- <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-target"></span><div style="margin-left: 5px;">100% Mexicano</div></li> -->
@@ -194,7 +194,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide" data-slide-bg="images/estudios-gratuitos.png">
+        <div class="swiper-slide" data-slide-bg="images/fondo_pagina_quimica.png">
           <div class="container">
             <div class="jumbotron-classic-content">
               <div class="wow-outer">
@@ -204,19 +204,19 @@
               <br>
               <!-- <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Founded in 1989, our company is a team of renowned property management and real estate experts always ready to help you.</span></p> -->
               <ul class="text-white font-weight-bold wow-outer wow slideInDown">
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;  margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Análisis In Situ</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;  margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Aislamiento de selección de cepas</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;  margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Trabajos de propagación de cepas</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;  margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Desarrollo de nutrientes específicos</div>
                 </li>
-                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;"></span>
+                <li style="display: flex;"><span class="icon novi-icon icon-sm mdi mdi-eyedropper" style="color: #71c500;  margin-top: 1%;"></span>
                   <div style="margin-left: 5px; font-size: 22px">Estudios de caracterización genética</div>
                 </li>
                 <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="typography.php" data-wow-delay=".4s" style="font-size: 20px; font-weight: normal;">Conoce más</a></div>
@@ -495,90 +495,14 @@
       </div>
     </section>
 
-    <section class="section novi-background section-lg text-center" style="background-color: #2c9182; font-size: 20px;">
-      <div class="container">
-        <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">Testimonios</span></h3>
-        <!-- Owl Carousel-->
-        <div class="owl-carousel wow fadeIn" data-items="1" data-md-items="2" data-lg-items="3" data-dots="true" data-nav="false" data-loop="true" data-autoplay="true" data-autoplay-speed="731" data-autoplay-timeout="4268" data-margin="30" data-stage-padding="0" data-mouse-drag="false">
-          <blockquote class="quote-classic">
-            <div class="quote-classic-meta">
-              <div class="quote-classic-avatar"><img src="images/testimonials-person-6-96x96.jpg" alt="" width="96" height="96" />
-              </div>
-              <div class="quote-classic-info">
-                <cite class="quote-classic-cite">Alberto Webb</cite>
-                <p class="quote-classic-caption">Cliente habitual</p>
-              </div>
-            </div>
-            <div class="quote-classic-text" style="color: black;">
-              <p>Acabo de comprar un apartamento en Los Ángeles gracias a ti y a tus corredores. Todo fue fácil y sin problemas, el precio fue bastante asequible y estoy seguro de que volveré a utilizar sus servicios en el futuro.</p>
-            </div>
-          </blockquote>
-          <blockquote class="quote-classic">
-            <div class="quote-classic-meta">
-              <div class="quote-classic-avatar"><img src="images/testimonials-person-1-96x96.jpg" alt="" width="96" height="96" />
-              </div>
-              <div class="quote-classic-info">
-                <cite class="quote-classic-cite">Kelly McMillan</cite>
-                <p class="quote-classic-caption">Cliente habitual</p>
-              </div>
-            </div>
-            <div class="quote-classic-text" style="color: black;">
-              <p>Recientemente vendí mi propiedad de alquiler en Nelson a través de inHouse. Todo lo relacionado con la venta fue realizado sin problemas por su equipo. Me diste muy buenos consejos sobre lo necesario para agilizar la venta.</p>
-            </div>
-          </blockquote>
-          <blockquote class="quote-classic">
-            <div class="quote-classic-meta">
-              <div class="quote-classic-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96" />
-              </div>
-              <div class="quote-classic-info">
-                <cite class="quote-classic-cite">Harold Barnett</cite>
-                <p class="quote-classic-caption">Cliente habitual</p>
-              </div>
-            </div>
-            <div class="quote-classic-text" style="color: black;">
-              <p>Realmente aprecio su tiempo y experiencia para ayudarme a encontrar y comprar mi casa actual en Seattle, WA. Espero que podamos hacer negocios nuevamente en el futuro y lo recomendaré a familiares y amigos.</p>
-            </div>
-          </blockquote>
-          <blockquote class="quote-classic">
-            <div class="quote-classic-meta">
-              <div class="quote-classic-avatar"><img src="images/testimonials-person-3-96x96.jpg" alt="" width="96" height="96" />
-              </div>
-              <div class="quote-classic-info">
-                <cite class="quote-classic-cite">Bill Warner</cite>
-                <p class="quote-classic-caption">Cliente habitual</p>
-              </div>
-            </div>
-            <div class="quote-classic-text" style="color: black;">
-              <p>Acabo de vender una propiedad con inHouse y no puedo agradecerles lo suficiente. Su equipo tiene grandes habilidades de comunicación y se han comunicado regularmente conmigo durante todo el proceso.</p>
-            </div>
-          </blockquote>
-          <blockquote class="quote-classic">
-            <div class="quote-classic-meta">
-              <div class="quote-classic-avatar"><img src="images/testimonials-person-4-96x96.jpg" alt="" width="96" height="96" />
-              </div>
-              <div class="quote-classic-info">
-                <cite class="quote-classic-cite">Ann Lee</cite>
-                <p class="quote-classic-caption">Cliente habitual</p>
-              </div>
-            </div>
-            <div class="quote-classic-text" style="color: black;">
-              <p>Su equipo calificado me ayudó a hacer realidad el sueño de vender mi antigua propiedad. La venta transcurrió sin problemas y acabo de cerrar un nuevo lugar ideal al que estoy emocionado de llamar hogar. ¡Gracias por sus excelentes servicios!</p>
-            </div>
-          </blockquote>
-          <blockquote class="quote-classic">
-            <div class="quote-classic-meta">
-              <div class="quote-classic-avatar"><img src="images/testimonials-person-5-96x96.jpg" alt="" width="96" height="96" />
-              </div>
-              <div class="quote-classic-info">
-                <cite class="quote-classic-cite">Peter Clarkson</cite>
-                <p class="quote-classic-caption">Cliente habitual</p>
-              </div>
-            </div>
-            <div class="quote-classic-text" style="color: black;">
-              <p>I have to say that inHouse has the best brokers we've ever worked with. Their professionalism, personality, attention to detail, responsiveness and ability to close the deal are outstanding!</p>
-            </div>
-          </blockquote>
-        </div>
+    <section class="section novi-background section-lg text-center">
+      <div class="fondoSistemaFMT">
+      <h3 class="text-uppercase font-weight-bold wow-outer wow slideInDown" style="color: white;">INNOVACIÓN BIOTECNOLÓGICA</h3>
+        <video class="responsiveFMT wow slideInLeft" autoplay controls loop muted>
+          <source src="./images/video/WhatsApp Video 2023-04-04 at 12.29.46 PM.mp4" type="video/mp4">
+          TU NAVEGADOR NO ES COMPATIBLE CON LA ETIQUETA VIDEOS DE HTML 5
+        </video>
+        <div class="wow-outer button-outer"><a class="button button-md button-primary wow slideInDown" href="desarrolloT.php" data-wow-delay=".4s" style="font-size: 20px; font-weight: normal;">Conoce más</a></div>
       </div>
     </section>
 

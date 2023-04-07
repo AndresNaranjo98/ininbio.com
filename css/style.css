@@ -7911,7 +7911,7 @@ html [class*='section-'].section-bottom-0 {
 		padding-bottom: 120px;
 	}
 	.section-xl {
-		padding: 160px 0;
+		/* padding: 160px 0; */
 	}
 	.section-1 {
 		padding: 90px 0 100px;
@@ -12315,7 +12315,7 @@ button.swiper-pagination-bullet {
 	width: 100%;
 	height: 100%;
 	white-space: nowrap;
-	background-position: 55% center;
+	background-position: 60%;
 }
 
 .swiper-slide > * {
@@ -18285,6 +18285,37 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	top:-0.14em;
   }
 
+  .textoEfecto {
+	margin: auto;
+	display: table;
+}
+.efectoTS {
+	position: relative;
+	float: left;
+	/* background: tomato; */
+	color: white;
+	font-size: 2.5em;
+}
+
+.efectoTS .segundoEfecto {
+	position: absolute;
+	right: 0;
+	width: 0;
+	/* background: tomato; */
+	border-left: 1px solid #000;
+	animation: escribir 5s steps(30) infinite alternate;
+}
+
+@keyframes escribir {
+	from {
+		width: 100%
+	}
+
+	to {
+		width: 0
+	}
+}
+
   /* fondoImagenSistema */
 .fondoImagenSistema {
   background-image: url('../images/Pp2.png');
@@ -18330,7 +18361,10 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	font-size: 1.5vw;
 	font-weight: normal;
 	text-align: justify;
-	margin-left: -2%;
+}
+
+.contenedorFMT {
+	height: auto;
 }
 
 .imagenMano {
@@ -18388,6 +18422,35 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	height : 100%;
   }
 
+  .slide-top {
+  	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  @-webkit-keyframes slide-top {
+  	0% {
+  		-webkit-transform: translateY(0);
+  		transform: translateY(0);
+  	}
+
+  	100% {
+  		-webkit-transform: translateY(-100px);
+  		transform: translateY(-100px);
+  	}
+  }
+
+  @keyframes slide-top {
+  	0% {
+  		-webkit-transform: translateY(0);
+  		transform: translateY(0);
+  	}
+
+  	100% {
+  		-webkit-transform: translateY(-100px);
+  		transform: translateY(-100px);
+  	}
+  }
+
   /* Hover Sobre Imagen De FMT */
 
 .imagenPrueba {
@@ -18426,6 +18489,28 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   .fondoVideoEmpresarial {
 	background-color: #2f545a; 
 	margin-top: -11%;
+  }
+
+  /* Imagenes De Index Responsive */
+
+  .responsiveImage data-slide-bg {
+	height: 100%;
+	width : 100%;
+  }
+
+  /* Estilo Video FMT Responsive */
+
+  .responsiveFMT {
+	width: 55%; 
+	margin-top: 2%;
+  }
+
+  .fondoSistemaFMT {
+	background-image: url('../images/fondoMacro.jpg'); 
+	background-size: cover; 
+	background-position: center; 
+	background-attachment: fixed; 
+	height: 100%;
   }
 
 @media screen and (max-width: 767px) {
@@ -18497,6 +18582,11 @@ height : 100%;
 
 .fondoVideoEmpresarial { 
 	margin-top: -16%;
+  }
+
+  .fondoSistemaFMT {
+	background-position: center; 
+	background-attachment: unset; 
   }
 
 }

@@ -141,7 +141,7 @@
       <div class="row">
         <div class="col-12 col-md-7">
           <div class="container">
-            <img src="./images/inSitu.jpg" id="imagenIcono" style="width: 100%; height: 350px;">
+            <img src="./images/inSitu1.jpg" id="imagenIcono" style="width: 100%; height: 350px;">
             <p id="tituloIcono" style="font-size: 30px; color: black; font-weight: normal; text-align: center; text-transform: uppercase;">Servicios de Análisis In Situ</p>
             <!-- <p style="font-size: 30px; font-weight: normal; color: black;">AQUÍ IRÁ EL TEXTO POR ICONO SELECCIONADO</p> -->
             <p id="descripcionIcono" style="font-size: 20px; color: black; font-weight: normal; text-align: justify;">Nuestro equipo técnico y científico hace análisis a sus procesos de fermentación
@@ -163,7 +163,7 @@
             <div class="col-md-8">
               <div class="row">
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/magnifying.png" class="bordesCirculares" onclick="inSitu('./images/inSitu.jpg')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
+                  <img src="./images/iconoServicios/magnifying.png" class="bordesCirculares" onclick="inSitu('./images/inSitu1.jpg')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Servicio de Análisis In Situ</p>
                 </div>
                 <div class="col-6 text-center">
@@ -175,7 +175,7 @@
                   <p style="font-size: 20px; color: black; font-weight: normal;">Aislamiento y Selección de Cepas</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/pipette.png" class="bordesCirculares" onclick="propagacionCepas('./images/propagacionCepas.jpg');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
+                  <img src="./images/iconoServicios/pipette.png" class="bordesCirculares" onclick="propagacionCepas('./images/propagacionCepas1.jpg');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Trabajos de Propagación de Cepas de Levadura</p>
                 </div>
               </div>

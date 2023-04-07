@@ -142,7 +142,6 @@
           Fermentation Mind Thinking (FMT) & Ininbio System
         </p>
       </div>
-
       <div style="margin-top: 30px;">
         <div class="tenedor">
           <div class="testo">
@@ -151,15 +150,15 @@
               <div class="console-underscore" id="console">&#95;
               </div>
             </div>
-            <div class="container">
+            <!-- <div class="contenedorFMT"> -->
               <p class="desFMT">
                 Medición, integración e innovación son palabras que describen al equipo FMT y a su plataforma Ininbio System.
                 Más que un sistema de vanguardia es la combinación perfecta de medición y monitoreo, es el apoyo incondicional en tu proceso que te
                 ayudará a cumplir tus objetivos de eficiencia de fermentación gracias a su Inteligencia Artificial que brinda sugerencias y
-                predicciones.Y gracias a su plataforma, Ininbio System, te permitirá visualizar estas variables en cualquier lugar en el que tengas
+                predicciones. Y gracias a su plataforma, Ininbio System, te permitirá visualizar estas variables en cualquier lugar en el que tengas
                 acceso a internet.
               </p>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
