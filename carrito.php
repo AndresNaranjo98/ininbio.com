@@ -187,8 +187,8 @@ if (isset($_SESSION['rol'])) {
       $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
       $dotenv->load();
 
-      $key_encrypt = $_ENV['KEY_ENCRYPT'];
-      $method_encrypt = $_ENV['METHOD_ENCRYPT'];
+      $key_encrypt = $_SERVER['KEY_ENCRYPT'];
+      $method_encrypt = $_SERVER['METHOD_ENCRYPT'];
 
       if (isset($_POST['addProduct']) && !empty($_SESSION['rol'])) {
         switch ($_POST['addProduct']) {

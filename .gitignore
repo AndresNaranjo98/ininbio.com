@@ -1,0 +1,4 @@
+# Ignora todos los archivos .mp4
+*.mp4
+#Ignora el archivo .gitattributes
+.gitattributes

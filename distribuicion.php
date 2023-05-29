@@ -74,7 +74,6 @@ if (isset($_SESSION['rol'])) {
 
 <body>
   <!-- <div id="google_translate_element"></div> -->
-  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
     </div>
@@ -139,20 +138,45 @@ if (isset($_SESSION['rol'])) {
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
-                    <ul class="menu-vertical" style="text-align: center;">
+                    <p class="rd-nav-link" id="aboutWeb" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <p class="rd-nav-link" id="aboutMovil" onclick="aboutUs()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <ul class="menu-vertical" id="menu-vertical1" style="text-align: center;">
                       <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
                       <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" style="text-align: center;" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Productos</p>
-                    <ul class="menu-vertical" style="text-align: center;">
+                    <p class="rd-nav-link" id="productosWeb" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Productos</p>
+                    <p class="rd-nav-link" id="productosMovil" onclick="productos()" style="cursor: pointer; font-size: 19px; display: none;">Productos</p>
+                    <ul class="menu-vertical" id="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
-                      <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
+                      <li class="rd-nav-item" style="text-align: center;">
+                        <a class="rd-nav-link" id="levadurasWeb" href="#" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer;">Levaduras</a>
+                        <p class="rd-nav-link" id="levadurasMovil" onclick="levaduras()" style="cursor: pointer;">Levaduras</p>
+                        <ul class="menu-submenu" id="menu-submenu">
+                          <form action="levaduras.php" method="post">
+                            <li><button class="botonSubmenu" type="submit" id="tequila" name="tequila" value="tequila">
+                                <p id="classTequila" style="cursor: pointer;">Tequila</p>
+                              </button>
+                            </li>
+                            <li><button class="botonSubmenu" type="submit" id="mezcal" name="mezcal" value="mezcal">
+                                <p id="classMezcal" style="cursor: pointer;">Mezcal</p>
+                              </button>
+                            </li>
+                            <li><button class="botonSubmenu" type="submit" id="vino" name="vino" value="vino">
+                                <p id="classVino" style="cursor: pointer;">Vino</p>
+                              </button>
+                            </li>
+                            <li><button class="botonSubmenu" type="submit" id="cerveza" name="cerveza" value="cerveza">
+                                <p id="classCerveza" style="cursor: pointer;">Cerveza</p>
+                              </button>
+                            </li>
+                          </form>
+                        </ul>
+                      </li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
@@ -175,6 +199,102 @@ if (isset($_SESSION['rol'])) {
       </div>
     </header>
 
+    <script>
+      var botonTequila = document.getElementById('tequila');
+      botonTequila.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'tequila');
+      });
+
+      var botonMezcal = document.getElementById('mezcal');
+      botonMezcal.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'mezcal');
+      });
+
+      var botonVino = document.getElementById('vino');
+      botonVino.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'vino');
+      });
+
+      var botonCerveza = document.getElementById('cerveza');
+      botonCerveza.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'cerveza');
+      });
+
+      window.onload = function() {
+        var tipoLevadura = localStorage.getItem('levadura');
+        document.getElementById('textoLevadura').innerHTML = 'Levadura para ' + tipoLevadura[0].toUpperCase() + tipoLevadura.substring(1);
+        switch (tipoLevadura) {
+          case 'tequila':
+            document.getElementById('classTequila').style.color = '#71c500';
+            break;
+          case 'mezcal':
+            document.getElementById('classMezcal').style.color = '#71c500';
+            break;
+          case 'vino':
+            document.getElementById('classVino').style.color = '#71c500';
+            break;
+          case 'cerveza':
+            document.getElementById('classCerveza').style.color = '#71c500';
+            break;
+        }
+      }
+
+      window.addEventListener('load', function() {
+        var movilProducts = document.getElementById('productosMovil');
+        var webProducts = document.getElementById('productosWeb');
+        var movilAbout = document.getElementById('aboutMovil');
+        var webAbout = document.getElementById('aboutWeb');
+        var movilLevaduras = document.getElementById('levadurasMovil');
+        var webLevaduras = document.getElementById('levadurasWeb');
+        if (window.matchMedia("(max-width: 600px)").matches) {
+          movilProducts.style.display = "block";
+          webProducts.style.display = "none";
+          movilAbout.style.display = "block";
+          webAbout.style.display = "none";
+          movilLevaduras.style.display = "inherit";
+          webLevaduras.style.display = "none";
+        } else {
+          movilProducts.style.display = "none";
+          webProducts.style.display = "block";
+          movilAbout.style.display = "none";
+          webAbout.style.display = "block";
+          movilLevaduras.style.display = "none";
+          webLevaduras.style.display = "inherit";
+        }
+      });
+
+      function levaduras() {
+        var submenu = document.getElementById('menu-submenu');
+        if (submenu.style.display === "inherit") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "inherit";
+        }
+      }
+
+      function productos() {
+        var submenu = document.getElementById('menu-vertical');
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+          toggleTranslateIcon();
+        } else {
+          submenu.style.display = "block";
+          toggleTranslateIcon();
+        }
+      }
+
+      function aboutUs() {
+        var submenu1 = document.getElementById('menu-vertical1');
+        if (submenu1.style.display === "block") {
+          submenu1.style.display = "none";
+          toggleTranslateIcon();
+        } else {
+          submenu1.style.display = "block";
+          toggleTranslateIcon();
+        }
+      }
+    </script>
+
     <section class="section novi-background section-xl">
       <div class="fondoInvestigaciones">
         <p class="tituloInvestigaciones" style="font-size: 30px;">
@@ -184,7 +304,7 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 30px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="text-align: center; margin-top: 30px; color: white;">Estación La Joya</h3>
+          <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Betania, Jalisco</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
             <iframe src="https://www.google.com/maps/embed?pb=!4v1678132831176!6m8!1m7!1s_w6hsu5m0yKVSpusTMHLog!2m2!1d20.57948172550611!2d-102.3991599317537!3f349.576519683138!4f3.426228507179829!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
@@ -349,28 +469,11 @@ if (isset($_SESSION['rol'])) {
     }
   </script>
 
-
-  <script type="text/javascript">
-    var btnElm = document.getElementById('Click');
-    var pElm = document.getElementById('contar');
-    var contar = 0;
-
-    btnElm.onclick = function() {
-
-      contar++;
-
-      pElm.textContent = contar;
-
-    }
-  </script>
-
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
-  <script src="js/boton.js"></script>
   <script src="js/script.js"></script>
-  <script src="js\contador.js"></script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <link rel="stylesheet" href="css\whats.css">

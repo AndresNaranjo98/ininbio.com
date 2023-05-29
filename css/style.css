@@ -18049,8 +18049,35 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	background-color: #4D9083;
 }
 
+.menu-submenu {
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 200px;
+	background-color: #4D9083;
+	/* background-color: #00aae6; */
+}
+
 .menu-horizontal li:hover .menu-vertical {
 	display: block;
+}
+
+.menu-vertical li:hover .menu-submenu {
+	display: inherit;
+}
+
+.menu-submenu li p {
+	display: block;
+	padding: 15px 15px 15px;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	font: 400 14px/20px "Poppins", sans-serif;
+	letter-spacing: .08em;
+}
+
+.menu-submenu li:hover p {
+	color: #71c500;
 }
 
 .menu-horizontal {
@@ -18061,6 +18088,16 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	display: block;
 	color: white;
 	padding: 15px 15px 15px;
+}
+
+.botonSubmenu {
+	background-color: transparent;
+	border: none;
+}
+
+.botonLevaduras {
+	background-color: transparent;
+	border: none;
 }
 
 /* Estilo Titulo Productos */
@@ -18513,6 +18550,21 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	height: 100%;
   }
 
+  /* Estilo Íconos Trabajos Index */
+
+  .iconosResponsive {
+	color: white;
+  }
+
+  /* Estilo Imagenes Levaduras Cerveza */
+
+  .levaduraCerveza {
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin-right: 15px;
+  }
+
 @media screen and (max-width: 767px) {
 
 .imagenPrueba img {
@@ -18534,45 +18586,46 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 }
 
 .videoResponsivo {
-width : 100%;
-height : 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .fondoEquipoTrabajo {
 	background-position: center;
 }
 
-  .consoleContainer {
+.consoleContainer {
 	font-size: 8px;
 	font-weight: bold;
-  }
+}
 
-  .testo {
+.testo {
 	margin-top: 10%;
-  }
+}
 
-  .tenedor {
-	height: 200px; /* altura deseada */
-  }
-
-  .imagenMano {
+.tenedor {
 	height: 200px;
-  }
+	/* altura deseada */
+}
 
-  .tituloCelular {
+.imagenMano {
+	height: 200px;
+}
+
+.tituloCelular {
 	font-size: 10px;
-  }
+}
 
-  .tituloPrincipal {
+.tituloPrincipal {
 	font-size: 10px;
-  }
+}
 
-  .textoMano {
+.textoMano {
 	width: 50%;
 	margin-top: -5%;
-  }
+}
 
-  .desFMT {
+.desFMT {
 	margin-top: 0%;
 	color: white;
 	font-size: 6px;
@@ -18580,14 +18633,34 @@ height : 100%;
 	margin-left: -10%;
 }
 
-.fondoVideoEmpresarial { 
+.fondoVideoEmpresarial {
 	margin-top: -16%;
-  }
+}
 
-  .fondoSistemaFMT {
-	background-position: center; 
-	background-attachment: unset; 
-  }
+.fondoSistemaFMT {
+	background-position: center;
+	background-attachment: unset;
+}
+
+.iconosResponsive {
+	margin-top: 3%;
+}
+
+.responsiveFMT {
+	width: 100%;
+	margin-top: 5%;
+}
+
+/* .menu-vertical .levaduras a:hover {
+	display: none;
+} */
+.estiloLevadura {
+	margin-left: 5px;
+}
+
+.levaduraCerveza {
+	width: 500px;
+}
 
 }
 

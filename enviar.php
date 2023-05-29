@@ -29,6 +29,16 @@
     /* Clase SMTP, necesaria si quieres usar SMTP */
     require './PHPMailer-master/src/SMTP.php';
 
+    // require('vendor/autoload.php');
+
+    // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    // $dotenv->load();
+
+    // $host = $_ENV['HOST_EMAIL'];
+    // $username = $_ENV['USERNAME_EMAIL'];
+    // $password = $_ENV['PASSWORD_EMAIL'];
+    // $address = $_ENV['AD_ADDRESS'];
+
     // $mail = new PHPMailer\PHPMailer\PHPMailer;
     // ini_set('SMTP', "smtp.gmail.com");
     // ini_set('smtp_port', "587");
@@ -52,17 +62,17 @@
 
         $mail = new PHPMailer(true);
         $mail->isSMTP();
-        $mail->Host = 'mail.ininbio.com';
+        $mail->Host = $_SERVER['HOST_EMAIL'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'tics_id@ininbio.com';
-        $mail->Password = 'in3521396778.AN';
+        $mail->Username = $_SERVER['USERNAME_EMAIL'];
+        $mail->Password = $_SERVER['PASSWORD_EMAIL'];
         $mail->Port = 465;
         $mail->SMTPSecure = 'ssl';
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
         $mail->setFrom($correo, $nombre, $apellido);
-        $mail->addAddress('tics_id@ininbio.com');
-        $mail->addAddress('andrescbtis84@gmail.com');
+        $mail->addAddress($_SERVER['AD_ADDRESS']);
+        // $mail->addAddress('andrescbtis84@gmail.com');
         $mail->Subject = ($asunto);
         $mail->Body = $mensaje;
         if (!$mail->send()) {
@@ -74,7 +84,7 @@
                 text: "Ocurrió un error al enviar el correo, inténtalo nuevamente",
                 });
             function redirec(){
-            window.history.back();
+                window.location.replace(document.referrer);
             }
              setTimeout(redirec, 2000);
         </script>';
@@ -87,7 +97,7 @@
                 "success"
             );
             function redirec(){
-                window.history.back();
+                window.location.replace(document.referrer);
               }
             setTimeout(redirec, 2000);
         </script>';

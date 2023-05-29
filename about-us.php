@@ -37,7 +37,6 @@
 
 <body>
   <!-- <div id="google_translate_element"></div> -->
-  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
     </div>
@@ -101,19 +100,44 @@
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
-                    <ul class="menu-vertical" style="text-align: center;">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
+                    <p class="rd-nav-link" id="aboutWeb" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <p class="rd-nav-link" id="aboutMovil" onclick="aboutUs()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
+                    <ul class="menu-vertical" id="menu-vertical1" style="text-align: center;">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php" style="text-align: center;">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
                       <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
                   <li class="rd-nav-item">
-                    <p class="rd-nav-link" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Productos</p>
-                    <ul class="menu-vertical" style="text-align: center;">
+                    <p class="rd-nav-link" id="productosWeb" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Productos</p>
+                    <p class="rd-nav-link" id="productosMovil" onclick="productos()" style="cursor: pointer; font-size: 19px; display: none;">Productos</p>
+                    <ul class="menu-vertical" id="menu-vertical" style="text-align: center;">
                       <li><a class="rd-nav-link" href="typography.php">Productos</a></li>
-                      <li><a class="rd-nav-link" href="levaduras.php">Levaduras</a></li>
+                      <li class="rd-nav-item" style="text-align: center;">
+                        <a class="rd-nav-link" id="levadurasWeb" href="#" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer;">Levaduras</a>
+                        <p class="rd-nav-link" id="levadurasMovil" onclick="levaduras()" style="cursor: pointer;">Levaduras</p>
+                        <ul class="menu-submenu" id="menu-submenu">
+                          <form action="levaduras.php" method="post">
+                            <li><button class="botonSubmenu" type="submit" id="tequila" name="tequila" value="tequila">
+                                <p id="classTequila" style="cursor: pointer;">Tequila</p>
+                              </button>
+                            </li>
+                            <li><button class="botonSubmenu" type="submit" id="mezcal" name="mezcal" value="mezcal">
+                                <p id="classMezcal" style="cursor: pointer;">Mezcal</p>
+                              </button>
+                            </li>
+                            <li><button class="botonSubmenu" type="submit" id="vino" name="vino" value="vino">
+                                <p id="classVino" style="cursor: pointer;">Vino</p>
+                              </button>
+                            </li>
+                            <li><button class="botonSubmenu" type="submit" id="cerveza" name="cerveza" value="cerveza">
+                                <p id="classCerveza" style="cursor: pointer;">Cerveza</p>
+                              </button>
+                            </li>
+                          </form>
+                        </ul>
+                      </li>
                       <li><a class="rd-nav-link" href="nutrientes.php">Nutrientes</a></li>
                       <li><a class="rd-nav-link" href="antiespumantes.php">Antiespumantes</a></li>
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
@@ -136,6 +160,102 @@
       </div>
     </header>
 
+    <script>
+      var botonTequila = document.getElementById('tequila');
+      botonTequila.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'tequila');
+      });
+
+      var botonMezcal = document.getElementById('mezcal');
+      botonMezcal.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'mezcal');
+      });
+
+      var botonVino = document.getElementById('vino');
+      botonVino.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'vino');
+      });
+
+      var botonCerveza = document.getElementById('cerveza');
+      botonCerveza.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'cerveza');
+      });
+
+      window.onload = function() {
+        var tipoLevadura = localStorage.getItem('levadura');
+        document.getElementById('textoLevadura').innerHTML = 'Levadura para ' + tipoLevadura[0].toUpperCase() + tipoLevadura.substring(1);
+        switch (tipoLevadura) {
+          case 'tequila':
+            document.getElementById('classTequila').style.color = '#71c500';
+            break;
+          case 'mezcal':
+            document.getElementById('classMezcal').style.color = '#71c500';
+            break;
+          case 'vino':
+            document.getElementById('classVino').style.color = '#71c500';
+            break;
+          case 'cerveza':
+            document.getElementById('classCerveza').style.color = '#71c500';
+            break;
+        }
+      }
+
+      window.addEventListener('load', function() {
+        var movilProducts = document.getElementById('productosMovil');
+        var webProducts = document.getElementById('productosWeb');
+        var movilAbout = document.getElementById('aboutMovil');
+        var webAbout = document.getElementById('aboutWeb');
+        var movilLevaduras = document.getElementById('levadurasMovil');
+        var webLevaduras = document.getElementById('levadurasWeb');
+        if (window.matchMedia("(max-width: 600px)").matches) {
+          movilProducts.style.display = "block";
+          webProducts.style.display = "none";
+          movilAbout.style.display = "block";
+          webAbout.style.display = "none";
+          movilLevaduras.style.display = "inherit";
+          webLevaduras.style.display = "none";
+        } else {
+          movilProducts.style.display = "none";
+          webProducts.style.display = "block";
+          movilAbout.style.display = "none";
+          webAbout.style.display = "block";
+          movilLevaduras.style.display = "none";
+          webLevaduras.style.display = "inherit";
+        }
+      });
+
+      function levaduras() {
+        var submenu = document.getElementById('menu-submenu');
+        if (submenu.style.display === "inherit") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "inherit";
+        }
+      }
+
+      function productos() {
+        var submenu = document.getElementById('menu-vertical');
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+          toggleTranslateIcon();
+        } else {
+          submenu.style.display = "block";
+          toggleTranslateIcon();
+        }
+      }
+
+      function aboutUs() {
+        var submenu1 = document.getElementById('menu-vertical1');
+        if (submenu1.style.display === "block") {
+          submenu1.style.display = "none";
+          toggleTranslateIcon();
+        } else {
+          submenu1.style.display = "block";
+          toggleTranslateIcon();
+        }
+      }
+    </script>
+
     <!-- Working at CaseCraft-->
     <section class="section novi-background section-xl">
       <div class="fondoInvestigaciones">
@@ -145,7 +265,7 @@
       </div>
       <div class="contenedorVideo">
         <!-- <div class="row"> -->
-          <!-- <div class="col-md-10 col-lg-6 col-xl-5">
+        <!-- <div class="col-md-10 col-lg-6 col-xl-5">
             <p class="about-subtitle notranslate">ININBIO</p>
             <p style="color: black; font-size: 25px;">Inovaciones Industriales Biotecnológicas</p>
             <br>
@@ -153,10 +273,10 @@
               levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de
               fórmulas novedosas de acuerdo a sus necesidades.</p> -->
 
-          <video class="videoResponsivo" autoplay controls loop muted>
-            <source src="./images/video/INIBIO_0323_Entrevista_v3.mp4" type="video/mp4">
-            TU NAVEGADOR NO ES COMPATIBLE CON LA ETIQUETA VIDEOS DE HTML 5
-          </video>
+        <video class="videoResponsivo" autoplay controls loop muted>
+          <source src="./images/video/INIBIO_0323_Entrevista_v3.mp4" type="video/mp4">
+          TU NAVEGADOR NO ES COMPATIBLE CON LA ETIQUETA VIDEOS DE HTML 5
+        </video>
         <!-- </div> -->
       </div>
     </section>
@@ -189,8 +309,8 @@
               <div class="box-minimal-main wow-outer">
                 <h3 class="box-minimal-title wow slideInDown" style="color: white;">Visión</h3>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
-                  En 2026 seremos un grupo referente en innovación biotecnológica, tecnológica, 
-                  comercialización y de servicios, aliados fundamentales con cada uno de nuestros 
+                  En 2026 seremos un grupo referente en innovación biotecnológica, tecnológica,
+                  comercialización y de servicios, aliados fundamentales con cada uno de nuestros
                   clientes de la industria de bebidas alcohólicas y agroindustrial.
                 </p>
               </div>
@@ -232,8 +352,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Eduardo Benjamín Ibarra Hernández</p>
@@ -251,8 +371,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Jorge Luis Salazar Martínez</p>
@@ -270,8 +390,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">José Martín Martínez Vera</p>
@@ -289,8 +409,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Juan Andrés Aguilar Naranjo</p>
@@ -308,8 +428,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Rosalinda Damián Bolaños</p>
@@ -327,8 +447,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Roberto González García</p>
@@ -346,8 +466,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Paz de la Cruz Marín</p>
@@ -365,8 +485,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Diego Alberto Huaracha López</p>
@@ -384,8 +504,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Feliciano Sánchez Romero</p>
@@ -403,8 +523,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Luisa Adriana Ibarra Hernández</p>
@@ -422,8 +542,8 @@
           <div class="wow-outer">
             <!-- Profile Creative-->
             <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure>
+              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
+              </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
                   <p style="color: white;">Elizabeth Aguilera Melgoza</p>
@@ -568,20 +688,6 @@
       var translateIcon = document.getElementById("translate-icon");
       translateIcon.classList.toggle("hide");
     }
-
-    function readCookie(name) {
-      var c = document.cookie.split('; '),
-        cookies = {},
-        i, C;
-
-      for (i = c.length - 1; i >= 0; i--) {
-        C = c[i].split('=');
-        cookies[C[0]] = C[1];
-      }
-
-      return cookies[name];
-    }
-    console.log(readCookie('googtrans'));
   </script>
 
   <!-- Global Mailform Output-->
@@ -589,7 +695,6 @@
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js\contador.js"></script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
