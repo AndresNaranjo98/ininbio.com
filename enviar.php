@@ -21,13 +21,18 @@
     // require 'vendor/autoload.php';
     /* Clase Exception */
 
-    require './PHPMailer-master./src./Exception.php';
+    require './PHPMailer-master/src/Exception.php';
 
     /* Clase principal de PHPMailer */
     require './PHPMailer-master/src/PHPMailer.php';
 
     /* Clase SMTP, necesaria si quieres usar SMTP */
     require './PHPMailer-master/src/SMTP.php';
+
+    require('vendor/autoload.php');
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
 
     // require('vendor/autoload.php');
 
@@ -62,16 +67,16 @@
 
         $mail = new PHPMailer(true);
         $mail->isSMTP();
-        $mail->Host = $_SERVER['HOST_EMAIL'];
+        $mail->Host = $_ENV['HOST_EMAIL'];
         $mail->SMTPAuth = true;
-        $mail->Username = $_SERVER['USERNAME_EMAIL'];
-        $mail->Password = $_SERVER['PASSWORD_EMAIL'];
+        $mail->Username = $_ENV['USERNAME_EMAIL'];
+        $mail->Password = $_ENV['PASSWORD_EMAIL'];
         $mail->Port = 465;
         $mail->SMTPSecure = 'ssl';
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
         $mail->setFrom($correo, $nombre, $apellido);
-        $mail->addAddress($_SERVER['AD_ADDRESS']);
+        $mail->addAddress($_ENV['AD_ADDRESS']);
         // $mail->addAddress('andrescbtis84@gmail.com');
         $mail->Subject = ($asunto);
         $mail->Body = $mensaje;

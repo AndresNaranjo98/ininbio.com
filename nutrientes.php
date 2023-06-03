@@ -322,8 +322,8 @@ if (isset($_SESSION['rol'])) {
       $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
       $dotenv->load();
 
-      $key_encrypt = $_SERVER['KEY_ENCRYPT'];
-      $method_encrypt = $_SERVER['METHOD_ENCRYPT'];
+      $key_encrypt = $_ENV['KEY_ENCRYPT'];
+      $method_encrypt = $_ENV['METHOD_ENCRYPT'];
 
       switch (isset($_POST)) {
         case isset($_POST['tequila']):

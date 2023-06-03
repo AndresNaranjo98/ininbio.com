@@ -18543,7 +18543,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   }
 
   .fondoSistemaFMT {
-	background-image: url('../images/fondoMacro.jpg'); 
+	background-image: url('../images/fondoMacro.webp'); 
 	background-size: cover; 
 	background-position: center; 
 	background-attachment: fixed; 
@@ -18736,4 +18736,5 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 .contenedorVideo {
 	position: relative;
 	height: 100%;
+	/* width: 100vw; */
 }

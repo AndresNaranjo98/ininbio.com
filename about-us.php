@@ -264,20 +264,10 @@
         </p>
       </div>
       <div class="contenedorVideo">
-        <!-- <div class="row"> -->
-        <!-- <div class="col-md-10 col-lg-6 col-xl-5">
-            <p class="about-subtitle notranslate">ININBIO</p>
-            <p style="color: black; font-size: 25px;">Inovaciones Industriales Biotecnológicas</p>
-            <br>
-            <p style="text-align: justify; font-size: 20px; color: black; font-weight: normal;">Surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes,
-              levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de
-              fórmulas novedosas de acuerdo a sus necesidades.</p> -->
-
         <video class="videoResponsivo" autoplay controls loop muted>
           <source src="./images/video/INIBIO_0323_Entrevista_v3.mp4" type="video/mp4">
           TU NAVEGADOR NO ES COMPATIBLE CON LA ETIQUETA VIDEOS DE HTML 5
         </video>
-        <!-- </div> -->
       </div>
     </section>
     <!-- Advantages and Achievements-->
@@ -364,7 +354,9 @@
                     <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
                   </div>
                 </div> -->
-                <p class="descriptionPuest" style="color: white;">Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
+                <p class="descriptionPuest" style="color: white;">Soy una persona innovadora y creativa que desafía los límites establecidos.
+                  Mi curiosidad insaciable me impulsa a encontrar soluciones únicas y revolucionarias.
+                  Soy un agente de cambio dedicado a hacer una diferencia positiva en el mundo, listo para dejar una huella duradera.</p>
               </div>
             </article>
           </div>
