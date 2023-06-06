@@ -18206,13 +18206,13 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 /* Estilo Fondo Técnicas De Levadura */
 
 .fondoTecnicas {
-	background-image: url('../images/fondoNutricionCelualr.jpg');
+	background-image: url('../images/fondoNutricionCelualr.webp');
 	background-size: cover;
 	background-attachment: fixed;
 }
 
 .fondoDistribuicion {
-	background-image: url('../images/fondo_distribuicion.jpg');
+	background-image: url('../images/fondo_distribuicion.webp');
 	background-size: cover;
 	background-attachment: fixed;
 
@@ -18220,7 +18220,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
 /* Estilo Fondo Nutrición Celular */
 .fondoNutricion {
-	background-image: url('../images/fondoNutricionCelular.jpg');
+	background-image: url('../images/fondoNutricionCelular.webp');
 	background-size: cover;
 	background-attachment: fixed;	
 }
@@ -18251,7 +18251,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 /* Estilo Fondo FMT */
 
 .fondoFMT {
-	background-image: url('../images/3326663.jpg');
+	background-image: url('../images/3326663.webp');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
@@ -18375,7 +18375,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 }
 
 .tenedor {
-  background-image: url('../images/Pp2.png');
+  background-image: url('../images/Pp2.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18405,7 +18405,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 }
 
 .imagenMano {
-	background-image: url('../images/imagenMano.png');
+	background-image: url('../images/imagenMano.webp');
 	background-size: cover;
 	background-position: center;
 	/* background-repeat: no-repeat; */
@@ -18690,7 +18690,7 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 /* Estilo Sección Equipo De Trabajo */
 
   .fondoEquipoTrabajo {
-  	background-image: url('../images/ADN2.png');
+  	background-image: url('../images/ADN2.webp');
   	background-size: cover;
   }
 

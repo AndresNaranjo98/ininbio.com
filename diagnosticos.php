@@ -36,7 +36,7 @@
 <body>
   <!-- <div id="google_translate_element"></div> -->
   <div class="preloader">
-    <div class="preloader-logo"><img src="images/main-logo.png" alt="" width="250" height="130" srcset="images/main-logo.png 2x" />
+    <div class="preloader-logo"><img src="images/main-logo.webp" alt="" width="250" height="130" srcset="images/main-logo.webp 2x" />
     </div>
     <div class="preloader-body">
       <div id="loadingProgressG">
@@ -59,7 +59,7 @@
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.png" width="250" height="130" srcset="images/main-logo.png 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.webp" width="250" height="130" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -256,12 +256,12 @@
       }
     </script>
 
-    <section class="section novi-background section-xl" style="margin-top: 30px; max-width: 100%; background : url('./images/19366.jpg') no-repeat; background-size: cover;">
+    <section class="section novi-background section-xl" style="margin-top: 30px; max-width: 100%; background : url('./images/19366.webp') no-repeat; background-size: cover;">
 
       <div class="row">
         <div class="col-12 col-md-7">
           <div class="container">
-            <img src="./images/inSitu1.jpg" id="imagenIcono" style="width: 100%; height: 350px;">
+            <img src="./images/inSitu1.webp" id="imagenIcono" style="width: 100%; height: 350px;">
             <p id="tituloIcono" style="font-size: 30px; color: black; font-weight: normal; text-align: center; text-transform: uppercase;">Servicios de Análisis In Situ</p>
             <!-- <p style="font-size: 30px; font-weight: normal; color: black;">AQUÍ IRÁ EL TEXTO POR ICONO SELECCIONADO</p> -->
             <p id="descripcionIcono" style="font-size: 20px; color: black; font-weight: normal; text-align: justify;">Nuestro equipo técnico y científico hace análisis a sus procesos de fermentación
@@ -283,19 +283,19 @@
             <div class="col-md-8">
               <div class="row">
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/magnifying.png" class="bordesCirculares" onclick="inSitu('./images/inSitu1.jpg')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
+                  <img src="./images/iconoServicios/magnifying.webp" class="bordesCirculares" onclick="inSitu('./images/inSitu1.webp')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Servicio de Análisis In Situ</p>
                 </div>
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/stem-cell-therapy.png" class="bordesCirculares" onclick="nutriEspecifico('./images/nutrientesEspecificos.jpg')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
+                  <img src="./images/iconoServicios/stem-cell-therapy.webp" class="bordesCirculares" onclick="nutriEspecifico('./images/nutrientesEspecificos.webp')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Desarrollo de Nutrientes Específicos</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/cepas.png" class="bordesCirculares" onclick="aislamientoCepas('./images/aislamientoCepas.jpg');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
+                  <img src="./images/iconoServicios/cepas.webp" class="bordesCirculares" onclick="aislamientoCepas('./images/aislamientoCepas.webp');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Aislamiento y Selección de Cepas</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/pipette.png" class="bordesCirculares" onclick="propagacionCepas('./images/propagacionCepas1.jpg');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
+                  <img src="./images/iconoServicios/pipette.webp" class="bordesCirculares" onclick="propagacionCepas('./images/propagacionCepas1.webp');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Trabajos de Propagación de Cepas de Levadura</p>
                 </div>
               </div>
@@ -377,28 +377,28 @@
             <div class="col-sm-5 col-md-7 col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.png" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.png" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
                     <div class="thumbnail-minimal-caption"> </div>
                   </a></div>
               </div>
@@ -411,7 +411,7 @@
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.png" alt="" width="115" height="34" srcset="images/main-logo.png 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
@@ -490,7 +490,7 @@
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.png" width="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50"> Hola, ¿en que podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">
