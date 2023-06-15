@@ -84,7 +84,7 @@ if (isset($_SESSION['rol'])) {
     </div>
   </div>
   <div class="page">
-    <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank">
+    <!-- Page Header<a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"> -->
       <!-- <img src="images/intense_02.jpg" alt=""/> -->
     </a>
     <header class="section novi-background page-header">
@@ -98,7 +98,7 @@ if (isset($_SESSION['rol'])) {
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.webp" width="250" height="130" srcset="images/main-logo.webp 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -220,25 +220,6 @@ if (isset($_SESSION['rol'])) {
         localStorage.setItem('levadura', 'cerveza');
       });
 
-      window.onload = function() {
-        var tipoLevadura = localStorage.getItem('levadura');
-        document.getElementById('textoLevadura').innerHTML = 'Levadura para ' + tipoLevadura[0].toUpperCase() + tipoLevadura.substring(1);
-        switch (tipoLevadura) {
-          case 'tequila':
-            document.getElementById('classTequila').style.color = '#71c500';
-            break;
-          case 'mezcal':
-            document.getElementById('classMezcal').style.color = '#71c500';
-            break;
-          case 'vino':
-            document.getElementById('classVino').style.color = '#71c500';
-            break;
-          case 'cerveza':
-            document.getElementById('classCerveza').style.color = '#71c500';
-            break;
-        }
-      }
-
       window.addEventListener('load', function() {
         var movilProducts = document.getElementById('productosMovil');
         var webProducts = document.getElementById('productosWeb');
@@ -306,7 +287,7 @@ if (isset($_SESSION['rol'])) {
           <br>
           <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Betania, Jalisco</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-            <iframe src="https://www.google.com/maps/embed?pb=!4v1678132831176!6m8!1m7!1s_w6hsu5m0yKVSpusTMHLog!2m2!1d20.57948172550611!2d-102.3991599317537!3f349.576519683138!4f3.426228507179829!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="betania" src="https://www.google.com/maps/embed?pb=!4v1678132831176!6m8!1m7!1s_w6hsu5m0yKVSpusTMHLog!2m2!1d20.57948172550611!2d-102.3991599317537!3f349.576519683138!4f3.426228507179829!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
               <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
                 <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
@@ -322,11 +303,75 @@ if (isset($_SESSION['rol'])) {
           <br>
           <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Tequila, Jalisco</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between">
-            <iframe src="https://www.google.com/maps/embed?pb=!4v1678132529203!6m8!1m7!1sy_KskdhzuWehQDXR9F-Iww!2m2!1d20.87631130490256!2d-103.8108683838134!3f202.54!4f-6.560000000000002!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="tequila" src="https://www.google.com/maps/embed?pb=!4v1678132529203!6m8!1m7!1sy_KskdhzuWehQDXR9F-Iww!2m2!1d20.87631130490256!2d-103.8108683838134!3f202.54!4f-6.560000000000002!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
               <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
                 <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                 <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/MjKNYge8zgWY8aB76">910 Carr. Guadalajara-Tepic <br>Tequila, Jalisco</a></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 100px;" class="fondoDistribuicion">
+        <div class="container">
+          <br>
+          <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Parque Industrial y Maquilador “Oaxaca 2000”, Oaxaca</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+          <iframe title="oaxaca" src="https://www.google.com/maps/embed?pb=!4v1686691872284!6m8!1m7!1syEOOZT2v2CXxctJaI8UMGw!2m2!1d17.23947113310986!2d-96.82506202408484!3f251.60648215219223!4f-11.33868328470632!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
+              <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
+                <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/8tx1zDtbFDqN8ig67">232 San Francisco Telixtlahuaca Oaxaca, Magdalena Apasco, Oaxaca</a></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 100px;" class="fondoDistribuicion">
+        <div class="container">
+          <br>
+          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Parque Industrial Pacífico, Tijuana</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1686692164262!6m8!1m7!1sZDwjKrZoayafHJhv5CPPBQ!2m2!1d32.47255177906522!2d-116.9912691530914!3f116.95824074392364!4f6.89715688487351!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
+              <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
+                <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/gGezag3Z7SCHfhmi7">14529 C. Pacifico, Tijuana, Baja California</a></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 100px;" class="fondoDistribuicion">
+        <div class="container">
+          <br>
+          <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Nanshan District, Shenzhen, China</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.9706977601477!2d114.05748169842052!3d22.542770392457008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f40e16718787%3A0xc6cf8992d9247579!2sFu%20Zhong%20San%20Lu%2C%20%E4%B8%AD%E5%BF%83%E5%9F%8E%20Fu%20Tian%20Qu%2C%20Shen%20Zhen%20Shi%2C%20Guang%20Dong%20Sheng%2C%20China%2C%20518000!5e0!3m2!1ses!2smx!4v1686696960425!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
+              <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
+                <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/RSZXB1sq4CFKcitB6">Fu Zhong San Lu, 中心城 Fu Tian Qu, Shen Zhen Shi, Guang Dong Sheng, China, 518000</a></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 100px;" class="fondoDistribuicion">
+        <div class="container">
+          <br>
+          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Parque Industrial Terrapuerto, Colombia</h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1686698922606!6m8!1m7!1sN3aCTnhuufvEiZFohkwiWA!2m2!1d4.734600365222766!2d-74.14657441460541!3f330.5105153007705!4f-4.642946298625674!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+            <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
+              <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
+                <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/J7pAiAERzr8Dyjjr6">Cota, Cundinamarca, Colombia</a></div>
               </article>
             </div>
           </div>
@@ -341,7 +386,7 @@ if (isset($_SESSION['rol'])) {
             <div class="col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
               <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
-                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidas alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
               </p>
             </div>
             <div class="col-sm-7 col-md-5 col-lg-4">
@@ -353,11 +398,11 @@ if (isset($_SESSION['rol'])) {
               <div style="margin-top: 20px;">
                 <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio" aria-label="facebook"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/" aria-label="instagram"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel" aria-label="tiktok"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg" aria-label="youtube"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098" aria-label="whatsapp"></a></li>
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
                 </ul>
@@ -366,28 +411,28 @@ if (isset($_SESSION['rol'])) {
             <div class="col-sm-5 col-md-7 col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item" aria-label="di-phosta"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item" aria-label="nutri-fast"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item" aria-label="nitro-ferm"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item" aria-label="vinimax"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item" aria-label="urea"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item" aria-label="nutri-ron"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item" aria-label="levadura"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item" aria-label="antiespumante"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
                     <div class="thumbnail-minimal-caption"> </div>
                   </a></div>
               </div>
@@ -400,7 +445,7 @@ if (isset($_SESSION['rol'])) {
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php" aria-label="logoFooter"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
@@ -487,7 +532,7 @@ if (isset($_SESSION['rol'])) {
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.webp" width="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">
@@ -502,7 +547,7 @@ if (isset($_SESSION['rol'])) {
 
       </div>
     </div>
-    <button type="button" id="whats-openPopup" class="whatsapp-button">
+    <button type="button" id="whats-openPopup" class="whatsapp-button" aria-label="whatsappContact">
       <div class="float">
         <i class="fa fa-whatsapp my-float"></i>
       </div>

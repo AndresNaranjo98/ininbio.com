@@ -84,7 +84,7 @@ if (isset($_SESSION['rol'])) {
     </div>
   </div>
   <div class="page">
-    <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank">
+    <!-- Page Header<a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"> -->
       <!-- <img src="images/intense_02.jpg" alt=""/> -->
     </a>
     <header class="section novi-background page-header">
@@ -98,7 +98,7 @@ if (isset($_SESSION['rol'])) {
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.webp" width="250" height="130" srcset="images/main-logo.webp 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -378,7 +378,7 @@ if (isset($_SESSION['rol'])) {
                 <div class="name"> <?php echo $row[$i][1]; ?> </div>
               </div>
               <div class="media-icons">
-                <a href="#" data-toggle="modal" data-target="#modalProducto<?php echo $idPro ?>"><i style=" padding-top: 25%;" class="fa-solid fa-info"></i></a>
+                <a href="#" data-toggle="modal" aria-label="infoProducto" data-target="#modalProducto<?php echo $idPro ?>"><i style=" padding-top: 25%;" class="fa-solid fa-info"></i></a>
               </div>
             </div>
             <div class="modal fade" id="modalProducto<?php echo $idPro ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -537,7 +537,7 @@ if (isset($_SESSION['rol'])) {
             <div class="col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
               <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
-                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidas alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
               </p>
             </div>
             <div class="col-sm-7 col-md-5 col-lg-4">
@@ -549,11 +549,11 @@ if (isset($_SESSION['rol'])) {
               <div style="margin-top: 20px;">
                 <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio" aria-label="facebook"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/" aria-label="instagram"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel" aria-label="tiktok"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg" aria-label="youtube"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098" aria-label="whatsapp"></a></li>
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
                 </ul>
@@ -562,28 +562,28 @@ if (isset($_SESSION['rol'])) {
             <div class="col-sm-5 col-md-7 col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item" aria-label="di-phosta"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item" aria-label="nutri-fast"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item" aria-label="nitro-ferm"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item" aria-label="vinimax"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item" aria-label="urea"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item" aria-label="nutri-ron"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item" aria-label="levadura"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item" aria-label="antiespumante"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
                     <div class="thumbnail-minimal-caption"> </div>
                   </a></div>
               </div>
@@ -596,7 +596,7 @@ if (isset($_SESSION['rol'])) {
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php" aria-label="logoFooter"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
@@ -683,7 +683,7 @@ if (isset($_SESSION['rol'])) {
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.webp" width="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">
@@ -698,7 +698,7 @@ if (isset($_SESSION['rol'])) {
 
       </div>
     </div>
-    <button type="button" id="whats-openPopup" class="whatsapp-button">
+    <button type="button" id="whats-openPopup" class="whatsapp-button" aria-label="whatsappContact">
       <div class="float">
         <i class="fa fa-whatsapp my-float"></i>
       </div>

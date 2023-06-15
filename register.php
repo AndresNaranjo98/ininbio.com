@@ -218,7 +218,7 @@ if(isset($_SESSION['rol'])){
               <div class="col-lg-4">
                 <h5 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h5>
                 <p class="footer-advanced-text">
-                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                  ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidas alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
                 </p>
               </div>
               <div class="col-sm-7 col-md-5 col-lg-4">

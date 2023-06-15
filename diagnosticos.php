@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="page">
-    <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank">
+    <!-- Page Header<a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"> -->
       <!-- <img src="images/intense_02.jpg" alt=""/> -->
     </a>
     <header class="section novi-background page-header">
@@ -59,7 +59,7 @@
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.webp" width="250" height="130" srcset="images/main-logo.webp 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -181,25 +181,6 @@
         localStorage.setItem('levadura', 'cerveza');
       });
 
-      window.onload = function() {
-        var tipoLevadura = localStorage.getItem('levadura');
-        document.getElementById('textoLevadura').innerHTML = 'Levadura para ' + tipoLevadura[0].toUpperCase() + tipoLevadura.substring(1);
-        switch (tipoLevadura) {
-          case 'tequila':
-            document.getElementById('classTequila').style.color = '#71c500';
-            break;
-          case 'mezcal':
-            document.getElementById('classMezcal').style.color = '#71c500';
-            break;
-          case 'vino':
-            document.getElementById('classVino').style.color = '#71c500';
-            break;
-          case 'cerveza':
-            document.getElementById('classCerveza').style.color = '#71c500';
-            break;
-        }
-      }
-
       window.addEventListener('load', function() {
         var movilProducts = document.getElementById('productosMovil');
         var webProducts = document.getElementById('productosWeb');
@@ -261,7 +242,7 @@
       <div class="row">
         <div class="col-12 col-md-7">
           <div class="container">
-            <img src="./images/inSitu1.webp" id="imagenIcono" style="width: 100%; height: 350px;">
+            <img src="./images/inSitu1.webp" id="imagenIcono" alt="analisisInSitu" style="width: 100%; height: 350px;">
             <p id="tituloIcono" style="font-size: 30px; color: black; font-weight: normal; text-align: center; text-transform: uppercase;">Servicios de Análisis In Situ</p>
             <!-- <p style="font-size: 30px; font-weight: normal; color: black;">AQUÍ IRÁ EL TEXTO POR ICONO SELECCIONADO</p> -->
             <p id="descripcionIcono" style="font-size: 20px; color: black; font-weight: normal; text-align: justify;">Nuestro equipo técnico y científico hace análisis a sus procesos de fermentación
@@ -283,20 +264,28 @@
             <div class="col-md-8">
               <div class="row">
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/magnifying.webp" class="bordesCirculares" onclick="inSitu('./images/inSitu1.webp')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
+                  <img src="./images/iconoServicios/magnifying.webp" alt="magnifying" class="bordesCirculares" onclick="inSitu('./images/inSitu1.webp')" title="https://www.flaticon.com/free-icons/microscope-slides Microscope slides icons created by Konkapp - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Servicio de Análisis In Situ</p>
                 </div>
                 <div class="col-6 text-center">
-                  <img src="./images/iconoServicios/stem-cell-therapy.webp" class="bordesCirculares" onclick="nutriEspecifico('./images/nutrientesEspecificos.webp')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
+                  <img src="./images/iconoServicios/stem-cell-therapy.webp" alt="cell-therapy" class="bordesCirculares" onclick="nutriEspecifico('./images/nutrientesEspecificos.webp')" title="https://www.flaticon.com/free-icons/stem-cell-therapy Stem cell therapy icons created by Freepik - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Desarrollo de Nutrientes Específicos</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/cepas.webp" class="bordesCirculares" onclick="aislamientoCepas('./images/aislamientoCepas.webp');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
+                  <img src="./images/iconoServicios/cepas.webp" alt="cepas" class="bordesCirculares" onclick="aislamientoCepas('./images/aislamientoCepas.webp');" title="https://www.flaticon.com/free-icons/cell Cell icons created by Paul J. - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Aislamiento y Selección de Cepas</p>
                 </div>
                 <div class="col-6 text-center" style="margin-top: 25px;">
-                  <img src="./images/iconoServicios/pipette.webp" class="bordesCirculares" onclick="propagacionCepas('./images/propagacionCepas1.webp');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
+                  <img src="./images/iconoServicios/pipette.webp" alt="pipeta" class="bordesCirculares" onclick="propagacionCepas('./images/propagacionCepas1.webp');" title="https://www.flaticon.com/free-icons/healthcare-and-medical Healthcare and medical icons created by justicon - Flaticon">
                   <p style="font-size: 20px; color: black; font-weight: normal;">Trabajos de Propagación de Cepas de Levadura</p>
+                </div>
+                <div class="col-6 text-center" style="margin-top: 25px;">
+                  <img src="./images/iconoServicios/desarrolloTecnologico.webp" alt="pipeta" class="bordesCirculares" onclick="desarrolloTecnologico('./images/dptoDesarrollo.webp');" title="https://www.flaticon.es/iconos-gratis/tecnologia tecnología iconos Tecnología iconos creados por Eucalyp - Flaticon">
+                  <p style="font-size: 20px; color: black; font-weight: normal;">Departamento de Desarrollo Tecnológico</p>
+                </div>
+                <div class="col-6 text-center" style="margin-top: 25px;">
+                  <img src="./images/iconoServicios/dptoIDi.webp" alt="pipeta" class="bordesCirculares" onclick="lbtoIDi('./images/laboratorioIDi.webp');" title="https://www.flaticon.es/iconos-gratis/idea idea iconos Idea iconos creados por geotatah - Flaticon">
+                  <p style="font-size: 20px; color: black; font-weight: normal;">Laboratorio de Investigación, Desarrollo e Innovación (I + D + i)</p>
                 </div>
               </div>
             </div>
@@ -327,7 +316,7 @@
       function aislamientoCepas(urlImagen) {
         var miDiv = document.getElementById("imagenIcono");
         document.getElementById('tituloIcono').innerHTML = 'Aislamiento y Selección de Cepas';
-        document.getElementById('descripcionIcono').innerHTML = 'En ININBIO, la selección y el aislamiento de las cepas se realizaron con el objetivo de encontrar levaduras con características de gran interés para la fermentación alcohólica, destinadas a la fabricación de bebidas alcohólicas, o para lograr la diferenciación de cepas de levaduras que tengan un gran valor industrial ya conocido.';
+        document.getElementById('descripcionIcono').innerHTML = 'En ININBIO, la selección y el aislamiento de las cepas se realizan con el objetivo de encontrar levaduras con características de gran interés para la fermentación alcohólica, destinadas a la fabricación de bebidas alcohólicas, o para lograr la diferenciación de cepas de levaduras que tengan un gran valor industrial ya conocido.';
         miDiv.src = urlImagen;
         miDiv.style.width = '100%';
         miDiv.style.height = '350px';
@@ -336,7 +325,25 @@
       function propagacionCepas(urlImagen) {
         var miDiv = document.getElementById("imagenIcono");
         document.getElementById('tituloIcono').innerHTML = 'Trabajos de Propagación de Cepas de Levadura';
-        document.getElementById('descripcionIcono').innerHTML = 'Dentro de nuestros servicios se encuentra la asesoría para hacer más eficiente la propagación y contar con mejores técnicas de reproducción celular.';
+        document.getElementById('descripcionIcono').innerHTML = 'Dentro de nuestros servicios se encuentra la asesoría para hacer más eficiente la propagación de la levadura mediante la obtención de biomasa en condiciones aeróbicas, implicando varios escalados durante el proceso que finalizan en la inoculación de la levadura en un mosto adecuado para sus condiciones de fermentación garantizando así la pureza de la cepa, inocuidad y valores adecuados de viabilidad celular evitando su envejecimiento.';
+        miDiv.src = urlImagen;
+        miDiv.style.width = '100%';
+        miDiv.style.height = '350px';
+      }
+
+      function desarrolloTecnologico(urlImagen) {
+        var miDiv = document.getElementById("imagenIcono");
+        document.getElementById('tituloIcono').innerHTML = 'Departamento de Desarrollo Tecnológico';
+        document.getElementById('descripcionIcono').innerHTML = '';
+        miDiv.src = urlImagen;
+        miDiv.style.width = '100%';
+        miDiv.style.height = '350px';
+      }
+
+      function lbtoIDi(urlImagen) {
+        var miDiv = document.getElementById("imagenIcono");
+        document.getElementById('tituloIcono').innerHTML = 'Laboratorio de Investigación, Desarrollo e innovación (I + D + i)';
+        document.getElementById('descripcionIcono').innerHTML = '';
         miDiv.src = urlImagen;
         miDiv.style.width = '100%';
         miDiv.style.height = '350px';
@@ -352,7 +359,7 @@
             <div class="col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
               <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
-                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidas alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
               </p>
             </div>
             <div class="col-sm-7 col-md-5 col-lg-4">
@@ -364,11 +371,11 @@
               <div style="margin-top: 20px;">
                 <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio" aria-label="facebook"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/" aria-label="instagram"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel" aria-label="tiktok"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg" aria-label="youtube"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098" aria-label="whatsapp"></a></li>
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
                 </ul>
@@ -377,28 +384,28 @@
             <div class="col-sm-5 col-md-7 col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item" aria-label="di-phosta"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item" aria-label="nutri-fast"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item" aria-label="nitro-ferm"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item" aria-label="vinimax"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item" aria-label="urea"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item" aria-label="nutri-ron"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item" aria-label="levadura"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item" aria-label="antiespumante"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
                     <div class="thumbnail-minimal-caption"> </div>
                   </a></div>
               </div>
@@ -411,7 +418,7 @@
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php" aria-label="logoFooter"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
@@ -490,7 +497,7 @@
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.webp" width="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">
@@ -505,7 +512,7 @@
 
       </div>
     </div>
-    <button type="button" id="whats-openPopup" class="whatsapp-button">
+    <button type="button" id="whats-openPopup" class="whatsapp-button" aria-label="whatsappContact">
       <div class="float">
         <i class="fa fa-whatsapp my-float"></i>
       </div>

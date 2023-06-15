@@ -36,7 +36,7 @@
 <body>
   <!-- <div id="google_translate_element"></div> -->
   <div class="preloader">
-    <div class="preloader-logo"><img src="images/main-logo.webp" alt="" width="250" height="130" srcset="images/main-logo.webp 2x" />
+    <div class="preloader-logo"><img src="images/main-logo.webp" alt="logo_Preloader" width="250" height="130" srcset="images/main-logo.webp 2x" />
     </div>
     <div class="preloader-body">
       <div id="loadingProgressG">
@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="page">
-    <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank">
+    <!-- Page Header<a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"> -->
       <!-- <img src="images/intense_02.jpg" alt=""/> -->
     </a>
     <header class="section novi-background page-header">
@@ -59,7 +59,7 @@
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.webp" width="250" height="130" srcset="images/main-logo.webp 2x" /></a>
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php"><img src="images/main-logo.webp" alt="logo_Index" width="250" height="130" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -144,6 +144,7 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
@@ -579,7 +580,7 @@
                 <h4 class="box-minimal-title wow slideInDown" style="color: white; font-size: 30px;" data-wow-delay=".1s">Estudios, Evaluación Y Factibilidad De Cepas</h4>
                 <p class="wow fadeInUpSmall" style="color: white; text-align: justify; font-size: 20px;" data-wow-delay=".1s">
                   Mediante la evaluación y factibilidad de cepas determinamos si una cepa en particular es adecuada para su uso en una
-                  aplicación específica. Esto implicar la evaluación de su capacidad para producir un compuesto de interés, su resistencia
+                  aplicación específica. Esto implica la evaluación de su capacidad para producir un compuesto de interés, su resistencia
                   a las condiciones adversas, entre otros factores.
                 </p>
               </div>
@@ -619,7 +620,7 @@
       <div class="fondoSistemaFMT">
         <h3 class="text-uppercase font-weight-bold wow-outer wow slideInDown" style="color: white;">INNOVACIÓN BIOTECNOLÓGICA</h3>
         <video class="responsiveFMT wow slideInLeft" autoplay controls loop muted>
-          <source src="./images/video/WhatsApp Video 2023-04-04 at 12.29.46 PM.mp4" type="video/mp4">
+          <source src="./images/video/IninbioSystem.mp4" type="video/mp4">
           TU NAVEGADOR NO ES COMPATIBLE CON LA ETIQUETA VIDEOS DE HTML 5
         </video>
         <div class="wow-outer button-outer" style="margin-top: 0%;">
@@ -635,7 +636,7 @@
             <div class="col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Acerca de Nosotros</h4>
               <p class="footer-advanced-text" style="color: white; font-size: 20px; text-align: justify;">
-                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidad alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
+                ININBIO, surge de la necesidad de satisfacer la demanda del sector de las bebidas alcohólicas que busca nutrientes, levaduras e insumos para sus fermentaciones de la más alta calidad y con innovaciones en cuanto a desarrollo de fórmulas novedosas de acuerdo a sus necesidades.
               </p>
             </div>
             <div class="col-sm-7 col-md-5 col-lg-4">
@@ -647,11 +648,11 @@
               <div style="margin-top: 20px;">
                 <h4 class="font-weight-bold text-uppercase text-white">Síguenos en redes Sociales</h4>
                 <ul class="foter-social-links list-inline list-inline-md" style="margin-top: 20px;">
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg"></a></li>
-                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-facebook" href="https://www.facebook.com/ininbio" aria-label="facebook"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-instagram" href="https://www.instagram.com/grupo_ininbio/" aria-label="instagram"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-tiktok" href="https://www.tiktok.com/@ininbio_channel" aria-label="tiktok"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-youtube" href="https://www.youtube.com/channel/UCvKFK3cB9022p2tpf3OItrg" aria-label="youtube"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default fa-brands fa-whatsapp" href="https:\/\/api.whatsapp.com/send?phone=5213521429098" aria-label="whatsapp"></a></li>
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li> -->
                   <!-- <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li> -->
                 </ul>
@@ -660,28 +661,28 @@
             <div class="col-sm-5 col-md-7 col-lg-4">
               <h4 class="font-weight-bold text-uppercase text-white">Galería de Productos</h4>
               <div class="row row-x-10" data-lightgallery="group">
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/di-phosta.webp" data-lightgallery="item" aria-label="di-phosta"><img class="thumbnail-minimal-image" src="images/productos/di-phosta.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nutri-fast.webp" data-lightgallery="item" aria-label="nutri-fast"><img class="thumbnail-minimal-image" src="images/productos/nutri-fast.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/nitro-ferm.webp" data-lightgallery="item" aria-label="nitro-ferm"><img class="thumbnail-minimal-image" src="images/productos/nitro-ferm.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/vinimax.webp" data-lightgallery="item" aria-label="vinimax"><img class="thumbnail-minimal-image" src="images/productos/vinimax.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/productos/urea.webp" data-lightgallery="item" aria-label="urea"><img class="thumbnail-minimal-image" src="images/productos/urea.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/ron.webp" data-lightgallery="item" aria-label="nutri-ron"><img class="thumbnail-minimal-image" src="images/ron.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/leva.webp" data-lightgallery="item" aria-label="levadura"><img class="thumbnail-minimal-image" src="images/leva.webp" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
-                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
+                <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/antiespumante.webp" data-lightgallery="item" aria-label="antiespumante"><img class="thumbnail-minimal-image" src="images/antiespumante.webp" alt="" />
                     <div class="thumbnail-minimal-caption"> </div>
                   </a></div>
               </div>
@@ -694,7 +695,7 @@
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php" aria-label="logo_footer"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
@@ -780,7 +781,7 @@
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.webp" width="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">
@@ -790,7 +791,7 @@
         </button>
       </div>
     </div>
-    <button type="button" id="whats-openPopup" class="whatsapp-button">
+    <button type="button" id="whats-openPopup" class="whatsapp-button" aria-label="whatsapp">
       <div class="float">
         <i class="fa fa-whatsapp my-float"></i>
       </div>

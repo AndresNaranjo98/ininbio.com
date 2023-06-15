@@ -366,7 +366,7 @@ mark,
 
 strong {
 	font-weight: 700;
-	color: #74757f;
+	color: #000000;
 }
 
 .big {
@@ -18565,6 +18565,12 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	margin-right: 15px;
   }
 
+  /* Separación Imagen Nutrición Celular */
+
+.margenImagen {
+	margin-top: 50px;
+}
+
 @media screen and (max-width: 767px) {
 
 .imagenPrueba img {
@@ -18662,6 +18668,10 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	width: 500px;
 }
 
+.margenImagen {
+	margin-top: 0px;
+}
+
 }
 
   /* Similitud Sección CIDAM */
@@ -18702,6 +18712,22 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
   	color: white;
   }
 
+  .carouselConvenios .slick-prev:before{
+	visibility: hidden;
+  }
+
+  .carouselConvenios .slick-next:before{
+	visibility: hidden;
+  }
+
+  .imgCarousel {
+	
+  }
+
+  .carrusel {
+	
+  }
+
 /* Estilo Plugin Translate */
 
 .goog-te-banner-frame.skiptranslate,
@@ -18737,4 +18763,20 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	position: relative;
 	height: 100%;
 	/* width: 100vw; */
+}
+
+
+.slick-dots li button
+{
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  font-size: 0px;
+  border: 0;
+}
+
+.slick-dots .slick-active button
+{
+  background-color: black;
 }

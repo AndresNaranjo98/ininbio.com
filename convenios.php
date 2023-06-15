@@ -2,64 +2,41 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Ininbio/Investigacion</title>
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="./images/logoWeb.png" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css" id="main-styles-link">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
-  <style>
-    .ie-panel {
-      display: none;
-      background: #212121;
-      padding: 10px 0;
-      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
-      clear: both;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    html.ie-10 .ie-panel,
-    html.lt-ie-10 .ie-panel {
-      display: block;
-    }
-  </style>
+    <title>Ininbio/Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="./images/logoWeb.png" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+    <link rel="stylesheet" href="css/style.css" id="main-styles-link">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
 
 <body>
-  <!-- <div id="google_translate_element"></div> -->
-  <div class="preloader">
-    <div class="preloader-logo"><img src="images/main-logo.webp" alt="" width="250" height="130" srcset="images/main-logo.webp 2x" />
+    <div class="preloader">
+        <div class="preloader-logo"><img src="images/main-logo.webp" alt="logo_Preloader" width="250" height="130" srcset="images/main-logo.webp 2x" />
+        </div>
+        <div class="preloader-body">
+            <div id="loadingProgressG">
+                <div class="loadingProgressG" id="loadingProgressG_1"></div>
+            </div>
+        </div>
     </div>
-    <div class="preloader-body">
-      <div id="loadingProgressG">
-        <div class="loadingProgressG" id="loadingProgressG_1"></div>
-      </div>
-    </div>
-  </div>
-  <div class="page">
-    <!-- Page Header<a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"> -->
-      <!-- <img src="images/intense_02.jpg" alt=""/> -->
-    </a>
+
+    <div class="page">
     <header class="section novi-background page-header">
       <!-- RD Navbar-->
       <div class="rd-navbar-wrap">
         <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-lg-stick-up="true" data-lg-stick-up-offset="118px" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xl-stick-up="true" data-xl-stick-up-offset="118px" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-xxl-stick-up-offset="118px" data-xxl-stick-up="true">
           <div class="rd-navbar-aside-outer" style="text-align: center;">
             <div class="rd-navbar-aside">
-              <!-- RD Navbar Panel-->
-
               <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
+                    <a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -94,7 +71,6 @@
           <div class="rd-navbar-main-outer">
             <div class="rd-navbar-main">
               <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
-
                 <ul class="rd-navbar-nav menu-horizontal">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php" style="font-size: 19px">Inicio</a>
                   </li>
@@ -102,10 +78,9 @@
                     <p class="rd-nav-link" id="aboutWeb" onmouseover="toggleTranslateIcon()" onmouseout="toggleTranslateIcon()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <p class="rd-nav-link" id="aboutMovil" onclick="aboutUs()" style="cursor: pointer; font-size: 19px">Acerca de Nosotros</p>
                     <ul class="menu-vertical" id="menu-vertical1" style="text-align: center;">
-                      <li><a class="rd-nav-link" href="about-us.php">¿Quiénes Somos?</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.php" style="text-align: center;">¿Quiénes Somos?</a></li>
                       <li><a class="rd-nav-link" href="certificaciones.php">Certificaciones</a></li>
-                      <!-- <li><a class="rd-nav-link" href="diagnosticos.php">Diagnósticos Gratuitos</a></li> -->
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
+                      <li><a class="rd-nav-link" href="investigaciones.php">Investigaciones</a></li>
                       <li><a class="rd-nav-link" href="distribuicion.php">Puntos de Distribuición</a></li>
                     </ul>
                   </li>
@@ -144,6 +119,7 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
@@ -160,137 +136,66 @@
       </div>
     </header>
 
-    <script>
-      var botonTequila = document.getElementById('tequila');
-      botonTequila.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'tequila');
-      });
-
-      var botonMezcal = document.getElementById('mezcal');
-      botonMezcal.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'mezcal');
-      });
-
-      var botonVino = document.getElementById('vino');
-      botonVino.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'vino');
-      });
-
-      var botonCerveza = document.getElementById('cerveza');
-      botonCerveza.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'cerveza');
-      });
-
-      window.onload = function() {
-        var tipoLevadura = localStorage.getItem('levadura');
-        document.getElementById('textoLevadura').innerHTML = 'Levadura para ' + tipoLevadura[0].toUpperCase() + tipoLevadura.substring(1);
-        switch (tipoLevadura) {
-          case 'tequila':
-            document.getElementById('classTequila').style.color = '#71c500';
-            break;
-          case 'mezcal':
-            document.getElementById('classMezcal').style.color = '#71c500';
-            break;
-          case 'vino':
-            document.getElementById('classVino').style.color = '#71c500';
-            break;
-          case 'cerveza':
-            document.getElementById('classCerveza').style.color = '#71c500';
-            break;
-        }
-      }
-
-      window.addEventListener('load', function() {
-        var movilProducts = document.getElementById('productosMovil');
-        var webProducts = document.getElementById('productosWeb');
-        var movilAbout = document.getElementById('aboutMovil');
-        var webAbout = document.getElementById('aboutWeb');
-        var movilLevaduras = document.getElementById('levadurasMovil');
-        var webLevaduras = document.getElementById('levadurasWeb');
-        if (window.matchMedia("(max-width: 600px)").matches) {
-          movilProducts.style.display = "block";
-          webProducts.style.display = "none";
-          movilAbout.style.display = "block";
-          webAbout.style.display = "none";
-          movilLevaduras.style.display = "inherit";
-          webLevaduras.style.display = "none";
-        } else {
-          movilProducts.style.display = "none";
-          webProducts.style.display = "block";
-          movilAbout.style.display = "none";
-          webAbout.style.display = "block";
-          movilLevaduras.style.display = "none";
-          webLevaduras.style.display = "inherit";
-        }
-      });
-
-      function levaduras() {
-        var submenu = document.getElementById('menu-submenu');
-        if (submenu.style.display === "inherit") {
-          submenu.style.display = "none";
-        } else {
-          submenu.style.display = "inherit";
-        }
-      }
-
-      function productos() {
-        var submenu = document.getElementById('menu-vertical');
-        if (submenu.style.display === "block") {
-          submenu.style.display = "none";
-          toggleTranslateIcon();
-        } else {
-          submenu.style.display = "block";
-          toggleTranslateIcon();
-        }
-      }
-
-      function aboutUs() {
-        var submenu1 = document.getElementById('menu-vertical1');
-        if (submenu1.style.display === "block") {
-          submenu1.style.display = "none";
-          toggleTranslateIcon();
-        } else {
-          submenu1.style.display = "block";
-          toggleTranslateIcon();
-        }
-      }
-    </script>
-
     <section class="section novi-background section-xl">
-      <div class="fondoInvestigaciones">
-        <p class="tituloInvestigaciones" style="font-size: 30px;">
-          Investigaciones
-        </p>
-      </div>
-      <div style="margin-top: 30px;" class="fondoTecnicas">
-        <div class="container">
-          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-            <div class="col-md-10 col-lg-6 col-xl-6" style="margin-top: 50px;">
-              <img class="img-responsive" src="images/cerrar-cientifico-borroso-sosteniendo-placa-petri.webp" title="Imagen de https://www.freepik.es/foto-gratis/cerrar-cientifico-borroso-sosteniendo-placa-petri_12892395.htm#page=2&query=laboratorio%20celulas&position=9&from_view=search&track=robertav1#position=9&page=2&query=laboratorio%20celulas Freepik" width="570" height="388" />
-            </div>
-            <div class="col-md-10 col-lg-6 col-xl-5">
-              <h3 style="color: white; text-align: center; margin-top: 30px;">Trabajos de Técnicas de Conservación de Levaduras</h3>
-              <p style="margin-top: 30px; text-align: justify; font-size: 20px; color: white; font-weight: normal;">ININBIO trabaja en conjunto con la Universidad Nacional Autónoma de México (UNAM), para dar un amplio servicio de técnicas
-                de conservación de levaduras, ya que esto permite al industrial tener siempre su misma levadura sin contaminación.</p>
-            </div>
-          </div>
+        <div class="fondoInvestigaciones">
+            <p class="tituloAbout" style="font-size: 30px;">
+                Convenios y Colaboraciones
+            </p>
         </div>
-      </div>
 
-      <div style="margin-top: 100px;" class="fondoNutricion">
-        <div class="container">
-          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-            <div class="col-md-10 col-lg-6 col-xl-5">
-              <h3 style="color: black; text-align: center; margin-top: 30px;">Nutrición Celular</h3>
-              <p style="margin-top: 30px; text-align: justify; font-size: 20px; color: black; font-weight: normal;">La nutrición de las levaduras en el proceso de fermentación es de suma importancia, ya que, tener un proceso eficiente ayuda a reducir costos
-                y aumentar la productividad. Es por eso que en ININBIO al igual que la Universidad de Guanajuato (UG),
-                se trabaja con amplia dedicación en el tema de nutrición celular dando soporte técnico a nuestros clientes en llevar a cabo procesos de alto nivel.</p>
+        <div class="container" style="margin-top: 30px;">
+            <div class="row carouselConvenios">
+                <div>
+                <img src="https://i.ibb.co/r48VfHX/colab-Estudiantes.jpg" alt="colab-Estudiantes" width="100%" height="50%">
+                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                        Como resultado de un proyecto de investigación científica desarrollado en la <strong>Universidad de Guanajuato</strong> fue inaugurada la planta 
+                        piloto de levaduras <strong>INLEMEX S.A. de C.V.</strong> en La Piedad, Michoacán. Tratándose de una empresa de base tecnológica en donde, con la 
+                        colaboración de la Universidad de Guanajuato se producen levaduras con características específicas que demanda la industria 
+                        alimentaria y tequilera. La edificación de esta planta es un modelo de creación de empresas con alto potencial buscando así de igual 
+                        manera diversificar las fuentes de financiamiento de la Universidad en donde la generación de empresas de base tecnológica sea una 
+                        opción viable que además fomente la innovación llevando los resultados de la ciencia a la industria dentro del amplio mercado 
+                        de la panificación y de bebidas con alcohol.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://i.ibb.co/qDvPcSY/colab-ITLP.jpg" alt="colab-ITLP" width="100%" height="50%">
+                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                        Con el objetivo de crear un marco de colaboración académica, científica y tecnológica entre el <strong>TecNM campus La Piedad</strong> y la empresa 
+                        <strong>Industrializadora de Levaduras Mexicanas SA de CV (INLEMEX)</strong>, signa convenio para realizar conjuntamente actividades que permitan 
+                        conseguir el máximo desarrollo en la formación y especialización de los jóvenes estudiantes del TecNM  campus La Piedad. 
+                        El convenio responde al objetivo de establecer las bases de formación y especialización de recursos humanos, investigaciones conjuntas;
+                        desarrollo tecnológico y académico, intercambio de información, asesoría técnica o académica y publicaciones. Ofreciendo además 
+                        asistencia académica, cultural, tecnológica y de servicio, así como, divulgación del conocimiento, en todas aquellas áreas de coincidencia 
+                        institucional, a través de planeación y realización de acciones de colaboración, intercambio y apoyo mutuo.  
+                    </p>
+                </div>
+                <div>
+                    <img src="https://i.ibb.co/Qf6JmGX/colab-CINVESTAV.jpg" alt="colab-CINVESTAV" width="100%" height="50%">
+                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                        <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y <strong>Cinvestav Unidad Irapuato</strong> unirán sus conocimientos, recursos y capacidades 
+                        técnicas para impulsar el descubrimiento y la comprensión de los mecanismos genéticos de las levaduras. Este tipo de investigación 
+                        tiene aplicaciones amplias y significativas, desde la mejora de la fermentación en la industria de alimentos y bebidas, hasta la 
+                        producción de biocombustibles y la síntesis de compuestos bioactivos. Ambas organizaciones se comprometen a colaborar estrechamente 
+                        en el intercambio de datos, el acceso a tecnologías de vanguardia y el desarrollo conjunto de proyectos de investigación. Además, se 
+                        fomentará la formación de talento humano mediante la participación de investigadores y estudiantes de ambas instituciones, creando así 
+                        una sinergia única que impulsará la innovación y la transferencia de conocimiento. Este convenio representa un paso significativo en 
+                        el avance de la genómica de levaduras y en el fortalecimiento de la colaboración entre el sector empresarial y el ámbito académico.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://i.ibb.co/60k8G3N/coUNAM.jpg" alt="coUNAM" width="100%" height="50%">
+                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                        Como parte de una alianza estratégica, <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y la <strong>Universidad Nacional 
+                        Autonóma De México (UNAM)</strong> colaboran estrechamente para desarrollar métodos de conservación de levaduras eficientes y sostenibles. 
+                        Trabajando en conjunto para optimizar técnicas tradicionales y explorar nuevas aproximaciones basadas en la tecnología y la innovación. 
+                        Teniendo como objetivo mejorar la viabilidad y la estabilidad de las levaduras a largo plazo, lo que impactará positivamente en 
+                        industrias como la producción de alimentos y bebidas tomando en cuenta que la conservación adecuada de las levaduras garantiza la calidad 
+                        y la eficiencia de los procesos industriales, y con esta colaboración se facilitará el intercambio de conocimientos, recursos y 
+                        tecnologías entre ambas organizaciones.
+                    </p>
+                </div>
             </div>
-            <div class="col-md-10 col-lg-6 col-xl-6 margenImagen"><img class="img-responsive" src="images/trabajo-conjunto-cientificos-talentosos.webp" title="https://www.freepik.es/foto-gratis/trabajo-conjunto-cientificos-talentosos_5634043.htm#page=4&query=laboratorio%20celulas&position=37&from_view=search&track=robertav1 Imagen de pressfoto en Freepik" width="570" height="388" />
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
@@ -359,60 +264,32 @@
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php" aria-label="logoFooter"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
           </div>
         </div>
       </div>
-
-      <!-- <div class="card" style="--i:url(img1.jpg)">
-          <div class="content">
-            <i class="fa-sharp fa-solid fa-house"></i>
-              <a href="#">Ver Detalles</a>
-          </div>
-      </div> -->
     </footer>
-  </div>
-  <!-- Global Mailform Output-->
 
+    </div> <!-- DIV PAGE -->
 
-
-  <div class="modal fade bd-example-modal-sm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Cerrar Sesión</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <div class="cerrar" aria-hidden="true">&times;</div>
-          </button>
-        </div>
-        <div class="modal-body" style="text-align: center; color: black;">
-          ¿Seguro que quieres finalizar tu sesión?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">No</button>
-          <button id="cerrar" type="button" class="btn" style="text-transform: none; background-color: #2d9082; color: white;">Sí, cerrar sesión</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Javascript-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>
-    document.getElementById("cerrar").onclick = function() {
-      location.href = 'cerrarSesion.php?logout=true';
-      localStorage.clear();
-    }
-
-    // document.getElementById("translate").onclick = function traductorGoogle() {
-    //   new google.translate.TranslateElement({
-    //       pageLanguage: 'es',
-    //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    //     },
-    //     'google_translate_element');
-    // }
+    $('.carouselConvenios').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 30000
+    });
 
     var mouseEvent = document.getElementById("translate");
     mouseEvent.addEventListener("mouseover", function traductorGoogle() {
@@ -428,38 +305,100 @@
       var translateIcon = document.getElementById("translate-icon");
       translateIcon.classList.toggle("hide");
     }
-  </script>
 
-  <div class="snackbars" id="form-output-global"></div>
-  <!-- Javascript-->
-  <script src="js/core.min.js"></script>
-  <script src="js/script.js"></script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    var botonTequila = document.getElementById('tequila');
+      botonTequila.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'tequila');
+    });
+
+      var botonMezcal = document.getElementById('mezcal');
+      botonMezcal.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'mezcal');
+    });
+
+      var botonVino = document.getElementById('vino');
+      botonVino.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'vino');
+    });
+
+      var botonCerveza = document.getElementById('cerveza');
+      botonCerveza.addEventListener("click", () => {
+        localStorage.setItem('levadura', 'cerveza');
+    });
+
+    window.addEventListener('load', function() {
+        var movilProducts = document.getElementById('productosMovil');
+        var webProducts = document.getElementById('productosWeb');
+        var movilAbout = document.getElementById('aboutMovil');
+        var webAbout = document.getElementById('aboutWeb');
+        var movilLevaduras = document.getElementById('levadurasMovil');
+        var webLevaduras = document.getElementById('levadurasWeb');
+        if (window.matchMedia("(max-width: 600px)").matches) {
+          movilProducts.style.display = "block";
+          webProducts.style.display = "none";
+          movilAbout.style.display = "block";
+          webAbout.style.display = "none";
+          movilLevaduras.style.display = "inherit";
+          webLevaduras.style.display = "none";
+        } else {
+          movilProducts.style.display = "none";
+          webProducts.style.display = "block";
+          movilAbout.style.display = "none";
+          webAbout.style.display = "block";
+          movilLevaduras.style.display = "none";
+          webLevaduras.style.display = "inherit";
+        }
+      });
+
+      function levaduras() {
+        var submenu = document.getElementById('menu-submenu');
+        if (submenu.style.display === "inherit") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "inherit";
+        }
+      }
+
+      function productos() {
+        var submenu = document.getElementById('menu-vertical');
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+          toggleTranslateIcon();
+        } else {
+          submenu.style.display = "block";
+          toggleTranslateIcon();
+        }
+      }
+
+      function aboutUs() {
+        var submenu1 = document.getElementById('menu-vertical1');
+        if (submenu1.style.display === "block") {
+          submenu1.style.display = "none";
+          toggleTranslateIcon();
+        } else {
+          submenu1.style.display = "block";
+          toggleTranslateIcon();
+        }
+      }
+  </script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
   <link rel="stylesheet" href="css\whats2.css">
+  
   <div class="nav-bottom">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <div class="popup-whatsapp fadeIn">
       <div class="content-whatsapp -top"><button type="button" class="closePopup">
           <i class="material-icons icon-font-color">close</i>
         </button>
-
         <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
-
       </div>
       <div class="content-whatsapp -bottom">
         <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-
-
-
-
         <button class="send-msPopup" id="send-btn" type="button">
           <i class="material-icons icon-font-color--black">send</i>
         </button>
-
       </div>
     </div>
     <button type="button" id="whats-openPopup" class="whatsapp-button" aria-label="whatsappContact">
@@ -470,6 +409,5 @@
     <div class="circle-anime"></div>
   </div>
   <script src="js\script2.js"></script>
+    
 </body>
-
-</html>
