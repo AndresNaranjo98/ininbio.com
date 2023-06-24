@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<?php include_once("googleAnalytics.php") ?>
     <div class="preloader">
         <div class="preloader-logo"><img src="images/main-logo.webp" alt="logo_Preloader" width="250" height="130" srcset="images/main-logo.webp 2x" />
         </div>
@@ -170,14 +171,14 @@
                     </p>
                 </div>
                 <div>
-                    <img src="https://i.ibb.co/Qf6JmGX/colab-CINVESTAV.jpg" alt="colab-CINVESTAV" width="100%" height="50%">
+                    <img src="https://i.ibb.co/9gq8N33/colab-CINVESTAV.jpg" alt="colab-CINVESTAV" width="100%" height="50%">
                     <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
-                        <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y <strong>Cinvestav Unidad Irapuato</strong> unirán sus conocimientos, recursos y capacidades 
+                        <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y <strong>Cinvestav Unidad Irapuato</strong> unen sus conocimientos, recursos y capacidades 
                         técnicas para impulsar el descubrimiento y la comprensión de los mecanismos genéticos de las levaduras. Este tipo de investigación 
                         tiene aplicaciones amplias y significativas, desde la mejora de la fermentación en la industria de alimentos y bebidas, hasta la 
                         producción de biocombustibles y la síntesis de compuestos bioactivos. Ambas organizaciones se comprometen a colaborar estrechamente 
                         en el intercambio de datos, el acceso a tecnologías de vanguardia y el desarrollo conjunto de proyectos de investigación. Además, se 
-                        fomentará la formación de talento humano mediante la participación de investigadores y estudiantes de ambas instituciones, creando así 
+                        fomenta la formación de talento humano mediante la participación de investigadores y estudiantes de ambas instituciones, creando así 
                         una sinergia única que impulsará la innovación y la transferencia de conocimiento. Este convenio representa un paso significativo en 
                         el avance de la genómica de levaduras y en el fortalecimiento de la colaboración entre el sector empresarial y el ámbito académico.
                     </p>

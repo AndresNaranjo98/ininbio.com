@@ -73,6 +73,7 @@ if (isset($_SESSION['rol'])) {
 </head>
 
 <body>
+<?php include_once("googleAnalytics.php") ?>
   <!-- <div id="google_translate_element"></div> -->
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.webp" alt="" width="250" height="130" srcset="images/main-logo.webp 2x" />
@@ -183,6 +184,7 @@ if (isset($_SESSION['rol'])) {
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
@@ -285,7 +287,7 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 30px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Betania, Jalisco</h3>
+          <h3 style="text-align: center; margin-top: 30px; color: white;">Betania, Jalisco</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
             <iframe title="betania" src="https://www.google.com/maps/embed?pb=!4v1678132831176!6m8!1m7!1s_w6hsu5m0yKVSpusTMHLog!2m2!1d20.57948172550611!2d-102.3991599317537!3f349.576519683138!4f3.426228507179829!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
@@ -301,7 +303,7 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 100px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Tequila, Jalisco</h3>
+          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Tequila, Jalisco</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between">
             <iframe title="tequila" src="https://www.google.com/maps/embed?pb=!4v1678132529203!6m8!1m7!1sy_KskdhzuWehQDXR9F-Iww!2m2!1d20.87631130490256!2d-103.8108683838134!3f202.54!4f-6.560000000000002!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
@@ -317,7 +319,7 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 100px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Parque Industrial y Maquilador “Oaxaca 2000”, Oaxaca</h3>
+          <h3 style="text-align: center; margin-top: 30px; color: white;">Parque Industrial y Maquilador “Oaxaca 2000”, Oaxaca</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
           <iframe title="oaxaca" src="https://www.google.com/maps/embed?pb=!4v1686691872284!6m8!1m7!1syEOOZT2v2CXxctJaI8UMGw!2m2!1d17.23947113310986!2d-96.82506202408484!3f251.60648215219223!4f-11.33868328470632!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
@@ -333,9 +335,9 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 100px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Parque Industrial Pacífico, Tijuana</h3>
+          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Parque Industrial Pacífico, Tijuana</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between">
-          <iframe src="https://www.google.com/maps/embed?pb=!4v1686692164262!6m8!1m7!1sZDwjKrZoayafHJhv5CPPBQ!2m2!1d32.47255177906522!2d-116.9912691530914!3f116.95824074392364!4f6.89715688487351!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+          <iframe title="tijuana" src="https://www.google.com/maps/embed?pb=!4v1686692164262!6m8!1m7!1sZDwjKrZoayafHJhv5CPPBQ!2m2!1d32.47255177906522!2d-116.9912691530914!3f116.95824074392364!4f6.89715688487351!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
               <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
                 <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
@@ -349,13 +351,13 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 100px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="text-align: center; margin-top: 30px; color: white;">Bodega Nanshan District, Shenzhen, China</h3>
+          <h3 style="text-align: center; margin-top: 30px; color: white;">Yuhuatai District, Nanjing City, Jiangsu Province, China</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.9706977601477!2d114.05748169842052!3d22.542770392457008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f40e16718787%3A0xc6cf8992d9247579!2sFu%20Zhong%20San%20Lu%2C%20%E4%B8%AD%E5%BF%83%E5%9F%8E%20Fu%20Tian%20Qu%2C%20Shen%20Zhen%20Shi%2C%20Guang%20Dong%20Sheng%2C%20China%2C%20518000!5e0!3m2!1ses!2smx!4v1686696960425!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+          <iframe title="china" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.4830131010417!2d118.79796007579777!3d31.965729525003454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b58eed4f98ffcf%3A0x519be82dc90c3db7!2sBo%20Ai%20Jie%2C%20Jiang%20Ning%20Qu%2C%20Nan%20Jing%20Shi%2C%20Jiang%20Su%20Sheng%2C%20China%2C%20211106!5e1!3m2!1ses-419!2smx!4v1687535897916!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
               <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
                 <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/RSZXB1sq4CFKcitB6">Fu Zhong San Lu, 中心城 Fu Tian Qu, Shen Zhen Shi, Guang Dong Sheng, China, 518000</a></div>
+                <div class="unit-body"><a style="color: white;" class="link-default" href="https://goo.gl/maps/g1ot44B4EijKr5Wf6">Jinlan Road, Yuhuatai District, Nanjing City, Jiangsu Province, China</a></div>
               </article>
             </div>
           </div>
@@ -365,9 +367,9 @@ if (isset($_SESSION['rol'])) {
       <div style="margin-top: 100px;" class="fondoDistribuicion">
         <div class="container">
           <br>
-          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Bodega Parque Industrial Terrapuerto, Colombia</h3>
+          <h3 style="color: black; text-align: center; margin-top: 30px; color: white;">Parque Industrial Terrapuerto, Colombia</h3>
           <div class="row row-50 justify-content-center justify-content-lg-between">
-          <iframe src="https://www.google.com/maps/embed?pb=!4v1686698922606!6m8!1m7!1sN3aCTnhuufvEiZFohkwiWA!2m2!1d4.734600365222766!2d-74.14657441460541!3f330.5105153007705!4f-4.642946298625674!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+          <iframe title="colombia" src="https://www.google.com/maps/embed?pb=!4v1686698922606!6m8!1m7!1sN3aCTnhuufvEiZFohkwiWA!2m2!1d4.734600365222766!2d-74.14657441460541!3f330.5105153007705!4f-4.642946298625674!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
             <div class="col-md-10 col-lg-6 col-xl-5" style="margin-top: 30px;">
               <article class="unit estacionDirecciones" style="text-align: center; font-size: 25px; color: black; font-weight: normal; justify-content: center;">
                 <div class="unit-left"><span style="color: white;" class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>

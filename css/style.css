@@ -18571,7 +18571,41 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	margin-top: 50px;
 }
 
+/* ESTILO FONDO ININBIO ANAEROBIC FERMENTATION MONITORING */
+
+.fondoIAFM {
+	background-image: url('../images/AnaerobicMonitoring.gif'); 
+	background-size: cover;
+	background-position: center;
+	/* background-attachment: fixed; */
+	width: 100vw;
+	height: 35vh;
+}
+
+.imagenIAFM {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+}
+
+.tituloIAFM {
+	font-weight: bold;
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	margin-top: 35%;
+}
+
 @media screen and (max-width: 767px) {
+
+.fondoIAFM {
+	height: 20vh;
+}
+
+.tituloIAFM {
+	margin-top: 5%;
+}
 
 .imagenPrueba img {
 	width: 100vw;
@@ -18718,6 +18752,20 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 
   .carouselConvenios .slick-next:before{
 	visibility: hidden;
+  }
+
+  .carouselIAFM .slick-prev:before{
+	color: #000000;
+	content: "<";
+	font-weight: bold;
+	font-size: xx-large;
+  }
+
+  .carouselIAFM .slick-next:before{
+	color: #000000;
+	content: ">";
+	font-weight: bold;
+	font-size: xx-large;
   }
 
   .imgCarousel {

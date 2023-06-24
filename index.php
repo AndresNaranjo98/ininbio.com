@@ -34,6 +34,7 @@
 </head>
 
 <body>
+  <?php include_once("googleAnalytics.php") ?>
   <!-- <div id="google_translate_element"></div> -->
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.webp" alt="logo_Preloader" width="250" height="130" srcset="images/main-logo.webp 2x" />
@@ -46,7 +47,7 @@
   </div>
   <div class="page">
     <!-- Page Header<a class="banner banner-top" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"> -->
-      <!-- <img src="images/intense_02.jpg" alt=""/> -->
+    <!-- <img src="images/intense_02.jpg" alt=""/> -->
     </a>
     <header class="section novi-background page-header">
       <!-- RD Navbar-->
@@ -143,8 +144,8 @@
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
@@ -555,6 +556,40 @@
       });
     </script>
 
+    <section class="section novi-background section-lg">
+      <!-- <div class="container"> -->
+      <div class="fondoIAFM">
+        <!-- <img src="./images/Ininbio Anaerobic Fermentation Monitoring.gif" alt="Fondo Sistema De Monitoreo Anaérobico" class="imagenIAFM"> -->
+      </div>
+      <div class="container">
+        <div class="row row-30">
+          <div class="col-sm-6 col-lg-6 wow-outer">
+            <p class="tituloIAFM">
+              Somos la primer empresa a nivel <u style="color: #2d9082;">LATINOAMÉRICA</u> que desarrolla simulaciones de fermentaciones adaptadas a las necesidades de nuestros clientes para así ofrecerles un mejor rendimiento en sus procesos de fermentación.
+            </p>
+          </div>
+          <div class="col-sm-6 col-lg-6 wow-outer carouselIAFM" style="margin-top: 3%; padding-left: 0px; padding-right: 0px; text-align: -webkit-center;">
+            <div>
+              <img src="./images/applikon1.webp" alt="Imagen Sistema De Monitoreo Anaérobico">
+            </div>
+            <div>
+              <img src="./images/applikon2.webp" alt="Imagen Sistema De Monitoreo Anaérobico General">
+            </div>
+            <div>
+              <img src="./images/applikon3.webp" alt="Imagen Sistema De Monitoreo Anaérobico General">
+            </div>
+            <div>
+              <img src="./images/monitoreoGral.webp" alt="Pantalla Sistema De Monitoreo Anaérobico General" width="500" height="500">
+            </div>
+            <div>
+              <img src="./images/monitoreoEspc.webp" alt="Pantalla Sistema De Monitoreo Anaérobico Específico" width="500" height="500">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+
 
     <section class="section novi-background section-lg" style="background-color: #182f3e;">
       <div class="container">
@@ -768,6 +803,17 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $('.carouselIAFM').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 10000
+    });
+  </script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

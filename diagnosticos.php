@@ -34,6 +34,7 @@
 </head>
 
 <body>
+<?php include_once("googleAnalytics.php") ?>
   <!-- <div id="google_translate_element"></div> -->
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.webp" alt="" width="250" height="130" srcset="images/main-logo.webp 2x" />
@@ -144,6 +145,7 @@
                     </ul>
                   </li>
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
@@ -334,7 +336,7 @@
       function desarrolloTecnologico(urlImagen) {
         var miDiv = document.getElementById("imagenIcono");
         document.getElementById('tituloIcono').innerHTML = 'Departamento de Desarrollo Tecnológico';
-        document.getElementById('descripcionIcono').innerHTML = '';
+        document.getElementById('descripcionIcono').innerHTML = 'El Departamento de Desarrollo Tecnológico es el motor impulsor de la innovación y el éxito tecnológico dentro de una organización. Nuestro equipo altamente capacitado y especializado se dedica a diseñar, desarrollar e implementar soluciones tecnológicas personalizadas que mejoran la eficiencia así como optimizan y potencian tus procesos de fermentación.<br><br>Nuestra consigna primordial es lograr la implementación y el despliegue de las más innovadoras soluciones tecnológicas. Nos aseguramos de que cada desarrollo que te proveemos sea exitoso y de calidad, además te brindamos un soporte técnico continuo para garantizar que las soluciones estén funcionando de manera óptima así como para resolver cualquier problema técnico que pueda surgir.';
         miDiv.src = urlImagen;
         miDiv.style.width = '100%';
         miDiv.style.height = '350px';
@@ -343,7 +345,7 @@
       function lbtoIDi(urlImagen) {
         var miDiv = document.getElementById("imagenIcono");
         document.getElementById('tituloIcono').innerHTML = 'Laboratorio de Investigación, Desarrollo e innovación (I + D + i)';
-        document.getElementById('descripcionIcono').innerHTML = '';
+        document.getElementById('descripcionIcono').innerHTML = 'El Laboratorio de Investigación, Desarrollo e Innovación, tiene por objeto brindar valor a nuestros clientes, esto a través de servicios que ofrecen soluciones integrales, de análisis e información relevante, para maximizar la eficiencia de sus procesos de fermentación.';
         miDiv.src = urlImagen;
         miDiv.style.width = '100%';
         miDiv.style.height = '350px';

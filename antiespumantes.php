@@ -73,6 +73,7 @@ if (isset($_SESSION['rol'])) {
 </head>
 
 <body>
+<?php include_once("googleAnalytics.php") ?>
   <!-- <div id="google_translate_element"></div> -->
   <div class="preloader">
     <div class="preloader-logo"><img src="images/main-logo.webp" alt="" width="250" height="130" srcset="images/main-logo.webp 2x" />
@@ -183,6 +184,7 @@ if (isset($_SESSION['rol'])) {
                     </ul>
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
