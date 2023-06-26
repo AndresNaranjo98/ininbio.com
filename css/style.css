@@ -18574,18 +18574,15 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 /* ESTILO FONDO ININBIO ANAEROBIC FERMENTATION MONITORING */
 
 .fondoIAFM {
-	background-image: url('../images/AnaerobicMonitoring.gif'); 
-	background-size: cover;
-	background-position: center;
-	/* background-attachment: fixed; */
-	width: 100vw;
-	height: 35vh;
+	width: 100vw; 
+	height: 35vh; 
+	position: relative;
 }
 
-.imagenIAFM {
-	width: 100%;
-	height: 100%;
-	position: absolute;
+.videoIAFM {
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
 	object-fit: cover;
 }
 
@@ -18597,7 +18594,27 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	margin-top: 35%;
 }
 
+.graficaAnaerobia {
+	width: 70%;
+}
+
+/* Estilo Texto Convenios */
+
+.textoConvenios {
+	font-weight: normal; 
+	color: black; 
+	font-size: 17px; 
+	text-align: justify; 
+	margin-left: 10px; 
+	margin-right: 10px;
+}
+
+
 @media screen and (max-width: 767px) {
+
+.graficaAnaerobia {
+	width: 100%;
+}
 
 .fondoIAFM {
 	height: 20vh;

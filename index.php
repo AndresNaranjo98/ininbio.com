@@ -144,8 +144,8 @@
                       <li><a class="rd-nav-link" href="desarrolloT.php">Desarrollo Tecnologico</a></li>
                     </ul>
                   </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="diagnosticos.php" style="font-size: 19px">Servicios</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.php" style="font-size: 19px">Convenios</a>
                   <li id="translate" class="rd-nav-item">
                     <p class="rd-nav-link" style="z-index: 0.5;"><span id="translate-icon" style="font-size: 22px" class="icon novi-icon mdi mdi-google-translate"></span></p>
                     <ul class="menu-vertical" style="text-align: center; background-color: transparent;">
@@ -559,6 +559,9 @@
     <section class="section novi-background section-lg">
       <!-- <div class="container"> -->
       <div class="fondoIAFM">
+        <video autoplay loop muted playsinline class="videoIAFM">
+          <source src="./images/AnaerobicMonitoring.mp4" type="video/mp4"/>
+        </video>
         <!-- <img src="./images/Ininbio Anaerobic Fermentation Monitoring.gif" alt="Fondo Sistema De Monitoreo Anaérobico" class="imagenIAFM"> -->
       </div>
       <div class="container">
@@ -584,6 +587,9 @@
             <div>
               <img src="./images/monitoreoEspc.webp" alt="Pantalla Sistema De Monitoreo Anaérobico Específico" width="500" height="500">
             </div>
+          </div>
+          <div class="col-sm-12 col-lg-12 wow-outer" style="text-align: center;">
+            <img src="./images/fermentacionAnaerobia.png" alt="Resultados Fermentación Anaerobia" class="graficaAnaerobia">
           </div>
         </div>
       </div>

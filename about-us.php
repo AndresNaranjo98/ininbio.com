@@ -483,25 +483,6 @@
               </figure> -->
               <div class="profile-creative-main">
                 <h5 class="profile-creative-title">
-                  <p style="color: white;">Diego Alberto Huaracha López</p>
-                </h5>
-                <p class="profile-creative-position" style="color: white;">Encargado Departamento de Contabilidad</p>
-                <!-- <div class="profile-creative-contacts">
-                  <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone" style="color: white;"></span>
-                    <p style="margin-top: 0px; color: white;">1-800-1324-567</p>
-                  </div>
-                </div> -->
-                <p class="descriptionPuest" style="color: white;">Apasionado del deporte, disfruto los momentos en familia, pareja y seres queridos.</p>
-              </div>
-            </article>
-          </div>
-          <div class="wow-outer">
-            <!-- Profile Creative-->
-            <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-              <!-- <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/personal.jpg" alt="" width="170" height="172" />
-              </figure> -->
-              <div class="profile-creative-main">
-                <h5 class="profile-creative-title">
                   <p style="color: white;">Feliciano Sánchez Romero</p>
                 </h5>
                 <p class="profile-creative-position" style="color: white;">Gerente de Planta</p>

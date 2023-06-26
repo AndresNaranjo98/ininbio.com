@@ -148,7 +148,7 @@
             <div class="row carouselConvenios">
                 <div>
                 <img src="https://i.ibb.co/r48VfHX/colab-Estudiantes.jpg" alt="colab-Estudiantes" width="100%" height="50%">
-                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                    <p class="textoConvenios">
                         Como resultado de un proyecto de investigación científica desarrollado en la <strong>Universidad de Guanajuato</strong> fue inaugurada la planta 
                         piloto de levaduras <strong>INLEMEX S.A. de C.V.</strong> en La Piedad, Michoacán. Tratándose de una empresa de base tecnológica en donde, con la 
                         colaboración de la Universidad de Guanajuato se producen levaduras con características específicas que demanda la industria 
@@ -160,7 +160,7 @@
                 </div>
                 <div>
                     <img src="https://i.ibb.co/qDvPcSY/colab-ITLP.jpg" alt="colab-ITLP" width="100%" height="50%">
-                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                    <p class="textoConvenios">
                         Con el objetivo de crear un marco de colaboración académica, científica y tecnológica entre el <strong>TecNM campus La Piedad</strong> y la empresa 
                         <strong>Industrializadora de Levaduras Mexicanas SA de CV (INLEMEX)</strong>, signa convenio para realizar conjuntamente actividades que permitan 
                         conseguir el máximo desarrollo en la formación y especialización de los jóvenes estudiantes del TecNM  campus La Piedad. 
@@ -172,7 +172,7 @@
                 </div>
                 <div>
                     <img src="https://i.ibb.co/9gq8N33/colab-CINVESTAV.jpg" alt="colab-CINVESTAV" width="100%" height="50%">
-                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                    <p class="textoConvenios">
                         <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y <strong>Cinvestav Unidad Irapuato</strong> unen sus conocimientos, recursos y capacidades 
                         técnicas para impulsar el descubrimiento y la comprensión de los mecanismos genéticos de las levaduras. Este tipo de investigación 
                         tiene aplicaciones amplias y significativas, desde la mejora de la fermentación en la industria de alimentos y bebidas, hasta la 
@@ -185,7 +185,7 @@
                 </div>
                 <div>
                     <img src="https://i.ibb.co/60k8G3N/coUNAM.jpg" alt="coUNAM" width="100%" height="50%">
-                    <p style="font-weight: normal; color: black; font-size: 17px; text-align: justify">
+                    <p class="textoConvenios">
                         Como parte de una alianza estratégica, <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y la <strong>Universidad Nacional 
                         Autonóma De México (UNAM)</strong> colaboran estrechamente para desarrollar métodos de conservación de levaduras eficientes y sostenibles. 
                         Trabajando en conjunto para optimizar técnicas tradicionales y explorar nuevas aproximaciones basadas en la tecnología y la innovación. 
