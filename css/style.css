@@ -104,6 +104,7 @@ body {
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: subpixel-antialiased;
 	letter-spacing: .03em;
+	touch-action: manipulation;
 }
 
 @media (min-width: 768px) {
@@ -18608,7 +18609,6 @@ box-shadow: 8px 8px 20px #00000027, -8px -8px 20px #969393;
 	margin-left: 10px; 
 	margin-right: 10px;
 }
-
 
 @media screen and (max-width: 767px) {
 

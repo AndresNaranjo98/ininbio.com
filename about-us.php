@@ -4,7 +4,7 @@
 <head>
   <title>Ininbio/Acerca de Nosotros</title>
   <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="./images/logoWeb.png" />
@@ -33,6 +33,7 @@
       display: block;
     }
   </style>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfuzhAnAAAAADeEhmMNHsbel9EsrBjikilHi7yy"></script>
 </head>
 
 <body>
@@ -81,7 +82,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59300, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -281,15 +282,13 @@
           <div class="col-sm-6 col-lg-4 wow-outer">
             <!-- Box Minimal-->
             <article class="box-minimal">
-              <div class="box-chloe__icon novi-icon fa-solid fa-bullseye wow fadeIn" style="color: white; margin-top: 5px;"></div>
+              <div class="box-chloe__icon novi-icon fa-solid fa-crosshairs wow fadeIn" style="color: white; margin-top: 5px;"></div>
               <div class="box-minimal-main wow-outer">
                 <h3 class="box-minimal-title wow slideInDown" style="color: white;">Misión</h3>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
-                  Ser una empresa que produzca y comercialice productos y servicios únicos e innovadores
-                  que ofrezcan a nuestros clientes una solución integral para garantizar los principios de
-                  sustentabilidad y sostenibilidad, logrando la fidelidad de clientes y proveedores, a través
-                  de motivar y perfeccionar a nuestra herramienta más importante, el CAPITAL HUMANO.
-
+                Somos el mejor aliado de la industria de bebidas alcohólicas; comprometidos en resolver problemas de los procesos de 
+                fermentación, los impulsamos a lograr niveles de competitividad más altos a través de la investigación, innovación, 
+                tecnología y servicios.
                 </p>
               </div>
             </article>
@@ -301,9 +300,8 @@
               <div class="box-minimal-main wow-outer">
                 <h3 class="box-minimal-title wow slideInDown" style="color: white;">Visión</h3>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
-                  En 2026 seremos un grupo referente en innovación biotecnológica, tecnológica,
-                  comercialización y de servicios, aliados fundamentales con cada uno de nuestros
-                  clientes de la industria de bebidas alcohólicas y agroindustrial.
+                Convertirnos en un grupo referente en innovación biotecnológica, tecnológica, comercialización y de servicios.  
+                Aliados fundamentales de cada uno de nuestros clientes en la industria de bebidas alcohólicas y sector agroindustrial.
                 </p>
               </div>
             </article>
@@ -313,15 +311,19 @@
             <article class="box-minimal">
               <div class="box-chloe__icon novi-icon fa-solid fa-balance-scale wow fadeIn" style="color: white; margin-top: 5px;"></div>
               <div class="box-minimal-main wow-outer">
-                <h3 class="box-minimal-title wow slideInDown" style="color: white;">Ética</h3>
-                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Calidad.</p>
+                <h3 class="box-minimal-title wow slideInDown" style="color: white;">Valores</h3>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">
+                En Ininbio nos apasionamos con lo que hacemos, entregando a nuestros aliados productos y servicios innovadores con un alto 
+                grado de honestidad y respaldados por nuestras familias.
+                </p>
+                <!-- <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Calidad.</p>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Justicia.</p>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Innovación.</p>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Coherencia.</p>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Comunicación.</p>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Confianza.</p>
                 <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Compromiso.</p>
-                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Lealtad.</p>
+                <p class="wow fadeInUpSmall" style="color: white; font-size: 20px;">* Lealtad.</p> -->
               </div>
             </article>
           </div>
@@ -721,7 +723,7 @@
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en qué podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">

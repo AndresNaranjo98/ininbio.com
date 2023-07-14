@@ -26,14 +26,15 @@
   height: auto;
   position: fixed;
   z-index: 8;
-  bottom: 0px;
-  right: 0px;
+  bottom: 70px;
+  right: -5px;
   padding: 5px;
   margin: 0px;
 }
-@media (max-width: 360px) {
+@media (max-width: 767px) {
   .nav-bottom {
     width: 320px;
+    right: -10px;
   }
 }
 

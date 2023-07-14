@@ -446,7 +446,7 @@ if (isset($_SESSION['rol'])) {
                     <i class="material-icons icon-font-color">close</i>
                   </button> 
                 
-                 <p>  <img src="images\secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
+                 <p>  <img src="images\secretary.png" width="50">  Hola, ¿en qué podemos ayudarle? </p>
                  
               </div>
               <div class="content-whatsapp -bottom">

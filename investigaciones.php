@@ -4,7 +4,7 @@
 <head>
   <title>Ininbio/Investigacion</title>
   <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="./images/logoWeb.png" />
@@ -31,6 +31,7 @@
       display: block;
     }
   </style>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfuzhAnAAAAADeEhmMNHsbel9EsrBjikilHi7yy"></script>
 </head>
 
 <body>
@@ -79,7 +80,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59300, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -449,7 +450,7 @@
           <i class="material-icons icon-font-color">close</i>
         </button>
 
-        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en qué podemos ayudarle? </p>
 
       </div>
       <div class="content-whatsapp -bottom">

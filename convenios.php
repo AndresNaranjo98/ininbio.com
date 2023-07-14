@@ -2,33 +2,34 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Ininbio/Home</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="./images/logoWeb.png" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- <link rel="stylesheet" href="css/fonts.css"> -->
-    <link rel="stylesheet" href="css/style.css" id="main-styles-link">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+  <title>Ininbio/Home</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="./images/logoWeb.png" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+  <link rel="stylesheet" href="css/style.css" id="main-styles-link">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfuzhAnAAAAADeEhmMNHsbel9EsrBjikilHi7yy"></script>
 </head>
 
 <body>
-<?php include_once("googleAnalytics.php") ?>
-    <div class="preloader">
-        <div class="preloader-logo"><img src="images/main-logo.webp" alt="logo_Preloader" width="250" height="130" srcset="images/main-logo.webp 2x" />
-        </div>
-        <div class="preloader-body">
-            <div id="loadingProgressG">
-                <div class="loadingProgressG" id="loadingProgressG_1"></div>
-            </div>
-        </div>
+  <?php include_once("googleAnalytics.php") ?>
+  <div class="preloader">
+    <div class="preloader-logo"><img src="images/main-logo.webp" alt="logo_Preloader" width="250" height="130" srcset="images/main-logo.webp 2x" />
     </div>
+    <div class="preloader-body">
+      <div id="loadingProgressG">
+        <div class="loadingProgressG" id="loadingProgressG_1"></div>
+      </div>
+    </div>
+  </div>
 
-    <div class="page">
+  <div class="page">
     <header class="section novi-background page-header">
       <!-- RD Navbar-->
       <div class="rd-navbar-wrap">
@@ -37,7 +38,7 @@
             <div class="rd-navbar-aside">
               <div class="rd-navbar-panel">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                    <a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
+                <a class="rd-navbar-brand" href="index.php" aria-label="logoIndex"><img src="images/main-logo.webp" width="250" height="130" alt="logoPreloader" srcset="images/main-logo.webp 2x" /></a>
               </div>
 
               <div class="rd-navbar-collapse">
@@ -56,7 +57,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59300, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -138,65 +139,65 @@
     </header>
 
     <section class="section novi-background section-xl">
-        <div class="fondoInvestigaciones">
-            <p class="tituloAbout" style="font-size: 30px;">
-                Convenios y Colaboraciones
-            </p>
-        </div>
+      <div class="fondoInvestigaciones">
+        <p class="tituloAbout" style="font-size: 30px;">
+          Convenios y Colaboraciones
+        </p>
+      </div>
 
-        <div class="container" style="margin-top: 30px;">
-            <div class="row carouselConvenios">
-                <div>
-                <img src="https://i.ibb.co/r48VfHX/colab-Estudiantes.jpg" alt="colab-Estudiantes" width="100%" height="50%">
-                    <p class="textoConvenios">
-                        Como resultado de un proyecto de investigación científica desarrollado en la <strong>Universidad de Guanajuato</strong> fue inaugurada la planta 
-                        piloto de levaduras <strong>INLEMEX S.A. de C.V.</strong> en La Piedad, Michoacán. Tratándose de una empresa de base tecnológica en donde, con la 
-                        colaboración de la Universidad de Guanajuato se producen levaduras con características específicas que demanda la industria 
-                        alimentaria y tequilera. La edificación de esta planta es un modelo de creación de empresas con alto potencial buscando así de igual 
-                        manera diversificar las fuentes de financiamiento de la Universidad en donde la generación de empresas de base tecnológica sea una 
-                        opción viable que además fomente la innovación llevando los resultados de la ciencia a la industria dentro del amplio mercado 
-                        de la panificación y de bebidas con alcohol.
-                    </p>
-                </div>
-                <div>
-                    <img src="https://i.ibb.co/qDvPcSY/colab-ITLP.jpg" alt="colab-ITLP" width="100%" height="50%">
-                    <p class="textoConvenios">
-                        Con el objetivo de crear un marco de colaboración académica, científica y tecnológica entre el <strong>TecNM campus La Piedad</strong> y la empresa 
-                        <strong>Industrializadora de Levaduras Mexicanas SA de CV (INLEMEX)</strong>, signa convenio para realizar conjuntamente actividades que permitan 
-                        conseguir el máximo desarrollo en la formación y especialización de los jóvenes estudiantes del TecNM  campus La Piedad. 
-                        El convenio responde al objetivo de establecer las bases de formación y especialización de recursos humanos, investigaciones conjuntas;
-                        desarrollo tecnológico y académico, intercambio de información, asesoría técnica o académica y publicaciones. Ofreciendo además 
-                        asistencia académica, cultural, tecnológica y de servicio, así como, divulgación del conocimiento, en todas aquellas áreas de coincidencia 
-                        institucional, a través de planeación y realización de acciones de colaboración, intercambio y apoyo mutuo.  
-                    </p>
-                </div>
-                <div>
-                    <img src="https://i.ibb.co/9gq8N33/colab-CINVESTAV.jpg" alt="colab-CINVESTAV" width="100%" height="50%">
-                    <p class="textoConvenios">
-                        <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y <strong>Cinvestav Unidad Irapuato</strong> unen sus conocimientos, recursos y capacidades 
-                        técnicas para impulsar el descubrimiento y la comprensión de los mecanismos genéticos de las levaduras. Este tipo de investigación 
-                        tiene aplicaciones amplias y significativas, desde la mejora de la fermentación en la industria de alimentos y bebidas, hasta la 
-                        producción de biocombustibles y la síntesis de compuestos bioactivos. Ambas organizaciones se comprometen a colaborar estrechamente 
-                        en el intercambio de datos, el acceso a tecnologías de vanguardia y el desarrollo conjunto de proyectos de investigación. Además, se 
-                        fomenta la formación de talento humano mediante la participación de investigadores y estudiantes de ambas instituciones, creando así 
-                        una sinergia única que impulsará la innovación y la transferencia de conocimiento. Este convenio representa un paso significativo en 
-                        el avance de la genómica de levaduras y en el fortalecimiento de la colaboración entre el sector empresarial y el ámbito académico.
-                    </p>
-                </div>
-                <div>
-                    <img src="https://i.ibb.co/60k8G3N/coUNAM.jpg" alt="coUNAM" width="100%" height="50%">
-                    <p class="textoConvenios">
-                        Como parte de una alianza estratégica, <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y la <strong>Universidad Nacional 
-                        Autonóma De México (UNAM)</strong> colaboran estrechamente para desarrollar métodos de conservación de levaduras eficientes y sostenibles. 
-                        Trabajando en conjunto para optimizar técnicas tradicionales y explorar nuevas aproximaciones basadas en la tecnología y la innovación. 
-                        Teniendo como objetivo mejorar la viabilidad y la estabilidad de las levaduras a largo plazo, lo que impactará positivamente en 
-                        industrias como la producción de alimentos y bebidas tomando en cuenta que la conservación adecuada de las levaduras garantiza la calidad 
-                        y la eficiencia de los procesos industriales, y con esta colaboración se facilitará el intercambio de conocimientos, recursos y 
-                        tecnologías entre ambas organizaciones.
-                    </p>
-                </div>
-            </div>
+      <div class="container" style="margin-top: 30px;">
+        <div class="row carouselConvenios">
+          <div>
+            <img src="https://i.ibb.co/DzWrJM6/colab-Estudiantes.webp" alt="colab-Estudiantes" width="100%" height="50%">
+            <p class="textoConvenios">
+              Como resultado de un proyecto de investigación científica desarrollado en la <strong>Universidad de Guanajuato</strong> fue inaugurada la planta
+              piloto de levaduras <strong>INLEMEX S.A. de C.V.</strong> en La Piedad, Michoacán. Tratándose de una empresa de base tecnológica en donde, con la
+              colaboración de la Universidad de Guanajuato se producen levaduras con características específicas que demanda la industria
+              alimentaria y tequilera. La edificación de esta planta es un modelo de creación de empresas con alto potencial buscando así de igual
+              manera diversificar las fuentes de financiamiento de la Universidad en donde la generación de empresas de base tecnológica sea una
+              opción viable que además fomente la innovación llevando los resultados de la ciencia a la industria dentro del amplio mercado
+              de la panificación y de bebidas con alcohol.
+            </p>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/XC2PZgb/colab-ITLP.webp" alt="colab-ITLP" width="100%" height="50%">
+            <p class="textoConvenios">
+              Con el objetivo de crear un marco de colaboración académica, científica y tecnológica entre el <strong>TecNM campus La Piedad</strong> y la empresa
+              <strong>Industrializadora de Levaduras Mexicanas SA de CV (INLEMEX)</strong>, signa convenio para realizar conjuntamente actividades que permitan
+              conseguir el máximo desarrollo en la formación y especialización de los jóvenes estudiantes del TecNM campus La Piedad.
+              El convenio responde al objetivo de establecer las bases de formación y especialización de recursos humanos, investigaciones conjuntas;
+              desarrollo tecnológico y académico, intercambio de información, asesoría técnica o académica y publicaciones. Ofreciendo además
+              asistencia académica, cultural, tecnológica y de servicio, así como, divulgación del conocimiento, en todas aquellas áreas de coincidencia
+              institucional, a través de planeación y realización de acciones de colaboración, intercambio y apoyo mutuo.
+            </p>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/ThCw0Dz/firma-CINVESTAV.webp" alt="firma-CINVESTAV" width="100%" height="50%">
+            <p class="textoConvenios">
+              <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y <strong>Cinvestav Unidad Irapuato</strong> unen sus conocimientos, recursos y capacidades
+              técnicas para impulsar el descubrimiento y la comprensión de los mecanismos genéticos de las levaduras. Este tipo de investigación
+              tiene aplicaciones amplias y significativas, desde la mejora de la fermentación en la industria de alimentos y bebidas, hasta la
+              producción de biocombustibles y la síntesis de compuestos bioactivos. Ambas organizaciones se comprometen a colaborar estrechamente
+              en el intercambio de datos, el acceso a tecnologías de vanguardia y el desarrollo conjunto de proyectos de investigación. Además, se
+              fomenta la formación de talento humano mediante la participación de investigadores y estudiantes de ambas instituciones, creando así
+              una sinergia única que impulsará la innovación y la transferencia de conocimiento. Este convenio representa un paso significativo en
+              el avance de la genómica de levaduras y en el fortalecimiento de la colaboración entre el sector empresarial y el ámbito académico.
+            </p>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/jRDrkBk/coUNAM.webp" alt="coUNAM" width="100%" height="50%">
+            <p class="textoConvenios">
+              Como parte de una alianza estratégica, <strong>Inovaciones Industriales Biotecnológicas (Ininbio)</strong> y la <strong>Universidad Nacional
+                Autonóma De México (UNAM)</strong> colaboran estrechamente para desarrollar métodos de conservación de levaduras eficientes y sostenibles.
+              Trabajando en conjunto para optimizar técnicas tradicionales y explorar nuevas aproximaciones basadas en la tecnología y la innovación.
+              Teniendo como objetivo mejorar la viabilidad y la estabilidad de las levaduras a largo plazo, lo que impactará positivamente en
+              industrias como la producción de alimentos y bebidas tomando en cuenta que la conservación adecuada de las levaduras garantiza la calidad
+              y la eficiencia de los procesos industriales, y con esta colaboración se facilitará el intercambio de conocimientos, recursos y
+              tecnologías entre ambas organizaciones.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="section novi-background footer-advanced bg-gray-700">
@@ -265,7 +266,7 @@
       </div>
       <div class="footer-advanced-aside">
         <div class="container">
-          <div class="footer-advanced-layout"><a class="brand" href="index.php"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
+          <div class="footer-advanced-layout"><a class="brand" href="index.php" aria-label="Redireccionar Al Inicio"><img src="images/main-logo.webp" alt="" width="115" height="34" srcset="images/main-logo.webp 2x" /></a>
             <!-- Rights-->
             <p class="rights"><span style="color: #71c500;">&copy;&nbsp;</span><span class="copyright-year"></span></p>
             <p class="rights" style="color: #2c9182;">www.ininbio.com</p>
@@ -274,7 +275,7 @@
       </div>
     </footer>
 
-    </div> <!-- DIV PAGE -->
+  </div> <!-- DIV PAGE -->
 
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
@@ -284,12 +285,12 @@
 
   <script>
     $('.carouselConvenios').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 30000
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 30000
     });
 
     var mouseEvent = document.getElementById("translate");
@@ -308,92 +309,92 @@
     }
 
     var botonTequila = document.getElementById('tequila');
-      botonTequila.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'tequila');
+    botonTequila.addEventListener("click", () => {
+      localStorage.setItem('levadura', 'tequila');
     });
 
-      var botonMezcal = document.getElementById('mezcal');
-      botonMezcal.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'mezcal');
+    var botonMezcal = document.getElementById('mezcal');
+    botonMezcal.addEventListener("click", () => {
+      localStorage.setItem('levadura', 'mezcal');
     });
 
-      var botonVino = document.getElementById('vino');
-      botonVino.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'vino');
+    var botonVino = document.getElementById('vino');
+    botonVino.addEventListener("click", () => {
+      localStorage.setItem('levadura', 'vino');
     });
 
-      var botonCerveza = document.getElementById('cerveza');
-      botonCerveza.addEventListener("click", () => {
-        localStorage.setItem('levadura', 'cerveza');
+    var botonCerveza = document.getElementById('cerveza');
+    botonCerveza.addEventListener("click", () => {
+      localStorage.setItem('levadura', 'cerveza');
     });
 
     window.addEventListener('load', function() {
-        var movilProducts = document.getElementById('productosMovil');
-        var webProducts = document.getElementById('productosWeb');
-        var movilAbout = document.getElementById('aboutMovil');
-        var webAbout = document.getElementById('aboutWeb');
-        var movilLevaduras = document.getElementById('levadurasMovil');
-        var webLevaduras = document.getElementById('levadurasWeb');
-        if (window.matchMedia("(max-width: 600px)").matches) {
-          movilProducts.style.display = "block";
-          webProducts.style.display = "none";
-          movilAbout.style.display = "block";
-          webAbout.style.display = "none";
-          movilLevaduras.style.display = "inherit";
-          webLevaduras.style.display = "none";
-        } else {
-          movilProducts.style.display = "none";
-          webProducts.style.display = "block";
-          movilAbout.style.display = "none";
-          webAbout.style.display = "block";
-          movilLevaduras.style.display = "none";
-          webLevaduras.style.display = "inherit";
-        }
-      });
-
-      function levaduras() {
-        var submenu = document.getElementById('menu-submenu');
-        if (submenu.style.display === "inherit") {
-          submenu.style.display = "none";
-        } else {
-          submenu.style.display = "inherit";
-        }
+      var movilProducts = document.getElementById('productosMovil');
+      var webProducts = document.getElementById('productosWeb');
+      var movilAbout = document.getElementById('aboutMovil');
+      var webAbout = document.getElementById('aboutWeb');
+      var movilLevaduras = document.getElementById('levadurasMovil');
+      var webLevaduras = document.getElementById('levadurasWeb');
+      if (window.matchMedia("(max-width: 600px)").matches) {
+        movilProducts.style.display = "block";
+        webProducts.style.display = "none";
+        movilAbout.style.display = "block";
+        webAbout.style.display = "none";
+        movilLevaduras.style.display = "inherit";
+        webLevaduras.style.display = "none";
+      } else {
+        movilProducts.style.display = "none";
+        webProducts.style.display = "block";
+        movilAbout.style.display = "none";
+        webAbout.style.display = "block";
+        movilLevaduras.style.display = "none";
+        webLevaduras.style.display = "inherit";
       }
+    });
 
-      function productos() {
-        var submenu = document.getElementById('menu-vertical');
-        if (submenu.style.display === "block") {
-          submenu.style.display = "none";
-          toggleTranslateIcon();
-        } else {
-          submenu.style.display = "block";
-          toggleTranslateIcon();
-        }
+    function levaduras() {
+      var submenu = document.getElementById('menu-submenu');
+      if (submenu.style.display === "inherit") {
+        submenu.style.display = "none";
+      } else {
+        submenu.style.display = "inherit";
       }
+    }
 
-      function aboutUs() {
-        var submenu1 = document.getElementById('menu-vertical1');
-        if (submenu1.style.display === "block") {
-          submenu1.style.display = "none";
-          toggleTranslateIcon();
-        } else {
-          submenu1.style.display = "block";
-          toggleTranslateIcon();
-        }
+    function productos() {
+      var submenu = document.getElementById('menu-vertical');
+      if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+        toggleTranslateIcon();
+      } else {
+        submenu.style.display = "block";
+        toggleTranslateIcon();
       }
+    }
+
+    function aboutUs() {
+      var submenu1 = document.getElementById('menu-vertical1');
+      if (submenu1.style.display === "block") {
+        submenu1.style.display = "none";
+        toggleTranslateIcon();
+      } else {
+        submenu1.style.display = "block";
+        toggleTranslateIcon();
+      }
+    }
   </script>
 
   <link rel="stylesheet" href="css\whats.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css\whats2.css">
-  
+
   <div class="nav-bottom">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <div class="popup-whatsapp fadeIn">
       <div class="content-whatsapp -top"><button type="button" class="closePopup">
           <i class="material-icons icon-font-color">close</i>
         </button>
-        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en que podemos ayudarle? </p>
+        <p> <img src="images\secretary.webp" width="50" height="50"> Hola, ¿en qué podemos ayudarle? </p>
       </div>
       <div class="content-whatsapp -bottom">
         <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
@@ -410,5 +411,5 @@
     <div class="circle-anime"></div>
   </div>
   <script src="js\script2.js"></script>
-    
+
 </body>

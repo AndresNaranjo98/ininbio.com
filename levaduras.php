@@ -43,7 +43,7 @@ if (isset($_SESSION['rol'])) {
 <head>
   <title>Ininbio/Levaduras</title>
   <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="./images/logoWeb.png" />
@@ -70,6 +70,7 @@ if (isset($_SESSION['rol'])) {
       display: block;
     }
   </style>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfuzhAnAAAAADeEhmMNHsbel9EsrBjikilHi7yy"></script>
 </head>
 
 <body>
@@ -118,7 +119,7 @@ if (isset($_SESSION['rol'])) {
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                     <div class="unit-body">
                       <ul class="list-0">
-                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59430, La Piedad, Michoacán, México.</a></li>
+                        <li><a class="link-default" href="https://goo.gl/maps/stCLzY3ohG2hGx6Z6">Aldama #45<br> Col. Centro <br> C.P. 59300, La Piedad, Michoacán, México.</a></li>
                       </ul>
                     </div>
                   </article>
@@ -456,6 +457,7 @@ if (isset($_SESSION['rol'])) {
                       </div>
                   </div>
                   <div class="modal-footer">
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
                     <button type="submit" name="send" class="btn btn-secondary" style="background-color: #2c9182; color: white;">Enviar</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #71c500; color: white;">Regresar</button>
                   </div>
@@ -510,6 +512,14 @@ if (isset($_SESSION['rol'])) {
 
       incrementButtons.forEach(btn => {
         btn.addEventListener("click", increment);
+      });
+
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LfuzhAnAAAAADeEhmMNHsbel9EsrBjikilHi7yy', {
+          action: 'submit'
+        }).then(function(token) {
+          document.getElementById('g-recaptcha-response').value = token;
+        });
       });
     </script>
 

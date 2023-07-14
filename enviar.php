@@ -56,6 +56,7 @@
         $empresa = htmlentities($_POST['empresa']);
         $telefono = htmlentities($_POST['telefono']);
         $correo = htmlentities($_POST['correo']);
+        $filtro_correo = explode('@', $correo)[1];
         $asunto = 'Solicitud Ficha Tecnica';
         $mensaje =
             "Asunto: $asunto <br> 
@@ -80,7 +81,32 @@
         // $mail->addAddress('andrescbtis84@gmail.com');
         $mail->Subject = ($asunto);
         $mail->Body = $mensaje;
-        if (!$mail->send()) {
+
+        // Respuesta Captcha
+
+        $token = $_POST['g-recaptcha-response'];
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = array(
+            'secret' => $_ENV['SECRET_CAPTCHA'],
+            'response' => $token
+        );
+
+        $options = array(
+            'http' => array (
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            )
+        );
+
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        $response = json_decode($result);
+
+        // 
+
+        if (substr($filtro_correo, -4) === '.com' || substr($filtro_correo, -7) === '.com.mx' || substr($filtro_correo, -3) === '.mx' || substr($filtro_correo, -4) === '.org') {
+        if (!$mail->send() && !$response->success && !$response->score >= 0.5) {
             echo '
                 <script>
                 Swal.fire({
@@ -107,7 +133,22 @@
             setTimeout(redirec, 2000);
         </script>';
         }
+    } //Cierre de filtro de dominio
+    else { 
+        echo '
+                <script>
+                Swal.fire({
+                icon: "error",
+                title: "¡Extensión no válida!",
+                text: "Por motivos de seguridad solamente se validan correos con extensión .com, .com.mx, .mx y .org",
+                });
+            function redirec(){
+                window.location.replace(document.referrer);
+            }
+             setTimeout(redirec, 3000);
+        </script>';
     }
+    } //Cierre de verificación de envío
     ?>
 </body>
 </html>
